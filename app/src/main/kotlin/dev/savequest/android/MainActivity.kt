@@ -55,7 +55,7 @@ class MainActivity : ComponentActivity() {
         active = repo.prefs.getString("active", "") ?: ""
         if (snapshots.none { it.profile == active }) active = snapshots.firstOrNull()?.profile ?: ""
     }
-    override fun onResume() { super.onResume(); launchAction { auto = repo.prefs.getBoolean("auto", false); if (auto) message = repo.refresh(); reload() } }
+    override fun onResume() { super.onResume(); launchAction { reload(); auto = repo.prefs.getBoolean("auto", false); if (auto) message = repo.refresh() } }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent { MaterialTheme(colorScheme = darkColorScheme(primary = Color(0xFFA8DDB5), background = Color(0xFF101C20), surface = Color(0xFF19292D))) { Surface(Modifier.fillMaxSize()) { Screen() } } }
