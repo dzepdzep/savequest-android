@@ -6,7 +6,7 @@ Validated locally using JDK 17, Gradle 8.13 and SDK 36:
 - 4 JVM evidence tests: manual preservation, historical distinction, clearing a manual check without erasing save proof, and unknown absence.
 - 7 Python catalog checks: unique IDs, original Falkner team, individual Joey team, all 57 bag positions, 251 caught positions, pinned source URLs, Rollout receipt mapping.
 - 3 Android tests on Retroid Pocket Classic / Android 14: Room deduplication and profile separation; repository import/refresh/rollback/export/restore including malformed backup and newer manual preservation; Compose offline trainer search and original Falkner team display.
-- Debug APK assembly and Android lint. Lint passes with warnings (older pinned dependencies/target API, backup configuration and conservative application-context singleton warning); this is not a warning-free production release.
+- Debug APK assembly and Android lint: 0 errors, 23 warnings (older pinned dependencies/target API, backup configuration, missing custom icon, Kotlin style suggestions and conservative application-context singleton warning). This is not a warning-free production release.
 
 Initial UI test failures were corrected: the handheld display was asleep, then the assertion ambiguously matched the search text as well as the trainer title. The final test scrolls to and checks the team entry. The screen was changed to one scrolling list to accommodate small handheld displays.
 

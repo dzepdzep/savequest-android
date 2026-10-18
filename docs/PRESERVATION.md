@@ -4,6 +4,7 @@
 - Mirrored all 51 advertised references including branches, tags and PR references; created `JohtoAtlas-before-savequest.bundle`. `git bundle verify` confirmed complete history. This includes prior experiments and source/data builders, not just main.
 - Added and pushed tag `savequest-preservation-2026-10-18` at that exact commit. No source branch was altered, deleted or archived.
 - Preserved TM/HM acquisition notes and receipt mapping as inputs in the new repository. All old source remains in the full bundle and old GitHub repository.
+- Also downloaded the existing TM v0.9 preview APK and v1.1.1 web tracker release assets into the local `legacy-release` deliverable folder, with SHA-256 hashes. These preserve installable/reference artifacts but contain no device-local user progress.
 - Git tracked no player battery saves. Git backup does **not** include Issues, release assets, Actions secrets, signing keys, browser storage or device-local progress.
 - The accessible Retroid Pocket Classic did not report an installed `johto` package; another connected device was unauthorized. No private app storage or user saves were extracted, changed or deleted.
 
