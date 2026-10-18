@@ -1,0 +1,896 @@
+{
+  "items": [
+    {
+      "id": "TM01",
+      "move": "DynamicPunch",
+      "methods": [
+        {
+          "kind": "gym",
+          "where": "Cianwood Gym – defeat Chuck",
+          "area": "CIANWOOD_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM02",
+      "move": "Headbutt",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Ilex Forest – talk to the Headbutt NPC",
+          "area": "ILEX_FOREST"
+        },
+        {
+          "kind": "shop",
+          "where": "Goldenrod Department Store 5F – ¥2,000 (after receiving first TM in Ilex Forest)",
+          "area": "GOLDENROD_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM03",
+      "move": "Curse",
+      "methods": [
+        {
+          "kind": "timed",
+          "where": "Celadon Mansion rooftop – talk to man at night",
+          "area": "CELADON_CITY"
+        }
+      ],
+      "notes": [
+        "night"
+      ]
+    },
+    {
+      "id": "TM04",
+      "move": "Rollout",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Route 35",
+          "area": "ROUTE_35"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM05",
+      "move": "Roar",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Route 32 – man on upper ledge",
+          "area": "ROUTE_32"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM06",
+      "move": "Toxic",
+      "methods": [
+        {
+          "kind": "gym",
+          "where": "Fuchsia Gym – defeat Janine",
+          "area": "FUCHSIA_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM07",
+      "move": "Zap Cannon",
+      "methods": [
+        {
+          "kind": "story",
+          "where": "Kanto Power Plant – return Machine Part",
+          "area": "POWER_PLANT"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM08",
+      "move": "Rock Smash",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Route 36 – man east of Sudowoodo",
+          "area": "ROUTE_36"
+        },
+        {
+          "kind": "shop",
+          "where": "Goldenrod Department Store 5F – ¥1,000 (after receiving first TM on Route 36)",
+          "area": "GOLDENROD_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM09",
+      "move": "Psych Up",
+      "methods": [
+        {
+          "kind": "trade",
+          "where": "Use the Time Capsule to trade Abra from Generation I (R/B/Y); it arrives holding TM09 in Gen II. Not obtainable from Silver's own map or shops",
+          "area": "OTHER"
+        }
+      ],
+      "notes": [
+        "external"
+      ]
+    },
+    {
+      "id": "TM10",
+      "move": "Hidden Power",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Lake of Rage – man in northwestern house gives the TM",
+          "area": "LAKE_OF_RAGE"
+        },
+        {
+          "kind": "shop",
+          "where": "Celadon Department Store – ¥3,000",
+          "area": "CELADON_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM11",
+      "move": "Sunny Day",
+      "methods": [
+        {
+          "kind": "story",
+          "where": "Goldenrod Radio Tower 3F – woman after defeating Team Rocket",
+          "area": "TEAM_ROCKET_HQ"
+        },
+        {
+          "kind": "shop",
+          "where": "Celadon Department Store – ¥2,000",
+          "area": "CELADON_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM12",
+      "move": "Sweet Scent",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Route 34 / Ilex Forest gate",
+          "area": "ILEX_FOREST"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM13",
+      "move": "Snore",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Moomoo Farm – help sick Miltank",
+          "area": "OTHER"
+        },
+        {
+          "kind": "field",
+          "where": "Dark Cave",
+          "area": "DARK_CAVE"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM14",
+      "move": "Blizzard",
+      "methods": [
+        {
+          "kind": "gamecorner",
+          "where": "Goldenrod Game Corner – 5,500 coins",
+          "area": "GOLDENROD_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM15",
+      "move": "Hyper Beam",
+      "methods": [
+        {
+          "kind": "gamecorner",
+          "where": "Celadon Game Corner – 7,500 coins",
+          "area": "CELADON_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM16",
+      "move": "Icy Wind",
+      "methods": [
+        {
+          "kind": "gym",
+          "where": "Mahogany Gym – defeat Pryce",
+          "area": "MAHOGANY_TOWN"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM17",
+      "move": "Protect",
+      "methods": [
+        {
+          "kind": "shop",
+          "where": "Celadon Department Store – ¥3,000",
+          "area": "CELADON_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM18",
+      "move": "Rain Dance",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Slowpoke Well",
+          "area": "SLOWPOKE_WELL"
+        },
+        {
+          "kind": "shop",
+          "where": "Celadon Department Store – ¥2,000",
+          "area": "CELADON_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM19",
+      "move": "Giga Drain",
+      "methods": [
+        {
+          "kind": "gym",
+          "where": "Celadon Gym – defeat Erika",
+          "area": "CELADON_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM20",
+      "move": "Endure",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Burned Tower",
+          "area": "BURNED_TOWER"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM21",
+      "move": "Frustration",
+      "methods": [
+        {
+          "kind": "timed",
+          "where": "Goldenrod Department Store 5F – Sunday NPC, low friendship of lead Pokémon",
+          "area": "GOLDENROD_CITY"
+        }
+      ],
+      "notes": [
+        "sunday",
+        "friendship"
+      ]
+    },
+    {
+      "id": "TM22",
+      "move": "SolarBeam",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Route 27",
+          "area": "ROUTE_27"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM23",
+      "move": "Iron Tail",
+      "methods": [
+        {
+          "kind": "gym",
+          "where": "Olivine Gym – defeat Jasmine",
+          "area": "OLIVINE_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM24",
+      "move": "DragonBreath",
+      "methods": [
+        {
+          "kind": "gym",
+          "where": "Blackthorn Gym – defeat Clair and finish Dragon's Den badge event",
+          "area": "BLACKTHORN_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM25",
+      "move": "Thunder",
+      "methods": [
+        {
+          "kind": "gamecorner",
+          "where": "Goldenrod Game Corner – 5,500 coins",
+          "area": "GOLDENROD_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM26",
+      "move": "Earthquake",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Victory Road",
+          "area": "VICTORY_ROAD"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM27",
+      "move": "Return",
+      "methods": [
+        {
+          "kind": "timed",
+          "where": "Goldenrod Department Store 5F – Sunday NPC, high friendship of lead Pokémon",
+          "area": "GOLDENROD_CITY"
+        }
+      ],
+      "notes": [
+        "sunday",
+        "friendship"
+      ]
+    },
+    {
+      "id": "TM28",
+      "move": "Dig",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "National Park",
+          "area": "NATIONAL_PARK"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM29",
+      "move": "Psychic",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Saffron City – Mr. Psychic's house",
+          "area": "SAFFRON_CITY"
+        },
+        {
+          "kind": "gamecorner",
+          "where": "Celadon Game Corner – 3,500 coins",
+          "area": "CELADON_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM30",
+      "move": "Shadow Ball",
+      "methods": [
+        {
+          "kind": "gym",
+          "where": "Ecruteak Gym – defeat Morty",
+          "area": "ECRUTEAK_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM31",
+      "move": "Mud-Slap",
+      "methods": [
+        {
+          "kind": "gym",
+          "where": "Violet Gym – defeat Falkner",
+          "area": "VIOLET_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM32",
+      "move": "Double Team",
+      "methods": [
+        {
+          "kind": "gamecorner",
+          "where": "Celadon Game Corner – 1,500 coins",
+          "area": "CELADON_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM33",
+      "move": "Ice Punch",
+      "methods": [
+        {
+          "kind": "shop",
+          "where": "Goldenrod Department Store 5F – ¥3,000",
+          "area": "GOLDENROD_CITY"
+        },
+        {
+          "kind": "trade",
+          "where": "Some Generation I Pokémon arrive holding TM33 on transfer",
+          "area": "OTHER"
+        }
+      ],
+      "notes": [
+        "trade"
+      ]
+    },
+    {
+      "id": "TM34",
+      "move": "Swagger",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Olivine Lighthouse",
+          "area": "OLIVINE_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM35",
+      "move": "Sleep Talk",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Goldenrod Department Store basement",
+          "area": "GOLDENROD_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM36",
+      "move": "Sludge Bomb",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Route 43 – NPC after Mahogany Rocket events",
+          "area": "ROUTE_43"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM37",
+      "move": "Sandstorm",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Route 27 – woman in the house near Tohjo Falls; show a Pokémon with maximum friendship",
+          "area": "ROUTE_27"
+        },
+        {
+          "kind": "shop",
+          "where": "Celadon Department Store – ¥2,000",
+          "area": "CELADON_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM38",
+      "move": "Fire Blast",
+      "methods": [
+        {
+          "kind": "gamecorner",
+          "where": "Goldenrod Game Corner – 5,500 coins",
+          "area": "GOLDENROD_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM39",
+      "move": "Swift",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Union Cave",
+          "area": "UNION_CAVE"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM40",
+      "move": "Defense Curl",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Mt. Mortar",
+          "area": "MT_MORTAR"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM41",
+      "move": "ThunderPunch",
+      "methods": [
+        {
+          "kind": "shop",
+          "where": "Goldenrod Department Store 5F – ¥3,000",
+          "area": "GOLDENROD_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM42",
+      "move": "Dream Eater",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Viridian City – NPC gives it",
+          "area": "VIRIDIAN_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM43",
+      "move": "Detect",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Lake of Rage",
+          "area": "LAKE_OF_RAGE"
+        },
+        {
+          "kind": "trade",
+          "where": "Nidoran♀/Nidoran♂ traded from Generation I may hold TM43",
+          "area": "OTHER"
+        }
+      ],
+      "notes": [
+        "trade"
+      ]
+    },
+    {
+      "id": "TM44",
+      "move": "Rest",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Ice Path",
+          "area": "ICE_PATH"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM45",
+      "move": "Attract",
+      "methods": [
+        {
+          "kind": "gym",
+          "where": "Goldenrod Gym – defeat Whitney",
+          "area": "GOLDENROD_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM46",
+      "move": "Thief",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Team Rocket HQ – Mahogany underground hideout",
+          "area": "TEAM_ROCKET_HQ"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM47",
+      "move": "Steel Wing",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Route 28 house",
+          "area": "ROUTE_28"
+        },
+        {
+          "kind": "field",
+          "where": "Rock Tunnel",
+          "area": "ROCK_TUNNEL"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM48",
+      "move": "Fire Punch",
+      "methods": [
+        {
+          "kind": "shop",
+          "where": "Goldenrod Department Store 5F – ¥3,000",
+          "area": "GOLDENROD_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM49",
+      "move": "Fury Cutter",
+      "methods": [
+        {
+          "kind": "gym",
+          "where": "Azalea Gym – defeat Bugsy",
+          "area": "AZALEA_TOWN"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "TM50",
+      "move": "Nightmare",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Route 31 – deliver Kenya the mail Spearow's letter (keep the mail until delivery)",
+          "area": "ROUTE_31"
+        }
+      ],
+      "notes": [
+        "quest",
+        "missable-risk"
+      ]
+    },
+    {
+      "id": "HM01",
+      "move": "Cut",
+      "methods": [
+        {
+          "kind": "story",
+          "where": "Ilex Forest – return the runaway Farfetch'd; talk to its owner",
+          "area": "ILEX_FOREST"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "HM02",
+      "move": "Fly",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Cianwood City – Chuck's wife outside Gym after victory",
+          "area": "CIANWOOD_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "HM03",
+      "move": "Surf",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Ecruteak Dance Theater – defeat all five Kimono Girls; speak to theater owner",
+          "area": "ECRUTEAK_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "HM04",
+      "move": "Strength",
+      "methods": [
+        {
+          "kind": "npc",
+          "where": "Olivine City – sailor in house near Pokémon Center",
+          "area": "OLIVINE_CITY"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "HM05",
+      "move": "Flash",
+      "methods": [
+        {
+          "kind": "story",
+          "where": "Sprout Tower 3F – defeat the elder Sage",
+          "area": "SPROUT_TOWER"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "HM06",
+      "move": "Whirlpool",
+      "methods": [
+        {
+          "kind": "story",
+          "where": "Team Rocket HQ – help Lance stop Rocket's operation",
+          "area": "TEAM_ROCKET_HQ"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "HM07",
+      "move": "Waterfall",
+      "methods": [
+        {
+          "kind": "field",
+          "where": "Ice Path – ground pickup",
+          "area": "ICE_PATH"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "receipts": {
+    "TM01": [
+      "EVENT_GOT_TM01_DYNAMICPUNCH"
+    ],
+    "TM02": [
+      "EVENT_GOT_TM02_HEADBUTT"
+    ],
+    "TM03": [
+      "EVENT_GOT_TM03_CURSE"
+    ],
+    "TM04": [
+      "EVENT_ROUTE_35_TM_ROLLOUT"
+    ],
+    "TM05": [
+      "EVENT_GOT_TM05_ROAR"
+    ],
+    "TM06": [
+      "EVENT_GOT_TM06_TOXIC"
+    ],
+    "TM07": [
+      "EVENT_GOT_TM07_ZAP_CANNON"
+    ],
+    "TM08": [
+      "EVENT_GOT_TM08_ROCK_SMASH"
+    ],
+    "TM10": [
+      "EVENT_GOT_TM10_HIDDEN_POWER"
+    ],
+    "TM12": [
+      "EVENT_GOT_TM12_SWEET_SCENT"
+    ],
+    "TM13": [
+      "EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM",
+      "EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_TM_SNORE"
+    ],
+    "TM16": [
+      "EVENT_GOT_TM16_ICY_WIND"
+    ],
+    "TM18": [
+      "EVENT_SLOWPOKE_WELL_B2F_TM_RAIN_DANCE"
+    ],
+    "TM19": [
+      "EVENT_GOT_TM19_GIGA_DRAIN"
+    ],
+    "TM20": [
+      "EVENT_BURNED_TOWER_B1F_TM_ENDURE"
+    ],
+    "TM22": [
+      "EVENT_ROUTE_27_TM_SOLARBEAM"
+    ],
+    "TM23": [
+      "EVENT_GOT_TM23_IRON_TAIL"
+    ],
+    "TM24": [
+      "EVENT_GOT_TM24_DRAGONBREATH"
+    ],
+    "TM26": [
+      "EVENT_VICTORY_ROAD_TM_EARTHQUAKE"
+    ],
+    "TM28": [
+      "EVENT_NATIONAL_PARK_TM_DIG"
+    ],
+    "TM29": [
+      "EVENT_GOT_TM29_PSYCHIC"
+    ],
+    "TM30": [
+      "EVENT_GOT_TM30_SHADOW_BALL"
+    ],
+    "TM31": [
+      "EVENT_GOT_TM31_MUD_SLAP"
+    ],
+    "TM34": [
+      "EVENT_OLIVINE_LIGHTHOUSE_5F_TM_SWAGGER"
+    ],
+    "TM35": [
+      "EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_TM_SLEEP_TALK"
+    ],
+    "TM36": [
+      "EVENT_GOT_TM36_SLUDGE_BOMB"
+    ],
+    "TM37": [
+      "EVENT_GOT_TM37_SANDSTORM"
+    ],
+    "TM39": [
+      "EVENT_UNION_CAVE_B1F_TM_SWIFT"
+    ],
+    "TM40": [
+      "EVENT_MOUNT_MORTAR_2F_INSIDE_TM_DEFENSE_CURL"
+    ],
+    "TM42": [
+      "EVENT_GOT_TM42_DREAM_EATER"
+    ],
+    "TM43": [
+      "EVENT_LAKE_OF_RAGE_TM_DETECT"
+    ],
+    "TM44": [
+      "EVENT_ICE_PATH_B2F_BLACKTHORN_SIDE_TM_REST"
+    ],
+    "TM45": [
+      "EVENT_GOT_TM45_ATTRACT"
+    ],
+    "TM46": [
+      "EVENT_TEAM_ROCKET_BASE_B2F_TM_THIEF"
+    ],
+    "TM47": [
+      "EVENT_GOT_TM47_STEEL_WING",
+      "EVENT_ROCK_TUNNEL_1F_TM_STEEL_WING"
+    ],
+    "TM49": [
+      "EVENT_GOT_TM49_FURY_CUTTER"
+    ],
+    "TM50": [
+      "EVENT_GOT_TM50_NIGHTMARE"
+    ],
+    "HM01": [
+      "EVENT_GOT_HM01_CUT"
+    ],
+    "HM02": [
+      "EVENT_GOT_HM02_FLY"
+    ],
+    "HM03": [
+      "EVENT_GOT_HM03_SURF"
+    ],
+    "HM04": [
+      "EVENT_GOT_HM04_STRENGTH"
+    ],
+    "HM05": [
+      "EVENT_GOT_HM05_FLASH"
+    ],
+    "HM06": [
+      "EVENT_GOT_HM06_WHIRLPOOL"
+    ],
+    "HM07": [
+      "EVENT_GOT_HM07_WATERFALL"
+    ]
+  }
+}
