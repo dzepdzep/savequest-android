@@ -18,18 +18,28 @@ object Silver : GameModule {
         require(primary || backup) { "Save validation failed: markers/checksum do not match English Gold/Silver. Existing progress was kept." }
         if (!primary) for ((start, end, source) in listOf(Triple(0x2009,0x222e,0x15c7), Triple(0x222f,0x23d8,0x3d96), Triple(0x23d9,0x2855,0xc6b), Triple(0x2856,0x2889,0x7e39), Triple(0x288a,0x2d68,0x10e8))) bytes.copyInto(b, start, source, source + end - start + 1)
         require(u(0x288a) <= 6) { "Invalid party count" }
+        val count = u(0x288a)
+        require(u(0x288b + count) == 255) { "Invalid party list terminator" }
+        for (i in 0 until count) {
+            val listed = u(0x288b + i); val at = 0x2892 + i * 48
+            require(listed in 1..251 || listed == 253) { "Invalid party species" }
+            require(u(at) in 1..251 && (listed == 253 || listed == u(at))) { "Party species list and structure disagree" }
+            require(u(at + 31) in 1..100) { "Invalid party level" }
+        }
         return SilverSave(b, !primary)
     }
 }
 class SilverSave internal constructor(private val bytes: ByteArray, override val usedBackup: Boolean) : ParsedSave {
     private fun u(i: Int) = bytes[i].toInt() and 255
-    override val trainer = bytes.slice(0x200b..0x2015).takeWhile { (it.toInt() and 255) != 0x50 }.joinToString("") {
+    override val trainer = bytes.slice(0x200b..0x2015).takeWhile { (it.toInt() and 255) !in setOf(0, 0x50) }.joinToString("") {
         val c = it.toInt() and 255
-        when(c) { in 0x80..0x99 -> ('A' + c - 0x80).toString(); in 0xa0..0xb9 -> ('a' + c - 0xa0).toString(); 0x7f -> " "; else -> "?" }
-    }
+        when(c) { in 0x80..0x99 -> ('A' + c - 0x80).toString(); in 0xa0..0xb9 -> ('a' + c - 0xa0).toString(); in 0xf6..0xff -> (c - 0xf6).toString(); in 0x9a..0x9f -> "():;[]"[c-0x9a].toString(); 0x7f -> " "; 0xe0 -> "'"; 0xe3 -> "-"; 0xe6 -> "?"; 0xe7 -> "!"; 0xe8,0xf2 -> "."; 0xe9 -> "&"; 0xea -> "é"; 0xef -> "♂"; 0xf3 -> "/"; 0xf4 -> ","; 0xf5 -> "♀"; else -> "?" }
+    }.ifEmpty { "Unknown" }
     override val profile = "silver:" + MessageDigest.getInstance("SHA-256").digest(bytes.copyOfRange(0x2009, 0x2016)).take(12).joinToString("") { "%02x".format(it) }
     val legacyScope = "GSC-${u(0x2009).toString(16)}${u(0x200a).toString(16)}-$trainer"
     val badges = Integer.bitCount(u(0x23e4)) + Integer.bitCount(u(0x23e5))
+    val caughtCount = (0 until 251).count { u(0x2a4c + it / 8) and (1 shl (it % 8)) != 0 }
+    val seenCount = (0 until 251).count { u(0x2a6c + it / 8) and (1 shl (it % 8)) != 0 }
     fun flag(bit: Int): Boolean { require(bit in 0 until 2000); return u(0x261f + bit / 8) and (1 shl (bit % 8)) != 0 }
     override fun evidence(task: Task): Evidence {
         task.bagIndex?.let { require(it in 0..56); if (u(0x23e6 + it) > 0) return Evidence(EvidenceKind.BAG, "Currently in Bag ×${u(0x23e6 + it)}") }

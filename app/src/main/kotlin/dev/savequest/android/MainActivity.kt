@@ -1,6 +1,7 @@
 package dev.savequest.android
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -35,12 +36,18 @@ class MainActivity : ComponentActivity() {
     private var busy by mutableStateOf(false)
     private var active by mutableStateOf("")
     private var auto by mutableStateOf(false)
+    private val refreshListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+        if (key?.startsWith("currentHash:") == true || key == "refreshStatus") lifecycleScope.launch {
+            reload()
+            if (key == "refreshStatus") message = repo.prefs.getString("refreshStatus", message) ?: message
+        }
+    }
+    override fun onStart() { super.onStart(); repo.prefs.registerOnSharedPreferenceChangeListener(refreshListener) }
+    override fun onStop() { repo.prefs.unregisterOnSharedPreferenceChangeListener(refreshListener); super.onStop() }
     private val savePicker = registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri -> if (uri != null) launchAction {
-        message = repo.importSave(uri)
         var persistent = false
         try { contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION); persistent = true } catch (_: SecurityException) { }
-        val p = repo.db.progress().snapshots().firstOrNull { it.profile == repo.prefs.getString("active", "") }
-        repo.prefs.edit().putString("uri", if (persistent) uri.toString() else null).putString("linkedProfile", p?.profile).apply()
+        message = repo.importSave(uri, linkSource = persistent)
         if (!persistent) { repo.autoRefresh(false); auto = false; message += "; this provider permits one-time import only" }
     } }
     private val exportPicker = registerForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri -> if (uri != null) launchAction { repo.export(uri); message = "Backup exported: snapshots and manual progress" } }
@@ -91,7 +98,7 @@ class MainActivity : ComponentActivity() {
             Text(message, style = MaterialTheme.typography.bodySmall)
             if (busy) LinearProgressIndicator(Modifier.fillMaxWidth())
             Row { Checkbox(checked = auto, enabled = repo.prefs.getString("uri", null) != null, onCheckedChange = { auto = it; repo.autoRefresh(it) }); Text("Auto refresh linked file\nOn return + best effort every 15+ minutes", style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 8.dp)) }
-            if (parsed != null) Text("${parsed.trainer} · ${parsed.badges}/16 badges · ${history.size} snapshots${if (parsed.usedBackup) " · backup recovered" else ""}")
+            if (parsed != null) Text("${parsed.trainer} · ${parsed.badges}/16 badges · ${parsed.caughtCount} caught · ${parsed.seenCount} seen · ${history.size} snapshots${if (parsed.usedBackup) " · backup recovered" else ""}")
             Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 snapshots.distinctBy { it.profile }.forEach { s -> FilterChip(selected = active == s.profile, onClick = { active = s.profile; repo.prefs.edit().putString("active", active).apply() }, label = { Text(Silver.parse(s.raw).trainer + " · " + s.profile.takeLast(4)) }) }
             }
@@ -100,11 +107,11 @@ class MainActivity : ComponentActivity() {
             }
           } }
             if (category == "History") {
-                item { Text("Viewing a snapshot keeps all imports and manual checks. Historical evidence uses only earlier imports. Import time is not in-game chronology.", style = MaterialTheme.typography.bodySmall) }
+                item { Text("Viewing a snapshot keeps all imports. Manual confirmations apply to this profile today, not to the historical date. Historical save evidence uses only earlier imports. Import time is not in-game chronology.", style = MaterialTheme.typography.bodySmall) }
                 items(history, key = { it.id }) { s -> OutlinedButton(onClick = { selectedSnapshot = s.id; category = "TM/HM" }, modifier = Modifier.fillMaxWidth()) { Text(DateFormat.getDateTimeInstance().format(Date(s.importedAt)) + " · " + s.hash.take(8)) } }
             } else {
               item { Column {
-                if (selectedSnapshot != null) TextButton(onClick = { selectedSnapshot = null }) { Text("Viewing history · return to latest") }
+                if (selectedSnapshot != null) TextButton(onClick = { selectedSnapshot = null }) { Text("Viewing history · return to current save") }
                 OutlinedTextField(value = query, onValueChange = { query = it }, label = { Text("Search name or location") }, singleLine = true, modifier = Modifier.fillMaxWidth())
                 Row { Checkbox(checked = incomplete, onCheckedChange = { incomplete = it }); Text("Show unconfirmed only", modifier = Modifier.padding(top = 12.dp)) }
                 Text("${visible.size} entries · evidence is shown separately from manual checks", style = MaterialTheme.typography.bodySmall)
@@ -117,7 +124,7 @@ class MainActivity : ComponentActivity() {
                             Text("${evidence.kind.name.lowercase().replaceFirstChar { it.uppercase() }} · ${evidence.detail}", color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.bodySmall)
                             Text(task.detail, style = MaterialTheme.typography.bodySmall)
                             Row {
-                                Checkbox(checked = manual[task.id]?.checked == true, enabled = active.isNotEmpty() && !busy, onCheckedChange = { checked -> launchAction { repo.db.progress().set(Manual(active, task.id, checked, System.currentTimeMillis())); message = "Manual confirmation saved separately" } })
+                                Checkbox(modifier = Modifier.testTag("manual:${task.id}"), checked = manual[task.id]?.checked == true, enabled = active.isNotEmpty() && !busy, onCheckedChange = { checked -> launchAction { repo.db.progress().set(Manual(active, task.id, checked, System.currentTimeMillis())); message = "Manual confirmation saved separately" } })
                                 Text("Manual confirmation", modifier = Modifier.padding(top = 12.dp))
                                 if (task.guide.isNotEmpty()) TextButton(onClick = { try { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(task.guide))) } catch (_: Exception) { message = "No browser available" } }) { Text("Source") }
                             }

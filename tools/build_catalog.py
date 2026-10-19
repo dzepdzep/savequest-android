@@ -71,7 +71,8 @@ for i,item in enumerate(tm['items']):
     for flag in receipt:
         assert flag in flags
         assert any(flag in p.read_text(encoding='utf8') for p in (src/'maps').glob('*.asm'))
-    tasks.append({'id':item['id'],'title':item['id']+' · '+item['move'],'category':'TM/HM','bagIndex':i,'flags':[flags[f] for f in receipt], 'location':' / '.join(m['where'] for m in item['methods']), 'detail':'Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.', 'guide':url('constants/event_flags.asm')})
+    receiptSources=[url('maps/'+p.name) for p in sorted((src/'maps').glob('*.asm')) if any(f in p.read_text(encoding='utf8') for f in receipt)]
+    tasks.append({'id':item['id'],'title':item['id']+' · '+item['move'],'category':'TM/HM','bagIndex':i,'flags':[flags[f] for f in receipt], 'location':' / '.join(m['where'] for m in item['methods']), 'detail':'Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.', 'guide':receiptSources[0] if receiptSources else url('constants/item_constants.asm'), 'receiptSources':receiptSources})
 for i,name in enumerate(json.loads((ROOT/'tools/species.json').read_text(encoding='utf8')),1):tasks.append({'id':f'dex:{i}','title':f'{i:03} · {name}','category':'Pokédex','dexNumber':i,'detail':'Caught flag, not current party/PC ownership.'})
 unique={}
 for task in tasks:

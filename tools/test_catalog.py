@@ -13,4 +13,9 @@ class CatalogTest(unittest.TestCase):
         for t in TASKS.values():
             if t.get('guide'):self.assertIn(CATALOG['sourceCommit'],t['guide'])
     def test_receipt_for_consumed_rollout(self):self.assertTrue(TASKS['TM04']['flags'])
+    def test_sunny_day_receipt_and_radio_tower_source(self):
+        self.assertTrue(TASKS['TM11']['flags'])
+        self.assertTrue(TASKS['TM11']['guide'].endswith('/maps/RadioTower3F.asm'))
+    def test_sandstorm_threshold_not_maximum(self):self.assertIn('at least 150',TASKS['TM37']['location'])
+    def test_sleep_talk_warehouse(self):self.assertIn('Underground Warehouse',TASKS['TM35']['location'])
 if __name__=='__main__':unittest.main()

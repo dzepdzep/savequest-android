@@ -10,6 +10,7 @@ class SilverTest {
         b[0x2008] = 99; b[0x2d6b] = 127
         b[0x2009] = 1; b[0x200a] = 2
         b[0x200b] = 0x93.toByte(); b[0x200c] = 0x50
+        b[0x288b] = 0xff.toByte()
         change(b)
         val sum = (0x2009..0x2d68).sumOf { b[it].toInt() and 255 } and 65535
         b[0x2d69] = sum.toByte(); b[0x2d6a] = (sum ushr 8).toByte()
@@ -21,7 +22,7 @@ class SilverTest {
         assertEquals(EvidenceKind.RECEIPT, Silver.parse(fixture { it[0x261f + 42/8] = (1 shl (42%8)).toByte() }).evidence(tm).kind)
     }
     @Test fun knownMoveAloneDoesNotProveAcquisition() {
-        val save = fixture { it[0x288a] = 1; it[0x2894] = 223.toByte() }
+        val save = fixture { it[0x288a] = 1; it[0x288b] = 66; it[0x288c] = 0xff.toByte(); it[0x2892] = 66; it[0x28b1] = 20; it[0x2894] = 223.toByte() }
         assertEquals(EvidenceKind.UNKNOWN, Silver.parse(save).evidence(tm).kind)
     }
     @Test fun caughtFlagsRespectBitBoundaries() {
@@ -46,4 +47,8 @@ class SilverTest {
         assertTrue(parsed.usedBackup); assertEquals(EvidenceKind.BAG, parsed.evidence(tm).kind); assertArrayEquals(before,b)
     }
     @Test fun rejectsInvalidPartyCount() { assertThrows(IllegalArgumentException::class.java) { Silver.parse(fixture { it[0x288a] = 7 }) } }
+    @Test fun rejectsChecksummedMalformedParty() { assertThrows(IllegalArgumentException::class.java) { Silver.parse(fixture { it[0x288a] = 1; it[0x288b] = 25; it[0x288c] = 0xff.toByte(); it[0x2892] = 1; it[0x28b1] = 20 }) } }
+    @Test fun rejectsMissingTerminator() { assertThrows(IllegalArgumentException::class.java) { Silver.parse(fixture { it[0x288b] = 0 }) } }
+    @Test fun decodesDigitsAndPunctuationWithoutChangingProfileAlgorithm() { assertEquals("A-9!", Silver.parse(fixture { it[0x200b] = 0x80.toByte(); it[0x200c] = 0xe3.toByte(); it[0x200d] = 0xff.toByte(); it[0x200e] = 0xe7.toByte(); it[0x200f] = 0x50 }).trainer) }
+    @Test fun backupCannotMakeCorruptPrimaryAppearValid() { val b = fixture(); b[0x2008] = 0; assertThrows(IllegalArgumentException::class.java) { Silver.parse(b) } }
 }

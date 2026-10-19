@@ -146,7 +146,7 @@
         {
           "kind": "story",
           "where": "Goldenrod Radio Tower 3F – woman after defeating Team Rocket",
-          "area": "TEAM_ROCKET_HQ"
+          "area": "GOLDENROD_CITY"
         },
         {
           "kind": "shop",
@@ -280,7 +280,7 @@
       "methods": [
         {
           "kind": "timed",
-          "where": "Goldenrod Department Store 5F – Sunday NPC, low friendship of lead Pokémon",
+          "where": "Goldenrod Department Store 5F – Sunday NPC; lead Pokémon friendship below 50",
           "area": "GOLDENROD_CITY"
         }
       ],
@@ -355,7 +355,7 @@
       "methods": [
         {
           "kind": "timed",
-          "where": "Goldenrod Department Store 5F – Sunday NPC, high friendship of lead Pokémon",
+          "where": "Goldenrod Department Store 5F – Sunday NPC; lead Pokémon friendship at least 150",
           "area": "GOLDENROD_CITY"
         }
       ],
@@ -466,7 +466,7 @@
       "methods": [
         {
           "kind": "field",
-          "where": "Goldenrod Department Store basement",
+          "where": "Goldenrod Underground Warehouse (connected to the Department Store basement)",
           "area": "GOLDENROD_CITY"
         }
       ],
@@ -490,7 +490,7 @@
       "methods": [
         {
           "kind": "npc",
-          "where": "Route 27 – woman in the house near Tohjo Falls; show a Pokémon with maximum friendship",
+          "where": "Route 27 – woman near Tohjo Falls; lead Pokémon friendship must be at least 150 (maximum is not required)",
           "area": "ROUTE_27"
         },
         {
@@ -891,6 +891,9 @@
     ],
     "HM07": [
       "EVENT_GOT_HM07_WATERFALL"
+    ],
+    "TM11": [
+      "EVENT_GOT_SUNNY_DAY_FROM_RADIO_TOWER"
     ]
   }
 }

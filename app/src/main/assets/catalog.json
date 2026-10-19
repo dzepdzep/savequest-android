@@ -4928,8 +4928,11 @@
         10
       ],
       "location": "Cianwood Gym – defeat Chuck",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/CianwoodGym.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/CianwoodGym.asm"
+      ]
     },
     {
       "id": "TM02",
@@ -4940,8 +4943,12 @@
         95
       ],
       "location": "Ilex Forest – talk to the Headbutt NPC / Goldenrod Department Store 5F – ¥2,000 (after receiving first TM in Ilex Forest)",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodDeptStore5F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodDeptStore5F.asm",
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/IlexForest.asm"
+      ]
     },
     {
       "id": "TM03",
@@ -4952,8 +4959,11 @@
         218
       ],
       "location": "Celadon Mansion rooftop – talk to man at night",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/CeladonMansionRoofHouse.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/CeladonMansionRoofHouse.asm"
+      ]
     },
     {
       "id": "TM04",
@@ -4964,8 +4974,11 @@
         1714
       ],
       "location": "Route 35",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route35.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route35.asm"
+      ]
     },
     {
       "id": "TM05",
@@ -4976,8 +4989,11 @@
         78
       ],
       "location": "Route 32 – man on upper ledge",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route32.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route32.asm"
+      ]
     },
     {
       "id": "TM06",
@@ -4988,8 +5004,11 @@
         221
       ],
       "location": "Fuchsia Gym – defeat Janine",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/FuchsiaGym.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/FuchsiaGym.asm"
+      ]
     },
     {
       "id": "TM07",
@@ -5000,8 +5019,11 @@
         223
       ],
       "location": "Kanto Power Plant – return Machine Part",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/PowerPlant.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/PowerPlant.asm"
+      ]
     },
     {
       "id": "TM08",
@@ -5012,8 +5034,12 @@
         75
       ],
       "location": "Route 36 – man east of Sudowoodo / Goldenrod Department Store 5F – ¥1,000 (after receiving first TM on Route 36)",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodDeptStore5F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodDeptStore5F.asm",
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route36.asm"
+      ]
     },
     {
       "id": "TM09",
@@ -5022,8 +5048,9 @@
       "bagIndex": 8,
       "flags": [],
       "location": "Use the Time Capsule to trade Abra from Generation I (R/B/Y); it arrives holding TM09 in Gen II. Not obtainable from Silver's own map or shops",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/item_constants.asm",
+      "receiptSources": []
     },
     {
       "id": "TM10",
@@ -5034,18 +5061,26 @@
         88
       ],
       "location": "Lake of Rage – man in northwestern house gives the TM / Celadon Department Store – ¥3,000",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/LakeOfRageHiddenPowerHouse.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/LakeOfRageHiddenPowerHouse.asm"
+      ]
     },
     {
       "id": "TM11",
       "title": "TM11 · Sunny Day",
       "category": "TM/HM",
       "bagIndex": 10,
-      "flags": [],
+      "flags": [
+        71
+      ],
       "location": "Goldenrod Radio Tower 3F – woman after defeating Team Rocket / Celadon Department Store – ¥2,000",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/RadioTower3F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/RadioTower3F.asm"
+      ]
     },
     {
       "id": "TM12",
@@ -5056,8 +5091,11 @@
         122
       ],
       "location": "Route 34 / Ilex Forest gate",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route34IlexForestGate.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route34IlexForestGate.asm"
+      ]
     },
     {
       "id": "TM13",
@@ -5069,8 +5107,12 @@
         1698
       ],
       "location": "Moomoo Farm – help sick Miltank / Dark Cave",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/DarkCaveBlackthornEntrance.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/DarkCaveBlackthornEntrance.asm",
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route39Farmhouse.asm"
+      ]
     },
     {
       "id": "TM14",
@@ -5079,8 +5121,9 @@
       "bagIndex": 13,
       "flags": [],
       "location": "Goldenrod Game Corner – 5,500 coins",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/item_constants.asm",
+      "receiptSources": []
     },
     {
       "id": "TM15",
@@ -5089,8 +5132,9 @@
       "bagIndex": 14,
       "flags": [],
       "location": "Celadon Game Corner – 7,500 coins",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/item_constants.asm",
+      "receiptSources": []
     },
     {
       "id": "TM16",
@@ -5101,8 +5145,11 @@
         14
       ],
       "location": "Mahogany Gym – defeat Pryce",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MahoganyGym.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MahoganyGym.asm"
+      ]
     },
     {
       "id": "TM17",
@@ -5111,8 +5158,9 @@
       "bagIndex": 16,
       "flags": [],
       "location": "Celadon Department Store – ¥3,000",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/item_constants.asm",
+      "receiptSources": []
     },
     {
       "id": "TM18",
@@ -5123,8 +5171,11 @@
         1635
       ],
       "location": "Slowpoke Well / Celadon Department Store – ¥2,000",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SlowpokeWellB2F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SlowpokeWellB2F.asm"
+      ]
     },
     {
       "id": "TM19",
@@ -5135,8 +5186,11 @@
         220
       ],
       "location": "Celadon Gym – defeat Erika",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/CeladonGym.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/CeladonGym.asm"
+      ]
     },
     {
       "id": "TM20",
@@ -5147,8 +5201,11 @@
         1623
       ],
       "location": "Burned Tower",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/BurnedTowerB1F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/BurnedTowerB1F.asm"
+      ]
     },
     {
       "id": "TM21",
@@ -5156,9 +5213,10 @@
       "category": "TM/HM",
       "bagIndex": 20,
       "flags": [],
-      "location": "Goldenrod Department Store 5F – Sunday NPC, low friendship of lead Pokémon",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "location": "Goldenrod Department Store 5F – Sunday NPC; lead Pokémon friendship below 50",
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/item_constants.asm",
+      "receiptSources": []
     },
     {
       "id": "TM22",
@@ -5169,8 +5227,11 @@
         1707
       ],
       "location": "Route 27",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route27.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route27.asm"
+      ]
     },
     {
       "id": "TM23",
@@ -5181,8 +5242,11 @@
         13
       ],
       "location": "Olivine Gym – defeat Jasmine",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/OlivineGym.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/OlivineGym.asm"
+      ]
     },
     {
       "id": "TM24",
@@ -5193,8 +5257,12 @@
         15
       ],
       "location": "Blackthorn Gym – defeat Clair and finish Dragon's Den badge event",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/BlackthornGym1F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/BlackthornGym1F.asm",
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/DragonsDenB1F.asm"
+      ]
     },
     {
       "id": "TM25",
@@ -5203,8 +5271,9 @@
       "bagIndex": 24,
       "flags": [],
       "location": "Goldenrod Game Corner – 5,500 coins",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/item_constants.asm",
+      "receiptSources": []
     },
     {
       "id": "TM26",
@@ -5215,8 +5284,11 @@
         1699
       ],
       "location": "Victory Road",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/VictoryRoad.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/VictoryRoad.asm"
+      ]
     },
     {
       "id": "TM27",
@@ -5224,9 +5296,10 @@
       "category": "TM/HM",
       "bagIndex": 26,
       "flags": [],
-      "location": "Goldenrod Department Store 5F – Sunday NPC, high friendship of lead Pokémon",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "location": "Goldenrod Department Store 5F – Sunday NPC; lead Pokémon friendship at least 150",
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/item_constants.asm",
+      "receiptSources": []
     },
     {
       "id": "TM28",
@@ -5237,8 +5310,12 @@
         1625
       ],
       "location": "National Park",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/NationalPark.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/NationalPark.asm",
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/NationalParkBugContest.asm"
+      ]
     },
     {
       "id": "TM29",
@@ -5249,8 +5326,11 @@
         227
       ],
       "location": "Saffron City – Mr. Psychic's house / Celadon Game Corner – 3,500 coins",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MrPsychicsHouse.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MrPsychicsHouse.asm"
+      ]
     },
     {
       "id": "TM30",
@@ -5261,8 +5341,11 @@
         12
       ],
       "location": "Ecruteak Gym – defeat Morty",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/EcruteakGym.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/EcruteakGym.asm"
+      ]
     },
     {
       "id": "TM31",
@@ -5273,8 +5356,11 @@
         8
       ],
       "location": "Violet Gym – defeat Falkner",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/VioletGym.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/VioletGym.asm"
+      ]
     },
     {
       "id": "TM32",
@@ -5283,8 +5369,9 @@
       "bagIndex": 31,
       "flags": [],
       "location": "Celadon Game Corner – 1,500 coins",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/item_constants.asm",
+      "receiptSources": []
     },
     {
       "id": "TM33",
@@ -5293,8 +5380,9 @@
       "bagIndex": 32,
       "flags": [],
       "location": "Goldenrod Department Store 5F – ¥3,000 / Some Generation I Pokémon arrive holding TM33 on transfer",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/item_constants.asm",
+      "receiptSources": []
     },
     {
       "id": "TM34",
@@ -5305,8 +5393,11 @@
         1639
       ],
       "location": "Olivine Lighthouse",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/OlivineLighthouse5F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/OlivineLighthouse5F.asm"
+      ]
     },
     {
       "id": "TM35",
@@ -5316,9 +5407,12 @@
       "flags": [
         1658
       ],
-      "location": "Goldenrod Department Store basement",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "location": "Goldenrod Underground Warehouse (connected to the Department Store basement)",
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodUndergroundWarehouse.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodUndergroundWarehouse.asm"
+      ]
     },
     {
       "id": "TM36",
@@ -5329,8 +5423,11 @@
         89
       ],
       "location": "Route 43 – NPC after Mahogany Rocket events",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route43Gate.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route43Gate.asm"
+      ]
     },
     {
       "id": "TM37",
@@ -5340,9 +5437,12 @@
       "flags": [
         117
       ],
-      "location": "Route 27 – woman in the house near Tohjo Falls; show a Pokémon with maximum friendship / Celadon Department Store – ¥2,000",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "location": "Route 27 – woman near Tohjo Falls; lead Pokémon friendship must be at least 150 (maximum is not required) / Celadon Department Store – ¥2,000",
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route27SandstormHouse.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route27SandstormHouse.asm"
+      ]
     },
     {
       "id": "TM38",
@@ -5351,8 +5451,9 @@
       "bagIndex": 37,
       "flags": [],
       "location": "Goldenrod Game Corner – 5,500 coins",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/item_constants.asm",
+      "receiptSources": []
     },
     {
       "id": "TM39",
@@ -5363,8 +5464,11 @@
         1630
       ],
       "location": "Union Cave",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/UnionCaveB1F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/UnionCaveB1F.asm"
+      ]
     },
     {
       "id": "TM40",
@@ -5375,8 +5479,11 @@
         1666
       ],
       "location": "Mt. Mortar",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortar2FInside.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortar2FInside.asm"
+      ]
     },
     {
       "id": "TM41",
@@ -5385,8 +5492,9 @@
       "bagIndex": 40,
       "flags": [],
       "location": "Goldenrod Department Store 5F – ¥3,000",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/item_constants.asm",
+      "receiptSources": []
     },
     {
       "id": "TM42",
@@ -5397,8 +5505,11 @@
         224
       ],
       "location": "Viridian City – NPC gives it",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/ViridianCity.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/ViridianCity.asm"
+      ]
     },
     {
       "id": "TM43",
@@ -5409,8 +5520,11 @@
         1606
       ],
       "location": "Lake of Rage / Nidoran♀/Nidoran♂ traded from Generation I may hold TM43",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/LakeOfRage.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/LakeOfRage.asm"
+      ]
     },
     {
       "id": "TM44",
@@ -5421,8 +5535,11 @@
         1677
       ],
       "location": "Ice Path",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/IcePathB2FBlackthornSide.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/IcePathB2FBlackthornSide.asm"
+      ]
     },
     {
       "id": "TM45",
@@ -5433,8 +5550,11 @@
         11
       ],
       "location": "Goldenrod Gym – defeat Whitney",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodGym.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodGym.asm"
+      ]
     },
     {
       "id": "TM46",
@@ -5445,8 +5565,11 @@
         1644
       ],
       "location": "Team Rocket HQ – Mahogany underground hideout",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TeamRocketBaseB2F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TeamRocketBaseB2F.asm"
+      ]
     },
     {
       "id": "TM47",
@@ -5458,8 +5581,12 @@
         1919
       ],
       "location": "Route 28 house / Rock Tunnel",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/RockTunnel1F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/RockTunnel1F.asm",
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route28SteelWingHouse.asm"
+      ]
     },
     {
       "id": "TM48",
@@ -5468,8 +5595,9 @@
       "bagIndex": 47,
       "flags": [],
       "location": "Goldenrod Department Store 5F – ¥3,000",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/item_constants.asm",
+      "receiptSources": []
     },
     {
       "id": "TM49",
@@ -5480,8 +5608,11 @@
         9
       ],
       "location": "Azalea Gym – defeat Bugsy",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/AzaleaGym.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/AzaleaGym.asm"
+      ]
     },
     {
       "id": "TM50",
@@ -5492,8 +5623,11 @@
         83
       ],
       "location": "Route 31 – deliver Kenya the mail Spearow's letter (keep the mail until delivery)",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route31.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route31.asm"
+      ]
     },
     {
       "id": "HM01",
@@ -5504,8 +5638,12 @@
         16
       ],
       "location": "Ilex Forest – return the runaway Farfetch'd; talk to its owner",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/CharcoalKiln.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/CharcoalKiln.asm",
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/IlexForest.asm"
+      ]
     },
     {
       "id": "HM02",
@@ -5516,8 +5654,11 @@
         17
       ],
       "location": "Cianwood City – Chuck's wife outside Gym after victory",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/CianwoodCity.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/CianwoodCity.asm"
+      ]
     },
     {
       "id": "HM03",
@@ -5528,8 +5669,11 @@
         18
       ],
       "location": "Ecruteak Dance Theater – defeat all five Kimono Girls; speak to theater owner",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/DanceTheater.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/DanceTheater.asm"
+      ]
     },
     {
       "id": "HM04",
@@ -5540,8 +5684,11 @@
         19
       ],
       "location": "Olivine City – sailor in house near Pokémon Center",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/OlivineCafe.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/OlivineCafe.asm"
+      ]
     },
     {
       "id": "HM05",
@@ -5552,8 +5699,11 @@
         20
       ],
       "location": "Sprout Tower 3F – defeat the elder Sage",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SproutTower3F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SproutTower3F.asm"
+      ]
     },
     {
       "id": "HM06",
@@ -5564,8 +5714,11 @@
         21
       ],
       "location": "Team Rocket HQ – help Lance stop Rocket's operation",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TeamRocketBaseB2F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TeamRocketBaseB2F.asm"
+      ]
     },
     {
       "id": "HM07",
@@ -5576,8 +5729,11 @@
         1672
       ],
       "location": "Ice Path – ground pickup",
-      "detail": "Acquisition notes inherited from JohtoAtlas; receipt flags checked against pinned original source. Learned moves alone never prove TM ownership.",
-      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/constants/event_flags.asm"
+      "detail": "Receipt flags can confirm a TM after it is consumed. Learned moves alone never prove TM ownership.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/IcePath1F.asm",
+      "receiptSources": [
+        "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/IcePath1F.asm"
+      ]
     },
     {
       "id": "dex:1",
