@@ -1,7 +1,7 @@
 plugins { id("com.android.application"); kotlin("android"); id("org.jetbrains.kotlin.plugin.compose") }
 android {
     namespace = "dev.savequest.android"; compileSdk = 36
-    defaultConfig { applicationId = if (providers.gradleProperty("auditInstall").orNull == "true") "dev.savequest.android.audit" else "dev.savequest.android"; minSdk = 26; targetSdk = 36; versionCode = 2; versionName = "0.1.1-alpha"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
+    defaultConfig { applicationId = if (providers.gradleProperty("auditInstall").orNull == "true") "dev.savequest.android.audit" else "dev.savequest.android"; minSdk = 26; targetSdk = 36; versionCode = 3; versionName = "0.1.2-alpha"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
     buildFeatures { compose = true }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
 }

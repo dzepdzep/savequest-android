@@ -67,10 +67,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent { MaterialTheme(colorScheme = darkColorScheme(primary = Color(0xFFA8DDB5), background = Color(0xFF101C20), surface = Color(0xFF19292D))) { Surface(Modifier.fillMaxSize()) { Screen() } } }
     }
+    private fun openUrl(url: String) { try { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) } catch (_: Exception) { message = "No browser available" } }
     @Composable private fun Screen() {
         var category by remember { mutableStateOf("TM/HM") }
         var query by remember { mutableStateOf("") }
         var incomplete by remember { mutableStateOf(false) }
+        var region by remember { mutableStateOf("All") }
         var selectedSnapshot by remember(active) { mutableStateOf<String?>(null) }
         val history = remember(snapshots, active) { snapshots.filter { it.profile == active } }
         val selected = history.find { it.id == selectedSnapshot } ?: history.find { it.hash == repo.prefs.getString("currentHash:$active", null) } ?: history.firstOrNull()
@@ -81,7 +83,7 @@ class MainActivity : ComponentActivity() {
             val current = parsed?.evidence(task) ?: Evidence(EvidenceKind.UNKNOWN, "Import a save to detect progress")
             task.id to Progress.resolve(current, earlier.any { it.evidence(task).kind != EvidenceKind.UNKNOWN }, manual[task.id]?.checked == true)
         } }
-        val visible = repo.tasks.filter { it.category == category && (!incomplete || results[it.id]?.kind == EvidenceKind.UNKNOWN) && "${it.title} ${it.location} ${it.detail}".contains(query, true) }
+        val visible = repo.tasks.filter { it.category == category && (!incomplete || results[it.id]?.kind == EvidenceKind.UNKNOWN) && (category != "Items" || region == "All" || it.region.equals(region, true)) && "${it.title} ${it.location} ${it.area} ${it.detail}".contains(query, true) }
         LazyColumn(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding().testTag("catalog"), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
           item { Column {
             Text("SaveQuest", style = MaterialTheme.typography.headlineLarge)
@@ -103,30 +105,42 @@ class MainActivity : ComponentActivity() {
                 snapshots.distinctBy { it.profile }.forEach { s -> FilterChip(selected = active == s.profile, onClick = { active = s.profile; repo.prefs.edit().putString("active", active).apply() }, label = { Text(Silver.parse(s.raw).trainer + " · " + s.profile.takeLast(4)) }) }
             }
             Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                listOf("TM/HM", "Trainers", "Items", "Pokédex", "History").forEach { name -> FilterChip(selected = category == name, onClick = { category = name }, label = { Text(name) }) }
+                listOf("TM/HM", "Trainers", "Items", "Pokédex", "Tips", "History").forEach { name -> FilterChip(selected = category == name, onClick = { category = name }, label = { Text(name) }) }
             }
           } }
-            if (category == "History") {
+            if (category == "Tips") {
+                item { TipsTab(selected?.raw, parsed?.usedBackup == true) { openUrl(it) } }
+            } else if (category == "History") {
                 item { Text("Viewing a snapshot keeps all imports. Manual confirmations apply to this profile today, not to the historical date. Historical save evidence uses only earlier imports. Import time is not in-game chronology.", style = MaterialTheme.typography.bodySmall) }
                 items(history, key = { it.id }) { s -> OutlinedButton(onClick = { selectedSnapshot = s.id; category = "TM/HM" }, modifier = Modifier.fillMaxWidth()) { Text(DateFormat.getDateTimeInstance().format(Date(s.importedAt)) + " · " + s.hash.take(8)) } }
             } else {
               item { Column {
                 if (selectedSnapshot != null) TextButton(onClick = { selectedSnapshot = null }) { Text("Viewing history · return to current save") }
                 OutlinedTextField(value = query, onValueChange = { query = it }, label = { Text("Search name or location") }, singleLine = true, modifier = Modifier.fillMaxWidth())
+                if (category == "Items") Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    listOf("All", "Johto", "Kanto").forEach { r -> FilterChip(selected = region == r, onClick = { region = r }, label = { Text(r) }) }
+                }
                 Row { Checkbox(checked = incomplete, onCheckedChange = { incomplete = it }); Text("Show unconfirmed only", modifier = Modifier.padding(top = 12.dp)) }
-                Text("${visible.size} entries · evidence is shown separately from manual checks", style = MaterialTheme.typography.bodySmall)
+                val found = visible.count { results[it.id]?.kind != EvidenceKind.UNKNOWN }
+                Text("$found of ${visible.size} confirmed · evidence is shown separately from manual checks", style = MaterialTheme.typography.bodySmall)
               } }
                     items(visible, key = { it.id }) { task ->
                         Card(Modifier.fillMaxWidth()) { Column(Modifier.padding(12.dp)) {
-                            Text(task.title, style = MaterialTheme.typography.titleMedium)
+                            Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                if (task.sprite.isNotEmpty()) Sprite("items/${task.sprite}", 32.dp)
+                                else if (task.dexNumber != null) Sprite("pokemon/%03d".format(task.dexNumber), 48.dp)
+                                Text(task.title, style = MaterialTheme.typography.titleMedium)
+                            }
                             if (task.location.isNotBlank()) Text(task.location, style = MaterialTheme.typography.bodyMedium)
                             val evidence = results.getValue(task.id)
                             Text("${evidence.kind.name.lowercase().replaceFirstChar { it.uppercase() }} · ${evidence.detail}", color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.bodySmall)
+                            if (task.spot.isNotEmpty()) Text("RankedBoost: ${task.spot}", style = MaterialTheme.typography.bodySmall)
                             Text(task.detail, style = MaterialTheme.typography.bodySmall)
                             Row {
                                 Checkbox(modifier = Modifier.testTag("manual:${task.id}"), checked = manual[task.id]?.checked == true, enabled = active.isNotEmpty() && !busy, onCheckedChange = { checked -> launchAction { repo.db.progress().set(Manual(active, task.id, checked, System.currentTimeMillis())); message = "Manual confirmation saved separately" } })
                                 Text("Manual confirmation", modifier = Modifier.padding(top = 12.dp))
-                                if (task.guide.isNotEmpty()) TextButton(onClick = { try { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(task.guide))) } catch (_: Exception) { message = "No browser available" } }) { Text("Source") }
+                                if (task.rankedboost.isNotEmpty()) TextButton(onClick = { openUrl(task.rankedboost) }) { Text("RankedBoost") }
+                                if (task.guide.isNotEmpty()) TextButton(onClick = { openUrl(task.guide) }) { Text("Source") }
                             }
                         } }
                     }

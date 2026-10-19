@@ -26,7 +26,7 @@ class Repository internal constructor(private val context: Context, private val 
     val tasks: List<Task> by lazy {
         val a = JSONObject(context.assets.open("catalog.json").bufferedReader().use { it.readText() }).getJSONArray("tasks")
         (0 until a.length()).map { i -> val t = a.getJSONObject(i); val f = t.optJSONArray("flags") ?: JSONArray()
-            Task(t.getString("id"), t.getString("title"), t.getString("category"), t.optString("location"), t.optString("detail"), t.optString("guide"), (0 until f.length()).map { f.getInt(it) }, if (t.has("bagIndex")) t.getInt("bagIndex") else null, if (t.has("dexNumber")) t.getInt("dexNumber") else null)
+            Task(t.getString("id"), t.getString("title"), t.getString("category"), t.optString("location"), t.optString("detail"), t.optString("guide"), (0 until f.length()).map { f.getInt(it) }, if (t.has("bagIndex")) t.getInt("bagIndex") else null, if (t.has("dexNumber")) t.getInt("dexNumber") else null, t.optString("region"), t.optString("area"), t.optString("rankedboost"), t.optString("sprite"), t.optString("spot"))
         }
     }
     suspend fun importSave(uri: Uri, expectedProfile: String? = null, linkSource: Boolean? = null): String = mutex.withLock {

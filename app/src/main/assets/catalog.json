@@ -10,7 +10,12 @@
       "flags": [
         177
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the east part of Azalea Town, tile 31,6. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Azalea Town",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/azalea-town/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": "On the north wall surrounding Slowpoke Well (hidden)"
     },
     {
       "id": "item:EVENT_BURNED_TOWER_1F_HIDDEN_ETHER",
@@ -21,7 +26,12 @@
       "flags": [
         128
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the center part of Burned Tower 1F, tile 8,7. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Burned Tower 1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/#pokemon-location-items",
+      "sprite": "ether",
+      "spot": "Found on 1F · in the small indent at the dead end in the center of the room (requires Rock Smash) (hidden)"
     },
     {
       "id": "item:EVENT_BURNED_TOWER_B1F_HIDDEN_ULTRA_BALL",
@@ -32,7 +42,12 @@
       "flags": [
         129
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south-west part of Burned Tower B1F, tile 2,13. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Burned Tower B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/#pokemon-location-items",
+      "sprite": "ultra-ball",
+      "spot": "Found on B1F · in the area accessed by dropping through the hole west of the entrance (hidden)"
     },
     {
       "id": "item:EVENT_BURNED_TOWER_B1F_HIDDEN_BURN_HEAL",
@@ -43,7 +58,12 @@
       "flags": [
         130
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south-east part of Burned Tower B1F, tile 17,14. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Burned Tower B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/#pokemon-location-items",
+      "sprite": "burn-heal",
+      "spot": "Found on B1F · in the area accessed by dropping through the hole east of the entrance (hidden)"
     },
     {
       "id": "item:EVENT_BURNED_TOWER_B1F_HIDDEN_NUGGET",
@@ -54,7 +74,12 @@
       "flags": [
         131
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north part of Burned Tower B1F, tile 8,3. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Burned Tower B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/#pokemon-location-items",
+      "sprite": "nugget",
+      "spot": "Found on B1F · where Entei, Raikou, and Suicune were (hidden)"
     },
     {
       "id": "item:EVENT_CELADON_CITY_HIDDEN_PP_UP",
@@ -65,7 +90,12 @@
       "flags": [
         253
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the east part of Celadon City, tile 37,21. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Celadon City",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/celadon-city/#pokemon-location-items",
+      "sprite": "pp-up",
+      "spot": "Found on Map · In the southeastern-most part of the city (hidden)"
     },
     {
       "id": "item:EVENT_FOUND_BERSERK_GENE_IN_CERULEAN_CITY",
@@ -76,7 +106,12 @@
       "flags": [
         250
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Cerulean City, tile 2,12. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Cerulean City",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/cerulean-city/#pokemon-location-items",
+      "sprite": "berserk-gene",
+      "spot": "Near where the entrance to Cerulean Cave used to be (requires Surf) (hidden)"
     },
     {
       "id": "item:EVENT_FOUND_MACHINE_PART_IN_CERULEAN_GYM",
@@ -87,7 +122,12 @@
       "flags": [
         251
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Cerulean Gym, tile 3,8. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Cerulean Gym",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/cerulean-city/#pokemon-location-items",
+      "sprite": "machine-part",
+      "spot": ""
     },
     {
       "id": "item:EVENT_CIANWOOD_CITY_HIDDEN_REVIVE",
@@ -98,7 +138,12 @@
       "flags": [
         178
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-west part of Cianwood City, tile 8,16. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Cianwood City",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/cianwood-city/#pokemon-location-items",
+      "sprite": "revive",
+      "spot": "Under rock in north area, near Pokémon Seer's house (requires Rock Smash) (hidden)"
     },
     {
       "id": "item:EVENT_CIANWOOD_CITY_HIDDEN_MAX_ETHER",
@@ -109,7 +154,12 @@
       "flags": [
         179
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Cianwood City, tile 5,29. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Cianwood City",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/cianwood-city/#pokemon-location-items",
+      "sprite": "max-ether",
+      "spot": "Northwest of the Photo Studio (requires Rock Smash) (hidden)"
     },
     {
       "id": "item:EVENT_CINNABAR_ISLAND_HIDDEN_RARE_CANDY",
@@ -120,7 +170,12 @@
       "flags": [
         254
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north part of Cinnabar Island, tile 9,1. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Cinnabar Island",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/cinnabar-island/#pokemon-location-items",
+      "sprite": "rare-candy",
+      "spot": "In the northernmost accessible corner of the island (hidden)"
     },
     {
       "id": "item:EVENT_DARK_CAVE_VIOLET_ENTRANCE_HIDDEN_ELIXER",
@@ -131,7 +186,12 @@
       "flags": [
         157
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north part of Dark Cave Violet entrance, tile 26,3. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Dark Cave Violet entrance",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/dark-cave/#pokemon-location-items",
+      "sprite": "elixir",
+      "spot": "Found on Violet Entrance · In the northernmost area of the Route 31 side, at the end of a short dead-end path (requires Rock Smash) (hidden)"
     },
     {
       "id": "item:EVENT_DIGLETTS_CAVE_HIDDEN_MAX_REVIVE",
@@ -142,7 +202,12 @@
       "flags": [
         228
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-west part of Diglett's Cave, tile 6,11. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Diglett's Cave",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/digletts-cave/#pokemon-location-items",
+      "sprite": "max-revive",
+      "spot": "On a rock near the northern side (hidden)"
     },
     {
       "id": "item:EVENT_DRAGONS_DEN_B1F_HIDDEN_REVIVE",
@@ -153,7 +218,12 @@
       "flags": [
         160
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-east part of Dragon's Den B1F, tile 31,4. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Dragon's Den B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/dragons-den/#pokemon-location-items",
+      "sprite": "revive",
+      "spot": "East of the entrance (hidden)"
     },
     {
       "id": "item:EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_POTION",
@@ -164,7 +234,12 @@
       "flags": [
         161
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the center part of Dragon's Den B1F, tile 21,17. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Dragon's Den B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/dragons-den/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": "On rock north of shrine island (hidden)"
     },
     {
       "id": "item:EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_ELIXER",
@@ -175,7 +250,12 @@
       "flags": [
         162
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the east part of Dragon's Den B1F, tile 31,15. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Dragon's Den B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/dragons-den/#pokemon-location-items",
+      "sprite": "max-elixir",
+      "spot": "North wall of water near Dragon Fang (hidden)"
     },
     {
       "id": "item:EVENT_ECRUTEAK_CITY_HIDDEN_HYPER_POTION",
@@ -186,7 +266,12 @@
       "flags": [
         180
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the center part of Ecruteak City, tile 23,14. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Ecruteak City",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ecruteak-city/#pokemon-location-items",
+      "sprite": "hyper-potion",
+      "spot": "In the corner by the water in the northeast (hidden)"
     },
     {
       "id": "item:EVENT_GOLDENROD_UNDERGROUND_HIDDEN_PARLYZ_HEAL",
@@ -197,7 +282,12 @@
       "flags": [
         139
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Goldenrod Underground, tile 6,13. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Goldenrod Underground",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "paralyze-heal",
+      "spot": ""
     },
     {
       "id": "item:EVENT_GOLDENROD_UNDERGROUND_HIDDEN_SUPER_POTION",
@@ -208,7 +298,12 @@
       "flags": [
         140
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Goldenrod Underground, tile 4,18. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Goldenrod Underground",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "super-potion",
+      "spot": ""
     },
     {
       "id": "item:EVENT_GOLDENROD_UNDERGROUND_HIDDEN_ANTIDOTE",
@@ -219,7 +314,12 @@
       "flags": [
         141
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north part of Goldenrod Underground, tile 17,8. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Goldenrod Underground",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "antidote",
+      "spot": ""
     },
     {
       "id": "item:EVENT_GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES_HIDDEN_MAX_POTION",
@@ -230,7 +330,12 @@
       "flags": [
         142
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-west part of Goldenrod Underground Switch room, tile 8,9. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Goldenrod Underground Switch room",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": ""
     },
     {
       "id": "item:EVENT_GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES_HIDDEN_REVIVE",
@@ -241,7 +346,12 @@
       "flags": [
         143
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-west part of Goldenrod Underground Switch room, tile 1,8. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Goldenrod Underground Switch room",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "revive",
+      "spot": ""
     },
     {
       "id": "item:EVENT_ICE_PATH_B1F_HIDDEN_MAX_POTION",
@@ -252,7 +362,12 @@
       "flags": [
         148
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south-east part of Ice Path B1F, tile 15,31. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Ice Path B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ice-path/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": "Found on B1F · bottom; on the middle rock in the ice puzzle (hidden)"
     },
     {
       "id": "item:EVENT_ICE_PATH_B2F_BLACKTHORN_SIDE_HIDDEN_ICE_HEAL",
@@ -263,7 +378,12 @@
       "flags": [
         150
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Ice Path B2F Blackthorn side, tile 2,10. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Ice Path B2F Blackthorn side",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ice-path/#pokemon-location-items",
+      "sprite": "ice-heal",
+      "spot": "Found on B2F Blackthorn Side · B2F, right side in lone boulder between raised platform and ladder to B1F (hidden)"
     },
     {
       "id": "item:EVENT_ICE_PATH_B2F_MAHOGANY_SIDE_HIDDEN_CARBOS",
@@ -274,7 +394,12 @@
       "flags": [
         149
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south-west part of Ice Path B2F Mahogany side, tile 0,17. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Ice Path B2F Mahogany side",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ice-path/#pokemon-location-items",
+      "sprite": "carbos",
+      "spot": "Found on B2F Mahogany Side · B2F, in southeast corner of the left portion (hidden)"
     },
     {
       "id": "item:EVENT_ILEX_FOREST_HIDDEN_ETHER",
@@ -285,7 +410,12 @@
       "flags": [
         136
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-east part of Ilex Forest, tile 27,1. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Ilex Forest",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ilex-forest/#pokemon-location-items",
+      "sprite": "ether",
+      "spot": "Northeast area of the forest (hidden)"
     },
     {
       "id": "item:EVENT_ILEX_FOREST_HIDDEN_SUPER_POTION",
@@ -296,7 +426,12 @@
       "flags": [
         137
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north part of Ilex Forest, tile 17,7. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Ilex Forest",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ilex-forest/#pokemon-location-items",
+      "sprite": "super-potion",
+      "spot": "In the indent on the left side, north of the Move Tutor (hidden)"
     },
     {
       "id": "item:EVENT_ILEX_FOREST_HIDDEN_FULL_HEAL",
@@ -307,7 +442,12 @@
       "flags": [
         138
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-west part of Ilex Forest, tile 9,17. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Ilex Forest",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ilex-forest/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": "East of the sign near the pond (hidden)"
     },
     {
       "id": "item:EVENT_LAKE_OF_RAGE_HIDDEN_FULL_RESTORE",
@@ -318,7 +458,12 @@
       "flags": [
         181
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south-west part of Lake of Rage, tile 11,28. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Lake of Rage",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/lake-of-rage/#pokemon-location-items",
+      "sprite": "full-restore",
+      "spot": "At the end of the indent on the right side, southwest of the lake (hidden)"
     },
     {
       "id": "item:EVENT_LAKE_OF_RAGE_HIDDEN_RARE_CANDY",
@@ -329,7 +474,12 @@
       "flags": [
         182
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-west part of Lake of Rage, tile 4,4. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Lake of Rage",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/lake-of-rage/#pokemon-location-items",
+      "sprite": "rare-candy",
+      "spot": "At the end of the western path, west of the lake (requires Cut) (hidden)"
     },
     {
       "id": "item:EVENT_LAKE_OF_RAGE_HIDDEN_MAX_POTION",
@@ -340,7 +490,12 @@
       "flags": [
         183
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-east part of Lake of Rage, tile 35,5. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Lake of Rage",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/lake-of-rage/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": "At the northern end of the path, east of the lake (hidden)"
     },
     {
       "id": "item:EVENT_MOUNT_MOON_SQUARE_HIDDEN_MOON_STONE",
@@ -351,7 +506,12 @@
       "flags": [
         236
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Mt. Moon Square, tile 7,7. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Mt. Moon Square",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-moon/#pokemon-location-items",
+      "sprite": "moon-stone",
+      "spot": "Hidden item on Mt. Moon Square"
     },
     {
       "id": "item:EVENT_MOUNT_MORTAR_1F_INSIDE_HIDDEN_MAX_REPEL",
@@ -362,7 +522,12 @@
       "flags": [
         145
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-east part of Mt. Mortar 1F Inside, tile 31,9. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Mt. Mortar 1F Inside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "max-repel",
+      "spot": "Found on 1F Inside · Northern area, on a rock in the eastern corner (requires Surf and Waterfall) (hidden)"
     },
     {
       "id": "item:EVENT_MOUNT_MORTAR_1F_OUTSIDE_HIDDEN_HYPER_POTION",
@@ -373,7 +538,12 @@
       "flags": [
         144
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the center part of Mt. Mortar 1F Outside, tile 25,22. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Mt. Mortar 1F Outside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "hyper-potion",
+      "spot": "Found on 1F Outside · East side, on a rock west of the entrance to 1F (back) (hidden)"
     },
     {
       "id": "item:EVENT_MOUNT_MORTAR_2F_INSIDE_HIDDEN_FULL_RESTORE",
@@ -384,7 +554,12 @@
       "flags": [
         146
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north part of Mt. Mortar 2F Inside, tile 19,6. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Mt. Mortar 2F Inside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "full-restore",
+      "spot": "Found on 2F Inside · The right tile in-between the ledges east of the Dragon Scale (hidden)"
     },
     {
       "id": "item:EVENT_MOUNT_MORTAR_B1F_HIDDEN_MAX_REVIVE",
@@ -395,7 +570,12 @@
       "flags": [
         147
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-west part of Mt. Mortar B1F, tile 4,6. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Mt. Mortar B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "max-revive",
+      "spot": "Found on B1F · On a lone rock south-east of the ladder from 2F (requires Surf and Waterfall) (hidden)"
     },
     {
       "id": "item:EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL",
@@ -406,7 +586,12 @@
       "flags": [
         132
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south-west part of National Park, tile 6,47. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "National Park",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/national-park/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": "Behind the fence, between the two flowers at the end of the path near the south gate (hidden)"
     },
     {
       "id": "item:EVENT_OLIVINE_LIGHTHOUSE_5F_HIDDEN_HYPER_POTION",
@@ -417,7 +602,12 @@
       "flags": [
         133
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south-west part of Olivine Lighthouse 5F, tile 3,13. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Olivine Lighthouse 5F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/olivine-city/#pokemon-location-items",
+      "sprite": "hyper-potion",
+      "spot": ""
     },
     {
       "id": "item:EVENT_OLIVINE_PORT_HIDDEN_PROTEIN",
@@ -428,7 +618,12 @@
       "flags": [
         234
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Olivine Port, tile 1,22. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Olivine Port",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/olivine-city/#pokemon-location-items",
+      "sprite": "protein",
+      "spot": "In Olivine Harbor, southwest of the S.S. Aqua (hidden) (requires the S.S. Ticket)"
     },
     {
       "id": "item:EVENT_ROCK_TUNNEL_1F_HIDDEN_X_ACCURACY",
@@ -439,7 +634,12 @@
       "flags": [
         231
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-east part of Rock Tunnel 1F, tile 24,4. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Rock Tunnel 1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/rock-tunnel/#pokemon-location-items",
+      "sprite": "x-accuracy",
+      "spot": "Found on 1F · northeast (hidden)"
     },
     {
       "id": "item:EVENT_ROCK_TUNNEL_1F_HIDDEN_X_DEFEND",
@@ -450,7 +650,12 @@
       "flags": [
         232
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the east part of Rock Tunnel 1F, tile 21,15. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Rock Tunnel 1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/rock-tunnel/#pokemon-location-items",
+      "sprite": "x-defense",
+      "spot": "Found on 1F · east of TM47 (hidden)"
     },
     {
       "id": "item:EVENT_ROCK_TUNNEL_B1F_HIDDEN_MAX_POTION",
@@ -461,7 +666,12 @@
       "flags": [
         233
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Rock Tunnel B1F, tile 4,14. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Rock Tunnel B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/rock-tunnel/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": "Found on B1F · northwest of PP Up (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_11_HIDDEN_REVIVE",
@@ -472,7 +682,12 @@
       "flags": [
         245
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-east part of Route 11, tile 32,5. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 11",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-11/#pokemon-location-items",
+      "sprite": "revive",
+      "spot": "Hidden item along Route 11"
     },
     {
       "id": "item:EVENT_ROUTE_12_HIDDEN_ELIXER",
@@ -483,7 +698,12 @@
       "flags": [
         243
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-east part of Route 12, tile 14,13. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 12",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-12/#pokemon-location-items",
+      "sprite": "elixir",
+      "spot": "Hidden item along Route 12"
     },
     {
       "id": "item:EVENT_ROUTE_13_HIDDEN_CALCIUM",
@@ -494,7 +714,12 @@
       "flags": [
         244
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south part of Route 13, tile 30,13. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 13",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-13/#pokemon-location-items",
+      "sprite": "calcium",
+      "spot": ""
     },
     {
       "id": "item:EVENT_ROUTE_17_HIDDEN_MAX_ETHER",
@@ -505,7 +730,12 @@
       "flags": [
         246
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north part of Route 17, tile 12,5. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 17",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-17/#pokemon-location-items",
+      "sprite": "max-ether",
+      "spot": "Hidden item along Route 17"
     },
     {
       "id": "item:EVENT_ROUTE_17_HIDDEN_MAX_ELIXER",
@@ -516,7 +746,12 @@
       "flags": [
         247
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south part of Route 17, tile 8,77. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 17",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-17/#pokemon-location-items",
+      "sprite": "max-elixir",
+      "spot": "Hidden item along Route 17"
     },
     {
       "id": "item:EVENT_ROUTE_2_HIDDEN_MAX_ETHER",
@@ -527,7 +762,12 @@
       "flags": [
         237
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the center part of Route 2, tile 7,23. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 2",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-2/#pokemon-location-items",
+      "sprite": "max-ether",
+      "spot": "Hidden item along Route 2"
     },
     {
       "id": "item:EVENT_ROUTE_2_HIDDEN_FULL_HEAL",
@@ -538,7 +778,12 @@
       "flags": [
         238
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-west part of Route 2, tile 4,14. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 2",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-2/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": "Hidden item along Route 2"
     },
     {
       "id": "item:EVENT_ROUTE_2_HIDDEN_FULL_RESTORE",
@@ -549,7 +794,12 @@
       "flags": [
         239
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Route 2, tile 4,27. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 2",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-2/#pokemon-location-items",
+      "sprite": "full-restore",
+      "spot": "Hidden item along Route 2"
     },
     {
       "id": "item:EVENT_ROUTE_2_HIDDEN_REVIVE",
@@ -560,7 +810,12 @@
       "flags": [
         240
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the center part of Route 2, tile 11,30. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 2",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-2/#pokemon-location-items",
+      "sprite": "revive",
+      "spot": "Hidden item along Route 2"
     },
     {
       "id": "item:EVENT_ROUTE_25_HIDDEN_POTION",
@@ -571,7 +826,12 @@
       "flags": [
         248
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-west part of Route 25, tile 4,5. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 25",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-25/#pokemon-location-items",
+      "sprite": "potion",
+      "spot": "In the lone western tree (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_28_HIDDEN_RARE_CANDY",
@@ -582,7 +842,12 @@
       "flags": [
         163
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north part of Route 28, tile 25,2. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 28",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-28/#pokemon-location-items",
+      "sprite": "rare-candy",
+      "spot": "In the northeast corner (hidden) (requires Cut)"
     },
     {
       "id": "item:EVENT_ROUTE_30_HIDDEN_POTION",
@@ -593,7 +858,12 @@
       "flags": [
         164
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-east part of Route 30, tile 14,9. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Route 30",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-30/#pokemon-location-items",
+      "sprite": "potion",
+      "spot": "Four squares south and three squares west of the entrance to Mr. Pokémon's house, in a flower bed (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_32_HIDDEN_GREAT_BALL",
@@ -604,7 +874,12 @@
       "flags": [
         165
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south part of Route 32, tile 12,67. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Route 32",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-32/#pokemon-location-items",
+      "sprite": "great-ball",
+      "spot": "In the dead end north of the Pokémon Center (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_32_HIDDEN_SUPER_POTION",
@@ -615,7 +890,12 @@
       "flags": [
         166
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the center part of Route 32, tile 11,40. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Route 32",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-32/#pokemon-location-items",
+      "sprite": "super-potion",
+      "spot": "In the patch of grass directly north of the pier (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_34_HIDDEN_RARE_CANDY",
@@ -626,7 +906,12 @@
       "flags": [
         167
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the center part of Route 34, tile 8,32. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Route 34",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-34/#pokemon-location-items",
+      "sprite": "rare-candy",
+      "spot": "In the fenced area west of Picnicker Gina, in the upper-left corner of the second tree from the right (requires Surf) (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_34_HIDDEN_SUPER_POTION",
@@ -637,7 +922,12 @@
       "flags": [
         168
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the east part of Route 34, tile 17,19. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Route 34",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-34/#pokemon-location-items",
+      "sprite": "super-potion",
+      "spot": ""
     },
     {
       "id": "item:EVENT_ROUTE_37_HIDDEN_ETHER",
@@ -648,7 +938,12 @@
       "flags": [
         169
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-west part of Route 37, tile 4,2. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Route 37",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-37/#pokemon-location-items",
+      "sprite": "ether",
+      "spot": "Northwest of the Route 37 sign (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_39_HIDDEN_NUGGET",
@@ -659,7 +954,12 @@
       "flags": [
         170
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Route 39, tile 5,13. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Route 39",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-39/#pokemon-location-items",
+      "sprite": "nugget",
+      "spot": "Between the Miltank (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_4_HIDDEN_ULTRA_BALL",
@@ -670,7 +970,12 @@
       "flags": [
         241
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-west part of Route 4, tile 10,3. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 4",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-4/#pokemon-location-items",
+      "sprite": "ultra-ball",
+      "spot": "Hidden item along Route 4"
     },
     {
       "id": "item:EVENT_ROUTE_40_HIDDEN_HYPER_POTION",
@@ -681,7 +986,12 @@
       "flags": [
         171
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north part of Route 40, tile 11,7. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Route 40",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-40/#pokemon-location-items",
+      "sprite": "hyper-potion",
+      "spot": "Under a breakable rock (requires Rock Smash) (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_41_HIDDEN_MAX_ETHER",
@@ -692,7 +1002,12 @@
       "flags": [
         172
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Route 41, tile 9,35. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Route 41",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-41/#pokemon-location-items",
+      "sprite": "max-ether",
+      "spot": "On the beach on the southwest island (requires Whirlpool) (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_42_HIDDEN_MAX_POTION",
@@ -703,7 +1018,12 @@
       "flags": [
         173
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Route 42, tile 16,11. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Route 42",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-42/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": "In the southwestern tile of the large rock in the middle of the western pond (requires Surf) (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_44_HIDDEN_ELIXER",
@@ -714,7 +1034,12 @@
       "flags": [
         174
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the center part of Route 44, tile 32,9. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Route 44",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-44/#pokemon-location-items",
+      "sprite": "elixir",
+      "spot": "In the patch of grass in the middle of the lake (requires Surf) (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_45_HIDDEN_PP_UP",
@@ -725,7 +1050,12 @@
       "flags": [
         175
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south part of Route 45, tile 13,80. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Route 45",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-45/#pokemon-location-items",
+      "sprite": "pp-up",
+      "spot": "In the middle of the pond at the south end of the route (requires Surf) (hidden)"
     },
     {
       "id": "item:EVENT_ROUTE_9_HIDDEN_ETHER",
@@ -736,7 +1066,12 @@
       "flags": [
         242
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-west part of Route 9, tile 10,5. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Route 9",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-9/#pokemon-location-items",
+      "sprite": "ether",
+      "spot": "Hidden item along Route 9"
     },
     {
       "id": "item:EVENT_SILVER_CAVE_OUTSIDE_HIDDEN_FULL_RESTORE",
@@ -747,7 +1082,12 @@
       "flags": [
         184
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south-west part of Mt. Silver Outside Outside, tile 9,25. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Mt. Silver Outside Outside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/#pokemon-location-items",
+      "sprite": "full-restore",
+      "spot": "Found on Item Rooms · Hidden item outside the cave"
     },
     {
       "id": "item:EVENT_SILVER_CAVE_ROOM_1_HIDDEN_DIRE_HIT",
@@ -758,7 +1098,12 @@
       "flags": [
         154
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the east part of Mt. Silver Room 1, tile 16,23. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Mt. Silver Room 1",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/#pokemon-location-items",
+      "sprite": "dire-hit",
+      "spot": "Found on Room 1 · Hidden item on 1F"
     },
     {
       "id": "item:EVENT_SILVER_CAVE_ROOM_1_HIDDEN_ULTRA_BALL",
@@ -769,7 +1114,12 @@
       "flags": [
         155
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the east part of Mt. Silver Room 1, tile 17,12. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Mt. Silver Room 1",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/#pokemon-location-items",
+      "sprite": "ultra-ball",
+      "spot": "Found on Room 1 · Hidden item on 1F"
     },
     {
       "id": "item:EVENT_SILVER_CAVE_ROOM_2_HIDDEN_MAX_POTION",
@@ -780,7 +1130,12 @@
       "flags": [
         156
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south part of Mt. Silver Room 2, tile 14,31. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Mt. Silver Room 2",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": "Found on Room 2 · Hidden item on 2F"
     },
     {
       "id": "item:EVENT_TEAM_ROCKET_BASE_B1F_HIDDEN_REVIVE",
@@ -791,7 +1146,12 @@
       "flags": [
         134
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Team Rocket HQ B1F, tile 3,11. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Team Rocket HQ B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/team-rocket-hq/#pokemon-location-items",
+      "sprite": "revive",
+      "spot": "Found on B1F · within the traps; three tiles north of the stairs (hidden)"
     },
     {
       "id": "item:EVENT_TEAM_ROCKET_BASE_B2F_HIDDEN_FULL_HEAL",
@@ -802,7 +1162,12 @@
       "flags": [
         135
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the east part of Team Rocket HQ B2F, tile 26,7. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Team Rocket HQ B2F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/team-rocket-hq/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": "Found on B2F · in the east, in a machine next to a computer (hidden)"
     },
     {
       "id": "item:EVENT_TIN_TOWER_4F_HIDDEN_MAX_POTION",
@@ -813,7 +1178,12 @@
       "flags": [
         125
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the center part of Tin Tower 4F, tile 11,6. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Tin Tower 4F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tin-tower/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": ""
     },
     {
       "id": "item:EVENT_TIN_TOWER_5F_HIDDEN_FULL_RESTORE",
@@ -824,7 +1194,12 @@
       "flags": [
         126
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south-east part of Tin Tower 5F, tile 16,14. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Tin Tower 5F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tin-tower/#pokemon-location-items",
+      "sprite": "full-restore",
+      "spot": ""
     },
     {
       "id": "item:EVENT_TIN_TOWER_5F_HIDDEN_CARBOS",
@@ -835,7 +1210,12 @@
       "flags": [
         127
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south-west part of Tin Tower 5F, tile 3,15. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Tin Tower 5F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tin-tower/#pokemon-location-items",
+      "sprite": "carbos",
+      "spot": ""
     },
     {
       "id": "item:EVENT_UNDERGROUND_PATH_HIDDEN_FULL_RESTORE",
@@ -846,7 +1226,12 @@
       "flags": [
         229
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north part of Underground Path, tile 3,9. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Underground Path",
+      "rankedboost": "",
+      "sprite": "full-restore",
+      "spot": ""
     },
     {
       "id": "item:EVENT_UNDERGROUND_PATH_HIDDEN_X_SPECIAL",
@@ -857,7 +1242,12 @@
       "flags": [
         230
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south-west part of Underground Path, tile 1,19. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Underground Path",
+      "rankedboost": "",
+      "sprite": "x-sp-atk",
+      "spot": ""
     },
     {
       "id": "item:EVENT_VERMILION_CITY_HIDDEN_FULL_HEAL",
@@ -868,7 +1258,12 @@
       "flags": [
         252
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Vermilion City, tile 12,19. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Vermilion City",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/vermilion-city/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": "Found on Map · In the bush next to the Vermilion Gym (hidden)"
     },
     {
       "id": "item:EVENT_VERMILION_PORT_HIDDEN_IRON",
@@ -879,7 +1274,12 @@
       "flags": [
         235
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the east part of Vermilion Port, tile 16,13. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Vermilion Port",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/vermilion-city/#pokemon-location-items",
+      "sprite": "iron",
+      "spot": "Found on Port · Northeast of the S.S. Aqua, in the area below the gatekeeper Sailor (requires Surf) (hidden)"
     },
     {
       "id": "item:EVENT_VICTORY_ROAD_HIDDEN_MAX_POTION",
@@ -890,7 +1290,12 @@
       "flags": [
         158
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Victory Road, tile 3,29. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Victory Road",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/victory-road/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": "Hidden item near the entrance corridor"
     },
     {
       "id": "item:EVENT_VICTORY_ROAD_HIDDEN_FULL_HEAL",
@@ -901,7 +1306,12 @@
       "flags": [
         159
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the south-west part of Victory Road, tile 3,65. Completion uses its original event flag.",
+      "region": "kanto",
+      "area": "Victory Road",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/victory-road/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": "Hidden item along the path"
     },
     {
       "id": "item:EVENT_VIOLET_CITY_HIDDEN_HYPER_POTION",
@@ -912,7 +1322,12 @@
       "flags": [
         176
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the east part of Violet City, tile 37,14. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Violet City",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/violet-city/#pokemon-location-items",
+      "sprite": "hyper-potion",
+      "spot": "At the end of the path between the Pokémon Center and the Pokémon academy (requires Cut/Rock Smash) (hidden)"
     },
     {
       "id": "item:EVENT_WHIRL_ISLAND_B1F_HIDDEN_RARE_CANDY",
@@ -923,7 +1338,12 @@
       "flags": [
         151
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the north-east part of Whirl Islands B1F, tile 30,4. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Whirl Islands B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "rare-candy",
+      "spot": "Found on B1F · northeast of northeast island ladder (hidden)"
     },
     {
       "id": "item:EVENT_WHIRL_ISLAND_B1F_HIDDEN_ULTRA_BALL",
@@ -934,7 +1354,12 @@
       "flags": [
         152
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the east part of Whirl Islands B1F, tile 36,18. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Whirl Islands B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "ultra-ball",
+      "spot": "Found on B1F · northeast of southeast island ladder (hidden)"
     },
     {
       "id": "item:EVENT_WHIRL_ISLAND_B1F_HIDDEN_FULL_RESTORE",
@@ -945,7 +1370,12 @@
       "flags": [
         153
       ],
-      "detail": "Hidden item; completion uses its original event flag."
+      "detail": "Hidden item (needs Itemfinder) in the west part of Whirl Islands B1F, tile 2,23. Completion uses its original event flag.",
+      "region": "johto",
+      "area": "Whirl Islands B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "full-restore",
+      "spot": "Found on B1F · southeast of northwest island ladder; in the isolated boulder (hidden)"
     },
     {
       "id": "trainer:EVENT_BEAT_TWINS_AMY_AND_MAY",
@@ -7491,6 +7921,1926 @@
       "category": "Pokédex",
       "dexNumber": 251,
       "detail": "Caught flag, not current party/PC ownership."
+    },
+    {
+      "id": "item:EVENT_BURNED_TOWER_1F_X_SPEED",
+      "title": "Burn Heal",
+      "category": "Items",
+      "location": "Burned Tower 1F",
+      "detail": "Item ball in the north-east part of Burned Tower 1F, tile 15,2. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/BurnedTower1F.asm",
+      "flags": [
+        1620
+      ],
+      "region": "johto",
+      "area": "Burned Tower 1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/#pokemon-location-items",
+      "sprite": "burn-heal",
+      "spot": "Found on 1F · dead end at the northeastern corner (requires Rock Smash)"
+    },
+    {
+      "id": "item:EVENT_BURNED_TOWER_1F_BURN_HEAL",
+      "title": "X Speed",
+      "category": "Items",
+      "location": "Burned Tower 1F",
+      "detail": "Item ball in the north part of Burned Tower 1F, tile 7,5. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/BurnedTower1F.asm",
+      "flags": [
+        1621
+      ],
+      "region": "johto",
+      "area": "Burned Tower 1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/#pokemon-location-items",
+      "sprite": "x-speed",
+      "spot": "Found on 1F · in the center area (requires Rock Smash)"
+    },
+    {
+      "id": "item:EVENT_BURNED_TOWER_B1F_HP_UP",
+      "title": "HP Up",
+      "category": "Items",
+      "location": "Burned Tower B1F",
+      "detail": "Item ball in the north-west part of Burned Tower B1F, tile 4,3. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/BurnedTowerB1F.asm",
+      "flags": [
+        1622
+      ],
+      "region": "johto",
+      "area": "Burned Tower B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/#pokemon-location-items",
+      "sprite": "hp-up",
+      "spot": "Found on B1F · in the area accessed by dropping through the northwestern hole"
+    },
+    {
+      "id": "item:EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_REVIVE",
+      "title": "Revive",
+      "category": "Items",
+      "location": "Dark Cave Blackthorn entrance",
+      "detail": "Item ball in the east part of Dark Cave Blackthorn entrance, tile 21,24. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/DarkCaveBlackthornEntrance.asm",
+      "flags": [
+        1697
+      ],
+      "region": "johto",
+      "area": "Dark Cave Blackthorn entrance",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/dark-cave/#pokemon-location-items",
+      "sprite": "revive",
+      "spot": "Found on Blackthorn Entrance · Southeast corner (requires Surf)"
+    },
+    {
+      "id": "item:EVENT_DARK_CAVE_VIOLET_ENTRANCE_POTION",
+      "title": "Potion",
+      "category": "Items",
+      "location": "Dark Cave Violet entrance",
+      "detail": "Item ball in the north-west part of Dark Cave Violet entrance, tile 6,8. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/DarkCaveVioletEntrance.asm",
+      "flags": [
+        1694
+      ],
+      "region": "johto",
+      "area": "Dark Cave Violet entrance",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/dark-cave/#pokemon-location-items",
+      "sprite": "potion",
+      "spot": "Found on Violet Entrance · Near the exit to Route 31"
+    },
+    {
+      "id": "item:EVENT_DARK_CAVE_VIOLET_ENTRANCE_HYPER_POTION",
+      "title": "Hyper Potion",
+      "category": "Items",
+      "location": "Dark Cave Violet entrance",
+      "detail": "Item ball in the north-east part of Dark Cave Violet entrance, tile 35,9. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/DarkCaveVioletEntrance.asm",
+      "flags": [
+        1696
+      ],
+      "region": "johto",
+      "area": "Dark Cave Violet entrance",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/dark-cave/#pokemon-location-items",
+      "sprite": "hyper-potion",
+      "spot": "Found on Violet Entrance · Directly north of the Route 46 entrance in the northeast corner (requires Rock Smash)"
+    },
+    {
+      "id": "item:EVENT_DARK_CAVE_VIOLET_ENTRANCE_FULL_HEAL",
+      "title": "Full Heal",
+      "category": "Items",
+      "location": "Dark Cave Violet entrance",
+      "detail": "Item ball in the east part of Dark Cave Violet entrance, tile 36,22. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/DarkCaveVioletEntrance.asm",
+      "flags": [
+        1695
+      ],
+      "region": "johto",
+      "area": "Dark Cave Violet entrance",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/dark-cave/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": "Found on Violet Entrance · North of the Route 46 entrance (requires Rock Smash)"
+    },
+    {
+      "id": "item:EVENT_GOLDENROD_DEPT_STORE_B1F_AMULET_COIN",
+      "title": "Amulet Coin",
+      "category": "Items",
+      "location": "Goldenrod Dept. Store B1F",
+      "detail": "Item ball in the north-east part of Goldenrod Dept. Store B1F, tile 14,2. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodDeptStoreB1F.asm",
+      "flags": [
+        1654
+      ],
+      "region": "johto",
+      "area": "Goldenrod Dept. Store B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "amulet-coin",
+      "spot": "Visible item ball in the Dept. Store B1F storage area"
+    },
+    {
+      "id": "item:EVENT_GOLDENROD_DEPT_STORE_B1F_BURN_HEAL",
+      "title": "Burn Heal",
+      "category": "Items",
+      "location": "Goldenrod Dept. Store B1F",
+      "detail": "Item ball in the north-west part of Goldenrod Dept. Store B1F, tile 6,3. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodDeptStoreB1F.asm",
+      "flags": [
+        1655
+      ],
+      "region": "johto",
+      "area": "Goldenrod Dept. Store B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "burn-heal",
+      "spot": "Visible item ball in the Dept. Store B1F storage area"
+    },
+    {
+      "id": "item:EVENT_GOLDENROD_DEPT_STORE_B1F_ETHER",
+      "title": "Ether",
+      "category": "Items",
+      "location": "Goldenrod Dept. Store B1F",
+      "detail": "Item ball in the south part of Goldenrod Dept. Store B1F, tile 10,15. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodDeptStoreB1F.asm",
+      "flags": [
+        1653
+      ],
+      "region": "johto",
+      "area": "Goldenrod Dept. Store B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "ether",
+      "spot": "Visible item ball in the Dept. Store B1F storage area"
+    },
+    {
+      "id": "item:EVENT_GOLDENROD_DEPT_STORE_B1F_ULTRA_BALL",
+      "title": "Ultra Ball",
+      "category": "Items",
+      "location": "Goldenrod Dept. Store B1F",
+      "detail": "Item ball in the south-east part of Goldenrod Dept. Store B1F, tile 15,15. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodDeptStoreB1F.asm",
+      "flags": [
+        1656
+      ],
+      "region": "johto",
+      "area": "Goldenrod Dept. Store B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "ultra-ball",
+      "spot": "Visible item ball in the Dept. Store B1F storage area"
+    },
+    {
+      "id": "item:EVENT_GOLDENROD_UNDERGROUND_COIN_CASE",
+      "title": "Coin Case",
+      "category": "Items",
+      "location": "Goldenrod Underground",
+      "detail": "Item ball in the south-west part of Goldenrod Underground, tile 7,25. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodUnderground.asm",
+      "flags": [
+        1650
+      ],
+      "region": "johto",
+      "area": "Goldenrod Underground",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "coin-case",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES_FULL_HEAL",
+      "title": "Full Heal",
+      "category": "Items",
+      "location": "Goldenrod Underground Switch room",
+      "detail": "Item ball in the north part of Goldenrod Underground Switch room, tile 14,9. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "flags": [
+        1652
+      ],
+      "region": "johto",
+      "area": "Goldenrod Underground Switch room",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES_SMOKE_BALL",
+      "title": "Smoke Ball",
+      "category": "Items",
+      "location": "Goldenrod Underground Switch room",
+      "detail": "Item ball in the west part of Goldenrod Underground Switch room, tile 1,12. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "flags": [
+        1651
+      ],
+      "region": "johto",
+      "area": "Goldenrod Underground Switch room",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "smoke-ball",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_MAX_ETHER",
+      "title": "Max Ether",
+      "category": "Items",
+      "location": "Goldenrod Underground Warehouse",
+      "detail": "Item ball in the south-east part of Goldenrod Underground Warehouse, tile 18,15. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/GoldenrodUndergroundWarehouse.asm",
+      "flags": [
+        1657
+      ],
+      "region": "johto",
+      "area": "Goldenrod Underground Warehouse",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/#pokemon-location-items",
+      "sprite": "max-ether",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_ICE_PATH_1F_PP_UP",
+      "title": "PP Up",
+      "category": "Items",
+      "location": "Ice Path 1F",
+      "detail": "Item ball in the east part of Ice Path 1F, tile 32,23. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/IcePath1F.asm",
+      "flags": [
+        1673
+      ],
+      "region": "johto",
+      "area": "Ice Path 1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ice-path/#pokemon-location-items",
+      "sprite": "pp-up",
+      "spot": "Found on 1F · bottom"
+    },
+    {
+      "id": "item:EVENT_ICE_PATH_B1F_IRON",
+      "title": "Iron",
+      "category": "Items",
+      "location": "Ice Path B1F",
+      "detail": "Item ball in the south-west part of Ice Path B1F, tile 5,35. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/IcePathB1F.asm",
+      "flags": [
+        1674
+      ],
+      "region": "johto",
+      "area": "Ice Path B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ice-path/#pokemon-location-items",
+      "sprite": "iron",
+      "spot": "Found on B1F · bottom"
+    },
+    {
+      "id": "item:EVENT_ICE_PATH_B2F_MAHOGANY_SIDE_MAX_POTION",
+      "title": "Max Potion",
+      "category": "Items",
+      "location": "Ice Path B2F Mahogany side",
+      "detail": "Item ball in the north-west part of Ice Path B2F Mahogany side, tile 0,2. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/IcePathB2FMahoganySide.asm",
+      "flags": [
+        1676
+      ],
+      "region": "johto",
+      "area": "Ice Path B2F Mahogany side",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ice-path/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": "Found on B2F Mahogany Side · B2F, northwest corner on the ice of the left portion"
+    },
+    {
+      "id": "item:EVENT_ICE_PATH_B2F_MAHOGANY_SIDE_FULL_HEAL",
+      "title": "Full Heal",
+      "category": "Items",
+      "location": "Ice Path B2F Mahogany side",
+      "detail": "Item ball in the center part of Ice Path B2F Mahogany side, tile 8,9. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/IcePathB2FMahoganySide.asm",
+      "flags": [
+        1675
+      ],
+      "region": "johto",
+      "area": "Ice Path B2F Mahogany side",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ice-path/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": "Found on B2F Mahogany Side · B2F, center of the left portion"
+    },
+    {
+      "id": "item:EVENT_ICE_PATH_B3F_NEVERMELTICE",
+      "title": "Never Melt Ice",
+      "category": "Items",
+      "location": "Ice Path B3F",
+      "detail": "Item ball in the west part of Ice Path B3F, tile 5,7. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/IcePathB3F.asm",
+      "flags": [
+        1678
+      ],
+      "region": "johto",
+      "area": "Ice Path B3F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ice-path/#pokemon-location-items",
+      "sprite": "never-melt-ice",
+      "spot": "Found on B3F · bottom left (on the other side of the breakable rock)"
+    },
+    {
+      "id": "item:EVENT_ILEX_FOREST_REVIVE",
+      "title": "Revive",
+      "category": "Items",
+      "location": "Ilex Forest",
+      "detail": "Item ball in the center part of Ilex Forest, tile 20,32. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/IlexForest.asm",
+      "flags": [
+        1649
+      ],
+      "region": "johto",
+      "area": "Ilex Forest",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ilex-forest/#pokemon-location-items",
+      "sprite": "revive",
+      "spot": "Southeast corner of the forest"
+    },
+    {
+      "id": "item:EVENT_LAKE_OF_RAGE_MAX_ETHER",
+      "title": "Max Ether",
+      "category": "Items",
+      "location": "Lake of Rage",
+      "detail": "Item ball in the north-west part of Lake of Rage, tile 7,10. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/LakeOfRage.asm",
+      "flags": [
+        1605
+      ],
+      "region": "johto",
+      "area": "Lake of Rage",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/lake-of-rage/#pokemon-location-items",
+      "sprite": "max-ether",
+      "spot": "At the end of the middle path, west of the lake (requires Cut)"
+    },
+    {
+      "id": "item:EVENT_MOUNT_MORTAR_1F_INSIDE_MAX_REVIVE",
+      "title": "Max Revive",
+      "category": "Items",
+      "location": "Mt. Mortar 1F Inside",
+      "detail": "Item ball in the north part of Mt. Mortar 1F Inside, tile 16,10. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortar1FInside.asm",
+      "flags": [
+        1662
+      ],
+      "region": "johto",
+      "area": "Mt. Mortar 1F Inside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "max-revive",
+      "spot": "Found on 1F Inside · Northern area, in the indent east of the ladder from 2F (requires Surf and Waterfall)"
+    },
+    {
+      "id": "item:EVENT_MOUNT_MORTAR_1F_INSIDE_HYPER_POTION",
+      "title": "Hyper Potion",
+      "category": "Items",
+      "location": "Mt. Mortar 1F Inside",
+      "detail": "Item ball in the west part of Mt. Mortar 1F Inside, tile 12,21. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortar1FInside.asm",
+      "flags": [
+        1663
+      ],
+      "region": "johto",
+      "area": "Mt. Mortar 1F Inside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "hyper-potion",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_MOUNT_MORTAR_1F_INSIDE_ESCAPE_ROPE",
+      "title": "Escape Rope",
+      "category": "Items",
+      "location": "Mt. Mortar 1F Inside",
+      "detail": "Item ball in the east part of Mt. Mortar 1F Inside, tile 33,22. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortar1FInside.asm",
+      "flags": [
+        1661
+      ],
+      "region": "johto",
+      "area": "Mt. Mortar 1F Inside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "escape-rope",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_MOUNT_MORTAR_1F_OUTSIDE_ETHER",
+      "title": "Ether",
+      "category": "Items",
+      "location": "Mt. Mortar 1F Outside",
+      "detail": "Item ball in the west part of Mt. Mortar 1F Outside, tile 13,15. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortar1FOutside.asm",
+      "flags": [
+        1659
+      ],
+      "region": "johto",
+      "area": "Mt. Mortar 1F Outside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "ether",
+      "spot": "Found on 1F Outside · West side, accessible from the southwestern ladder from 1F (back)"
+    },
+    {
+      "id": "item:EVENT_MOUNT_MORTAR_1F_OUTSIDE_REVIVE",
+      "title": "Guard Spec",
+      "category": "Items",
+      "location": "Mt. Mortar 1F Outside",
+      "detail": "Item ball in the east part of Mt. Mortar 1F Outside, tile 31,18. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortar1FOutside.asm",
+      "flags": [
+        1660
+      ],
+      "region": "johto",
+      "area": "Mt. Mortar 1F Outside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "guard-spec",
+      "spot": "Found on 1F Outside · East side, accessible from the southeastern ladder from 1F (back)"
+    },
+    {
+      "id": "item:EVENT_MOUNT_MORTAR_2F_INSIDE_DRAGON_SCALE",
+      "title": "Dragon Scale",
+      "category": "Items",
+      "location": "Mt. Mortar 2F Inside",
+      "detail": "Item ball in the north part of Mt. Mortar 2F Inside, tile 14,5. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortar2FInside.asm",
+      "flags": [
+        1667
+      ],
+      "region": "johto",
+      "area": "Mt. Mortar 2F Inside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "dragon-scale",
+      "spot": "Found on 2F Inside · On the raised section in the northwest corner"
+    },
+    {
+      "id": "item:EVENT_MOUNT_MORTAR_2F_INSIDE_ESCAPE_ROPE",
+      "title": "Escape Rope",
+      "category": "Items",
+      "location": "Mt. Mortar 2F Inside",
+      "detail": "Item ball in the north-east part of Mt. Mortar 2F Inside, tile 28,5. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortar2FInside.asm",
+      "flags": [
+        1669
+      ],
+      "region": "johto",
+      "area": "Mt. Mortar 2F Inside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "escape-rope",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_MOUNT_MORTAR_2F_INSIDE_ELIXER",
+      "title": "Elixir",
+      "category": "Items",
+      "location": "Mt. Mortar 2F Inside",
+      "detail": "Item ball in the north-west part of Mt. Mortar 2F Inside, tile 8,9. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortar2FInside.asm",
+      "flags": [
+        1668
+      ],
+      "region": "johto",
+      "area": "Mt. Mortar 2F Inside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "elixir",
+      "spot": "Found on 2F Inside · In the northwest corner, southeast of the ladder leading to 1F (back)"
+    },
+    {
+      "id": "item:EVENT_MOUNT_MORTAR_2F_INSIDE_MAX_POTION",
+      "title": "Max Potion",
+      "category": "Items",
+      "location": "Mt. Mortar 2F Inside",
+      "detail": "Item ball in the east part of Mt. Mortar 2F Inside, tile 31,23. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortar2FInside.asm",
+      "flags": [
+        1664
+      ],
+      "region": "johto",
+      "area": "Mt. Mortar 2F Inside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": "Found on 2F Inside · Northeast of the entrance, below the second ledge from the bottom and east of the rectangular raised section"
+    },
+    {
+      "id": "item:EVENT_MOUNT_MORTAR_2F_INSIDE_RARE_CANDY",
+      "title": "Rare Candy",
+      "category": "Items",
+      "location": "Mt. Mortar 2F Inside",
+      "detail": "Item ball in the west part of Mt. Mortar 2F Inside, tile 2,24. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortar2FInside.asm",
+      "flags": [
+        1665
+      ],
+      "region": "johto",
+      "area": "Mt. Mortar 2F Inside",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "rare-candy",
+      "spot": "Found on 2F Inside · In the southwest corner, east of a ledge and below two rocks"
+    },
+    {
+      "id": "item:EVENT_MOUNT_MORTAR_B1F_FULL_HEAL",
+      "title": "Full Heal",
+      "category": "Items",
+      "location": "Mt. Mortar B1F",
+      "detail": "Item ball in the west part of Mt. Mortar B1F, tile 4,16. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortarB1F.asm",
+      "flags": [
+        1671
+      ],
+      "region": "johto",
+      "area": "Mt. Mortar B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": "Found on B1F · On the patch of land across the water, west of the ladder from 1F (requires Surf)"
+    },
+    {
+      "id": "item:EVENT_MOUNT_MORTAR_B1F_HYPER_POTION",
+      "title": "Hyper Potion",
+      "category": "Items",
+      "location": "Mt. Mortar B1F",
+      "detail": "Item ball in the east part of Mt. Mortar B1F, tile 31,17. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/MountMortarB1F.asm",
+      "flags": [
+        1670
+      ],
+      "region": "johto",
+      "area": "Mt. Mortar B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-mortar/#pokemon-location-items",
+      "sprite": "hyper-potion",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_NATIONAL_PARK_PARLYZ_HEAL",
+      "title": "Paralyze Heal",
+      "category": "Items",
+      "location": "National Park",
+      "detail": "Item ball in the north-east part of National Park, tile 35,12. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/NationalPark.asm",
+      "flags": [
+        1624
+      ],
+      "region": "johto",
+      "area": "National Park",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/national-park/#pokemon-location-items",
+      "sprite": "paralyze-heal",
+      "spot": "Behind the fence, near the east gate"
+    },
+    {
+      "id": "item:EVENT_OLIVINE_LIGHTHOUSE_3F_ETHER",
+      "title": "Ether",
+      "category": "Items",
+      "location": "Olivine Lighthouse 3F",
+      "detail": "Item ball in the north part of Olivine Lighthouse 3F, tile 8,2. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/OlivineLighthouse3F.asm",
+      "flags": [
+        1636
+      ],
+      "region": "johto",
+      "area": "Olivine Lighthouse 3F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/olivine-city/#pokemon-location-items",
+      "sprite": "ether",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_OLIVINE_LIGHTHOUSE_5F_RARE_CANDY",
+      "title": "Rare Candy",
+      "category": "Items",
+      "location": "Olivine Lighthouse 5F",
+      "detail": "Item ball in the east part of Olivine Lighthouse 5F, tile 15,12. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/OlivineLighthouse5F.asm",
+      "flags": [
+        1637
+      ],
+      "region": "johto",
+      "area": "Olivine Lighthouse 5F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/olivine-city/#pokemon-location-items",
+      "sprite": "rare-candy",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_OLIVINE_LIGHTHOUSE_5F_GREAT_BALL",
+      "title": "Great Ball",
+      "category": "Items",
+      "location": "Olivine Lighthouse 5F",
+      "detail": "Item ball in the south-west part of Olivine Lighthouse 5F, tile 6,15. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/OlivineLighthouse5F.asm",
+      "flags": [
+        1638
+      ],
+      "region": "johto",
+      "area": "Olivine Lighthouse 5F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/olivine-city/#pokemon-location-items",
+      "sprite": "great-ball",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_OLIVINE_LIGHTHOUSE_6F_SUPER_POTION",
+      "title": "Super Potion",
+      "category": "Items",
+      "location": "Olivine Lighthouse 6F",
+      "detail": "Item ball in the north-west part of Olivine Lighthouse 6F, tile 3,4. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/OlivineLighthouse6F.asm",
+      "flags": [
+        1640
+      ],
+      "region": "johto",
+      "area": "Olivine Lighthouse 6F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/olivine-city/#pokemon-location-items",
+      "sprite": "super-potion",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_ROUTE_29_POTION",
+      "title": "Potion",
+      "category": "Items",
+      "location": "Route 29",
+      "detail": "Item ball in the north-east part of Route 29, tile 48,2. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route29.asm",
+      "flags": [
+        1709
+      ],
+      "region": "johto",
+      "area": "Route 29",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-29/#pokemon-location-items",
+      "sprite": "potion",
+      "spot": "East of the northeasternmost grass patch"
+    },
+    {
+      "id": "item:EVENT_ROUTE_31_ANTIDOTE",
+      "title": "Antidote",
+      "category": "Items",
+      "location": "Route 31",
+      "detail": "Item ball in the north-east part of Route 31, tile 29,5. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route31.asm",
+      "flags": [
+        1710
+      ],
+      "region": "johto",
+      "area": "Route 31",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-31/#pokemon-location-items",
+      "sprite": "antidote",
+      "spot": "West of the entrance to Dark Cave"
+    },
+    {
+      "id": "item:EVENT_ROUTE_31_POKE_BALL",
+      "title": "Poke Ball",
+      "category": "Items",
+      "location": "Route 31",
+      "detail": "Item ball in the south part of Route 31, tile 21,13. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route31.asm",
+      "flags": [
+        1711
+      ],
+      "region": "johto",
+      "area": "Route 31",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-31/#pokemon-location-items",
+      "sprite": "poke-ball",
+      "spot": "Near Bug Catcher Wade"
+    },
+    {
+      "id": "item:EVENT_ROUTE_32_POTION",
+      "title": "Potion",
+      "category": "Items",
+      "location": "Route 32",
+      "detail": "Item ball in the west part of Route 32, tile 3,30. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route32.asm",
+      "flags": [
+        1713
+      ],
+      "region": "johto",
+      "area": "Route 32",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-32/#pokemon-location-items",
+      "sprite": "potion",
+      "spot": "In the tall grass, west of Picnicker Liz"
+    },
+    {
+      "id": "item:EVENT_ROUTE_32_GREAT_BALL",
+      "title": "Great Ball",
+      "category": "Items",
+      "location": "Route 32",
+      "detail": "Item ball in the west part of Route 32, tile 6,53. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route32.asm",
+      "flags": [
+        1712
+      ],
+      "region": "johto",
+      "area": "Route 32",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-32/#pokemon-location-items",
+      "sprite": "great-ball",
+      "spot": "Southwest of the pier, in a patch of grass"
+    },
+    {
+      "id": "item:EVENT_ROUTE_42_ULTRA_BALL",
+      "title": "Ultra Ball",
+      "category": "Items",
+      "location": "Route 42",
+      "detail": "Item ball in the north-west part of Route 42, tile 6,4. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route42.asm",
+      "flags": [
+        1715
+      ],
+      "region": "johto",
+      "area": "Route 42",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-42/#pokemon-location-items",
+      "sprite": "ultra-ball",
+      "spot": "In the indent next to the western entrance to Mt. Mortar"
+    },
+    {
+      "id": "item:EVENT_ROUTE_42_SUPER_POTION",
+      "title": "Super Potion",
+      "category": "Items",
+      "location": "Route 42",
+      "detail": "Item ball in the center part of Route 42, tile 33,8. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route42.asm",
+      "flags": [
+        1716
+      ],
+      "region": "johto",
+      "area": "Route 42",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-42/#pokemon-location-items",
+      "sprite": "super-potion",
+      "spot": "Northeast of the Apricorn grove (requires Surf)"
+    },
+    {
+      "id": "item:EVENT_ROUTE_43_MAX_ETHER",
+      "title": "Max Ether",
+      "category": "Items",
+      "location": "Route 43",
+      "detail": "Item ball in the center part of Route 43, tile 12,32. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route43.asm",
+      "flags": [
+        1717
+      ],
+      "region": "johto",
+      "area": "Route 43",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-43/#pokemon-location-items",
+      "sprite": "max-ether",
+      "spot": "West of the toll gate"
+    },
+    {
+      "id": "item:EVENT_ROUTE_44_ULTRA_BALL",
+      "title": "Ultra Ball",
+      "category": "Items",
+      "location": "Route 44",
+      "detail": "Item ball in the north-east part of Route 44, tile 43,2. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route44.asm",
+      "flags": [
+        1719
+      ],
+      "region": "johto",
+      "area": "Route 44",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-44/#pokemon-location-items",
+      "sprite": "ultra-ball",
+      "spot": "Northeast of the ponds"
+    },
+    {
+      "id": "item:EVENT_ROUTE_44_MAX_REVIVE",
+      "title": "Max Revive",
+      "category": "Items",
+      "location": "Route 44",
+      "detail": "Item ball in the center part of Route 44, tile 30,8. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route44.asm",
+      "flags": [
+        1718
+      ],
+      "region": "johto",
+      "area": "Route 44",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-44/#pokemon-location-items",
+      "sprite": "max-revive",
+      "spot": "In the patch of grass in the middle of the lake (requires Surf)"
+    },
+    {
+      "id": "item:EVENT_ROUTE_45_ELIXER",
+      "title": "Elixir",
+      "category": "Items",
+      "location": "Route 45",
+      "detail": "Item ball in the north-west part of Route 45, tile 4,21. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route45.asm",
+      "flags": [
+        1722
+      ],
+      "region": "johto",
+      "area": "Route 45",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-45/#pokemon-location-items",
+      "sprite": "elixir",
+      "spot": "Left path"
+    },
+    {
+      "id": "item:EVENT_ROUTE_45_MAX_POTION",
+      "title": "Max Potion",
+      "category": "Items",
+      "location": "Route 45",
+      "detail": "Item ball in the center part of Route 45, tile 8,33. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route45.asm",
+      "flags": [
+        1723
+      ],
+      "region": "johto",
+      "area": "Route 45",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-45/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": "Center path"
+    },
+    {
+      "id": "item:EVENT_ROUTE_45_X_SPECIAL",
+      "title": "X Sp Atk",
+      "category": "Items",
+      "location": "Route 45",
+      "detail": "Item ball in the west part of Route 45, tile 6,51. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route45.asm",
+      "flags": [
+        1720
+      ],
+      "region": "johto",
+      "area": "Route 45",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-45/#pokemon-location-items",
+      "sprite": "x-sp-atk",
+      "spot": "Left path"
+    },
+    {
+      "id": "item:EVENT_ROUTE_45_REVIVE",
+      "title": "Revive",
+      "category": "Items",
+      "location": "Route 45",
+      "detail": "Item ball in the south-west part of Route 45, tile 6,66. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route45.asm",
+      "flags": [
+        1721
+      ],
+      "region": "johto",
+      "area": "Route 45",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-45/#pokemon-location-items",
+      "sprite": "revive",
+      "spot": "Left path"
+    },
+    {
+      "id": "item:EVENT_ROUTE_46_DIRE_HIT",
+      "title": "Dire Hit",
+      "category": "Items",
+      "location": "Route 46",
+      "detail": "Item ball in the west part of Route 46, tile 0,12. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route46.asm",
+      "flags": [
+        1724
+      ],
+      "region": "johto",
+      "area": "Route 46",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-46/#pokemon-location-items",
+      "sprite": "dire-hit",
+      "spot": "West of Camper Ted"
+    },
+    {
+      "id": "item:EVENT_SILVER_CAVE_ITEM_ROOMS_MAX_REVIVE",
+      "title": "Max Revive",
+      "category": "Items",
+      "location": "Mt. Silver Item Rooms",
+      "detail": "Item ball in the north-west part of Mt. Silver Item Rooms, tile 6,3. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SilverCaveItemRooms.asm",
+      "flags": [
+        1692
+      ],
+      "region": "johto",
+      "area": "Mt. Silver Item Rooms",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/#pokemon-location-items",
+      "sprite": "max-revive",
+      "spot": "Found on Item Rooms · Visible item ball in the side chambers"
+    },
+    {
+      "id": "item:EVENT_SILVER_CAVE_ITEM_ROOMS_FULL_RESTORE",
+      "title": "Full Restore",
+      "category": "Items",
+      "location": "Mt. Silver Item Rooms",
+      "detail": "Item ball in the east part of Mt. Silver Item Rooms, tile 15,11. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SilverCaveItemRooms.asm",
+      "flags": [
+        1693
+      ],
+      "region": "johto",
+      "area": "Mt. Silver Item Rooms",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/#pokemon-location-items",
+      "sprite": "full-restore",
+      "spot": "Found on Item Rooms · Visible item ball in the side chambers"
+    },
+    {
+      "id": "item:EVENT_SILVER_CAVE_ROOM_1_MAX_ELIXER",
+      "title": "Max Elixir",
+      "category": "Items",
+      "location": "Mt. Silver Room 1",
+      "detail": "Item ball in the north-west part of Mt. Silver Room 1, tile 4,9. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SilverCaveRoom1.asm",
+      "flags": [
+        1689
+      ],
+      "region": "johto",
+      "area": "Mt. Silver Room 1",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/#pokemon-location-items",
+      "sprite": "max-elixir",
+      "spot": "Found on Room 1 · Visible item ball on 1F"
+    },
+    {
+      "id": "item:EVENT_SILVER_CAVE_ROOM_1_X_ACCURACY",
+      "title": "X Accuracy",
+      "category": "Items",
+      "location": "Mt. Silver Room 1",
+      "detail": "Item ball in the south-east part of Mt. Silver Room 1, tile 15,29. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SilverCaveRoom1.asm",
+      "flags": [
+        1690
+      ],
+      "region": "johto",
+      "area": "Mt. Silver Room 1",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/#pokemon-location-items",
+      "sprite": "x-accuracy",
+      "spot": "Found on Room 1 · Visible item ball on 1F"
+    },
+    {
+      "id": "item:EVENT_SILVER_CAVE_ROOM_1_ESCAPE_ROPE",
+      "title": "Escape Rope",
+      "category": "Items",
+      "location": "Mt. Silver Room 1",
+      "detail": "Item ball in the south-west part of Mt. Silver Room 1, tile 5,30. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SilverCaveRoom1.asm",
+      "flags": [
+        1691
+      ],
+      "region": "johto",
+      "area": "Mt. Silver Room 1",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/#pokemon-location-items",
+      "sprite": "escape-rope",
+      "spot": "Found on Room 1 · Visible item ball on 1F"
+    },
+    {
+      "id": "item:EVENT_SLOWPOKE_WELL_B1F_SUPER_POTION",
+      "title": "Super Potion",
+      "category": "Items",
+      "location": "Slowpoke Well B1F",
+      "detail": "Item ball in the north part of Slowpoke Well B1F, tile 10,3. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SlowpokeWellB1F.asm",
+      "flags": [
+        1634
+      ],
+      "region": "johto",
+      "area": "Slowpoke Well B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/slowpoke-well/#pokemon-location-items",
+      "sprite": "super-potion",
+      "spot": "Found on B1F · in the center of the platform in the northeast"
+    },
+    {
+      "id": "item:EVENT_SPROUT_TOWER_1F_PARLYZ_HEAL",
+      "title": "Paralyze Heal",
+      "category": "Items",
+      "location": "Sprout Tower 1F",
+      "detail": "Item ball in the east part of Sprout Tower 1F, tile 16,7. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SproutTower1F.asm",
+      "flags": [
+        1607
+      ],
+      "region": "johto",
+      "area": "Sprout Tower 1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/sprout-tower/#pokemon-location-items",
+      "sprite": "paralyze-heal",
+      "spot": "Found on 1F · in the east area of the floor, accessible from 2F"
+    },
+    {
+      "id": "item:EVENT_SPROUT_TOWER_2F_X_DEFEND",
+      "title": "X Defense",
+      "category": "Items",
+      "location": "Sprout Tower 2F",
+      "detail": "Item ball in the north-west part of Sprout Tower 2F, tile 3,1. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SproutTower2F.asm",
+      "flags": [
+        1608
+      ],
+      "region": "johto",
+      "area": "Sprout Tower 2F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/sprout-tower/#pokemon-location-items",
+      "sprite": "x-defense",
+      "spot": "Found on 2F · in the northwest area of the floor, accessible from 1F"
+    },
+    {
+      "id": "item:EVENT_SPROUT_TOWER_3F_ESCAPE_ROPE",
+      "title": "Escape Rope",
+      "category": "Items",
+      "location": "Sprout Tower 3F",
+      "detail": "Item ball in the north-east part of Sprout Tower 3F, tile 14,1. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SproutTower3F.asm",
+      "flags": [
+        1610
+      ],
+      "region": "johto",
+      "area": "Sprout Tower 3F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/sprout-tower/#pokemon-location-items",
+      "sprite": "escape-rope",
+      "spot": "Found on 3F · east of Li"
+    },
+    {
+      "id": "item:EVENT_SPROUT_TOWER_3F_POTION",
+      "title": "Potion",
+      "category": "Items",
+      "location": "Sprout Tower 3F",
+      "detail": "Item ball in the south-west part of Sprout Tower 3F, tile 6,14. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/SproutTower3F.asm",
+      "flags": [
+        1609
+      ],
+      "region": "johto",
+      "area": "Sprout Tower 3F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/sprout-tower/#pokemon-location-items",
+      "sprite": "potion",
+      "spot": "Found on 3F · west of the ladder to 2F"
+    },
+    {
+      "id": "item:EVENT_TEAM_ROCKET_BASE_B1F_HYPER_POTION",
+      "title": "Hyper Potion",
+      "category": "Items",
+      "location": "Team Rocket HQ B1F",
+      "detail": "Item ball in the east part of Team Rocket HQ B1F, tile 27,6. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TeamRocketBaseB1F.asm",
+      "flags": [
+        1641
+      ],
+      "region": "johto",
+      "area": "Team Rocket HQ B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/team-rocket-hq/#pokemon-location-items",
+      "sprite": "hyper-potion",
+      "spot": "Found on B1F · in the east"
+    },
+    {
+      "id": "item:EVENT_TEAM_ROCKET_BASE_B1F_X_ACCURACY",
+      "title": "X Accuracy",
+      "category": "Items",
+      "location": "Team Rocket HQ B1F",
+      "detail": "Item ball in the east part of Team Rocket HQ B1F, tile 21,12. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TeamRocketBaseB1F.asm",
+      "flags": [
+        1643
+      ],
+      "region": "johto",
+      "area": "Team Rocket HQ B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/team-rocket-hq/#pokemon-location-items",
+      "sprite": "x-accuracy",
+      "spot": "Found on B1F · in the room with the computer"
+    },
+    {
+      "id": "item:EVENT_TEAM_ROCKET_BASE_B1F_NUGGET",
+      "title": "Nugget",
+      "category": "Items",
+      "location": "Team Rocket HQ B1F",
+      "detail": "Item ball in the south part of Team Rocket HQ B1F, tile 14,15. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TeamRocketBaseB1F.asm",
+      "flags": [
+        1642
+      ],
+      "region": "johto",
+      "area": "Team Rocket HQ B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/team-rocket-hq/#pokemon-location-items",
+      "sprite": "nugget",
+      "spot": "Found on B1F · in the southwest corner"
+    },
+    {
+      "id": "item:EVENT_TEAM_ROCKET_BASE_B3F_ICE_HEAL",
+      "title": "Ice Heal",
+      "category": "Items",
+      "location": "Team Rocket HQ B3F",
+      "detail": "Item ball in the north part of Team Rocket HQ B3F, tile 17,2. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TeamRocketBaseB3F.asm",
+      "flags": [
+        1648
+      ],
+      "region": "johto",
+      "area": "Team Rocket HQ B3F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/team-rocket-hq/#pokemon-location-items",
+      "sprite": "ice-heal",
+      "spot": "Found on B3F · in the northwest corner of the corridor around the room"
+    },
+    {
+      "id": "item:EVENT_TEAM_ROCKET_BASE_B3F_PROTEIN",
+      "title": "Protein",
+      "category": "Items",
+      "location": "Team Rocket HQ B3F",
+      "detail": "Item ball in the east part of Team Rocket HQ B3F, tile 28,9. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TeamRocketBaseB3F.asm",
+      "flags": [
+        1647
+      ],
+      "region": "johto",
+      "area": "Team Rocket HQ B3F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/team-rocket-hq/#pokemon-location-items",
+      "sprite": "protein",
+      "spot": "Found on B3F · eastern corridor"
+    },
+    {
+      "id": "item:EVENT_TEAM_ROCKET_BASE_B3F_FULL_HEAL",
+      "title": "Full Heal",
+      "category": "Items",
+      "location": "Team Rocket HQ B3F",
+      "detail": "Item ball in the west part of Team Rocket HQ B3F, tile 1,12. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TeamRocketBaseB3F.asm",
+      "flags": [
+        1645
+      ],
+      "region": "johto",
+      "area": "Team Rocket HQ B3F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/team-rocket-hq/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": "Found on B3F · in the southwest corner"
+    },
+    {
+      "id": "item:EVENT_TEAM_ROCKET_BASE_B3F_DIRE_HIT",
+      "title": "Dire Hit",
+      "category": "Items",
+      "location": "Team Rocket HQ B3F",
+      "detail": "Item ball in the west part of Team Rocket HQ B3F, tile 3,12. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TeamRocketBaseB3F.asm",
+      "flags": [
+        1646
+      ],
+      "region": "johto",
+      "area": "Team Rocket HQ B3F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/team-rocket-hq/#pokemon-location-items",
+      "sprite": "dire-hit",
+      "spot": "Found on B3F · in the southwest corner"
+    },
+    {
+      "id": "item:EVENT_TIN_TOWER_3F_FULL_HEAL",
+      "title": "Full Heal",
+      "category": "Items",
+      "location": "Tin Tower 3F",
+      "detail": "Item ball in the south-west part of Tin Tower 3F, tile 3,14. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TinTower3F.asm",
+      "flags": [
+        1611
+      ],
+      "region": "johto",
+      "area": "Tin Tower 3F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tin-tower/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_TIN_TOWER_4F_ULTRA_BALL",
+      "title": "Ultra Ball",
+      "category": "Items",
+      "location": "Tin Tower 4F",
+      "detail": "Item ball in the east part of Tin Tower 4F, tile 14,10. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TinTower4F.asm",
+      "flags": [
+        1612
+      ],
+      "region": "johto",
+      "area": "Tin Tower 4F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tin-tower/#pokemon-location-items",
+      "sprite": "ultra-ball",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_TIN_TOWER_4F_ESCAPE_ROPE",
+      "title": "Escape Rope",
+      "category": "Items",
+      "location": "Tin Tower 4F",
+      "detail": "Item ball in the west part of Tin Tower 4F, tile 2,12. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TinTower4F.asm",
+      "flags": [
+        1614
+      ],
+      "region": "johto",
+      "area": "Tin Tower 4F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tin-tower/#pokemon-location-items",
+      "sprite": "escape-rope",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_TIN_TOWER_4F_SUPER_POTION",
+      "title": "Super Potion",
+      "category": "Items",
+      "location": "Tin Tower 4F",
+      "detail": "Item ball in the south-east part of Tin Tower 4F, tile 17,14. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TinTower4F.asm",
+      "flags": [
+        1613
+      ],
+      "region": "johto",
+      "area": "Tin Tower 4F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tin-tower/#pokemon-location-items",
+      "sprite": "super-potion",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_TIN_TOWER_5F_RARE_CANDY",
+      "title": "Rare Candy",
+      "category": "Items",
+      "location": "Tin Tower 5F",
+      "detail": "Item ball in the center part of Tin Tower 5F, tile 9,9. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TinTower5F.asm",
+      "flags": [
+        1615
+      ],
+      "region": "johto",
+      "area": "Tin Tower 5F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tin-tower/#pokemon-location-items",
+      "sprite": "rare-candy",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_TIN_TOWER_7F_MAX_REVIVE",
+      "title": "Max Revive",
+      "category": "Items",
+      "location": "Tin Tower 7F",
+      "detail": "Item ball in the north-east part of Tin Tower 7F, tile 16,1. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TinTower7F.asm",
+      "flags": [
+        1616
+      ],
+      "region": "johto",
+      "area": "Tin Tower 7F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tin-tower/#pokemon-location-items",
+      "sprite": "max-revive",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_TIN_TOWER_8F_FULL_RESTORE",
+      "title": "Full Restore",
+      "category": "Items",
+      "location": "Tin Tower 8F",
+      "detail": "Item ball in the north-west part of Tin Tower 8F, tile 3,1. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TinTower8F.asm",
+      "flags": [
+        1619
+      ],
+      "region": "johto",
+      "area": "Tin Tower 8F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tin-tower/#pokemon-location-items",
+      "sprite": "full-restore",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_TIN_TOWER_8F_MAX_ELIXER",
+      "title": "Max Elixir",
+      "category": "Items",
+      "location": "Tin Tower 8F",
+      "detail": "Item ball in the center part of Tin Tower 8F, tile 11,6. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TinTower8F.asm",
+      "flags": [
+        1618
+      ],
+      "region": "johto",
+      "area": "Tin Tower 8F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tin-tower/#pokemon-location-items",
+      "sprite": "max-elixir",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_TIN_TOWER_8F_NUGGET",
+      "title": "Nugget",
+      "category": "Items",
+      "location": "Tin Tower 8F",
+      "detail": "Item ball in the south part of Tin Tower 8F, tile 7,13. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TinTower8F.asm",
+      "flags": [
+        1617
+      ],
+      "region": "johto",
+      "area": "Tin Tower 8F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tin-tower/#pokemon-location-items",
+      "sprite": "nugget",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_UNION_CAVE_1F_POTION",
+      "title": "Potion",
+      "category": "Items",
+      "location": "Union Cave 1F",
+      "detail": "Item ball in the north-west part of Union Cave 1F, tile 4,2. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/UnionCave1F.asm",
+      "flags": [
+        1627
+      ],
+      "region": "johto",
+      "area": "Union Cave 1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/union-cave/#pokemon-location-items",
+      "sprite": "potion",
+      "spot": "Found on 1F · northwest corner"
+    },
+    {
+      "id": "item:EVENT_UNION_CAVE_1F_X_ATTACK",
+      "title": "X Attack",
+      "category": "Items",
+      "location": "Union Cave 1F",
+      "detail": "Item ball in the west part of Union Cave 1F, tile 4,17. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/UnionCave1F.asm",
+      "flags": [
+        1628
+      ],
+      "region": "johto",
+      "area": "Union Cave 1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/union-cave/#pokemon-location-items",
+      "sprite": "x-attack",
+      "spot": "Found on 1F · west of Firebreather Bill"
+    },
+    {
+      "id": "item:EVENT_UNION_CAVE_1F_GREAT_BALL",
+      "title": "Great Ball",
+      "category": "Items",
+      "location": "Union Cave 1F",
+      "detail": "Item ball in the east part of Union Cave 1F, tile 17,21. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/UnionCave1F.asm",
+      "flags": [
+        1626
+      ],
+      "region": "johto",
+      "area": "Union Cave 1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/union-cave/#pokemon-location-items",
+      "sprite": "great-ball",
+      "spot": "Found on 1F · southeast of Firebreather Bill"
+    },
+    {
+      "id": "item:EVENT_UNION_CAVE_1F_AWAKENING",
+      "title": "Awakening",
+      "category": "Items",
+      "location": "Union Cave 1F",
+      "detail": "Item ball in the south part of Union Cave 1F, tile 12,33. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/UnionCave1F.asm",
+      "flags": [
+        1629
+      ],
+      "region": "johto",
+      "area": "Union Cave 1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/union-cave/#pokemon-location-items",
+      "sprite": "awakening",
+      "spot": "Found on 1F · west of the Route 33 exit"
+    },
+    {
+      "id": "item:EVENT_UNION_CAVE_B1F_X_DEFEND",
+      "title": "X Defense",
+      "category": "Items",
+      "location": "Union Cave B1F",
+      "detail": "Item ball in the east part of Union Cave B1F, tile 17,23. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/UnionCaveB1F.asm",
+      "flags": [
+        1631
+      ],
+      "region": "johto",
+      "area": "Union Cave B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/union-cave/#pokemon-location-items",
+      "sprite": "x-defense",
+      "spot": "Found on B1F · east of the ladder from 1F"
+    },
+    {
+      "id": "item:EVENT_UNION_CAVE_B2F_ELIXER",
+      "title": "Elixir",
+      "category": "Items",
+      "location": "Union Cave B2F",
+      "detail": "Item ball in the north-east part of Union Cave B2F, tile 16,2. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/UnionCaveB2F.asm",
+      "flags": [
+        1632
+      ],
+      "region": "johto",
+      "area": "Union Cave B2F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/union-cave/#pokemon-location-items",
+      "sprite": "elixir",
+      "spot": "Found on B2F · northeast corner"
+    },
+    {
+      "id": "item:EVENT_UNION_CAVE_B2F_HYPER_POTION",
+      "title": "Hyper Potion",
+      "category": "Items",
+      "location": "Union Cave B2F",
+      "detail": "Item ball in the center part of Union Cave B2F, tile 12,19. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/UnionCaveB2F.asm",
+      "flags": [
+        1633
+      ],
+      "region": "johto",
+      "area": "Union Cave B2F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/union-cave/#pokemon-location-items",
+      "sprite": "hyper-potion",
+      "spot": "Found on B2F · northwest of Ace Trainer Nick"
+    },
+    {
+      "id": "item:EVENT_VIOLET_CITY_PP_UP",
+      "title": "PP Up",
+      "category": "Items",
+      "location": "Violet City",
+      "detail": "Item ball in the north-west part of Violet City, tile 4,1. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/VioletCity.asm",
+      "flags": [
+        1603
+      ],
+      "region": "johto",
+      "area": "Violet City",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/violet-city/#pokemon-location-items",
+      "sprite": "pp-up",
+      "spot": "On the land across the western water (requires Surf)"
+    },
+    {
+      "id": "item:EVENT_VIOLET_CITY_RARE_CANDY",
+      "title": "Rare Candy",
+      "category": "Items",
+      "location": "Violet City",
+      "detail": "Item ball in the north-east part of Violet City, tile 35,5. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/VioletCity.asm",
+      "flags": [
+        1604
+      ],
+      "region": "johto",
+      "area": "Violet City",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/violet-city/#pokemon-location-items",
+      "sprite": "rare-candy",
+      "spot": "On the land across the eastern water (requires Surf)"
+    },
+    {
+      "id": "item:EVENT_WHIRL_ISLAND_B1F_NUGGET",
+      "title": "Nugget",
+      "category": "Items",
+      "location": "Whirl Islands B1F",
+      "detail": "Item ball in the north part of Whirl Islands B1F, tile 17,8. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/WhirlIslandB1F.asm",
+      "flags": [
+        1684
+      ],
+      "region": "johto",
+      "area": "Whirl Islands B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "nugget",
+      "spot": "Found on B1F · near center of northern edge of room"
+    },
+    {
+      "id": "item:EVENT_WHIRL_ISLAND_B1F_FULL_RESTORE",
+      "title": "Full Restore",
+      "category": "Items",
+      "location": "Whirl Islands B1F",
+      "detail": "Item ball in the west part of Whirl Islands B1F, tile 7,13. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/WhirlIslandB1F.asm",
+      "flags": [
+        1681
+      ],
+      "region": "johto",
+      "area": "Whirl Islands B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "full-restore",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_WHIRL_ISLAND_B1F_CARBOS",
+      "title": "Carbos",
+      "category": "Items",
+      "location": "Whirl Islands B1F",
+      "detail": "Item ball in the west part of Whirl Islands B1F, tile 2,18. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/WhirlIslandB1F.asm",
+      "flags": [
+        1682
+      ],
+      "region": "johto",
+      "area": "Whirl Islands B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "carbos",
+      "spot": "Found on B1F · southwest of northwest island ladder"
+    },
+    {
+      "id": "item:EVENT_WHIRL_ISLAND_B1F_CALCIUM",
+      "title": "Calcium",
+      "category": "Items",
+      "location": "Whirl Islands B1F",
+      "detail": "Item ball in the east part of Whirl Islands B1F, tile 33,23. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/WhirlIslandB1F.asm",
+      "flags": [
+        1683
+      ],
+      "region": "johto",
+      "area": "Whirl Islands B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "calcium",
+      "spot": "Found on B1F · northeast of southeast island ladder"
+    },
+    {
+      "id": "item:EVENT_WHIRL_ISLAND_B1F_ESCAPE_ROPE",
+      "title": "Escape Rope",
+      "category": "Items",
+      "location": "Whirl Islands B1F",
+      "detail": "Item ball in the south part of Whirl Islands B1F, tile 19,26. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/WhirlIslandB1F.asm",
+      "flags": [
+        1685
+      ],
+      "region": "johto",
+      "area": "Whirl Islands B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "escape-rope",
+      "spot": "Found on B1F · east of southwest island ladder"
+    },
+    {
+      "id": "item:EVENT_WHIRL_ISLAND_B2F_MAX_REVIVE",
+      "title": "Max Revive",
+      "category": "Items",
+      "location": "Whirl Islands B2F",
+      "detail": "Item ball in the north-west part of Whirl Islands B2F, tile 6,4. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/WhirlIslandB2F.asm",
+      "flags": [
+        1687
+      ],
+      "region": "johto",
+      "area": "Whirl Islands B2F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "max-revive",
+      "spot": "Found on B2F · west of main ladder located at the top"
+    },
+    {
+      "id": "item:EVENT_WHIRL_ISLAND_B2F_FULL_RESTORE",
+      "title": "Full Restore",
+      "category": "Items",
+      "location": "Whirl Islands B2F",
+      "detail": "Item ball in the north part of Whirl Islands B2F, tile 10,11. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/WhirlIslandB2F.asm",
+      "flags": [
+        1686
+      ],
+      "region": "johto",
+      "area": "Whirl Islands B2F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "full-restore",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_WHIRL_ISLAND_B2F_MAX_ELIXER",
+      "title": "Max Elixir",
+      "category": "Items",
+      "location": "Whirl Islands B2F",
+      "detail": "Item ball in the west part of Whirl Islands B2F, tile 5,12. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/WhirlIslandB2F.asm",
+      "flags": [
+        1688
+      ],
+      "region": "johto",
+      "area": "Whirl Islands B2F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "max-elixir",
+      "spot": "Found on B2F · southwest of ladder in enclosed section"
+    },
+    {
+      "id": "item:EVENT_WHIRL_ISLAND_NE_ULTRA_BALL",
+      "title": "Ultra Ball",
+      "category": "Items",
+      "location": "Whirl Islands NE",
+      "detail": "Item ball in the center part of Whirl Islands NE, tile 11,11. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/WhirlIslandNE.asm",
+      "flags": [
+        1679
+      ],
+      "region": "johto",
+      "area": "Whirl Islands NE",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "ultra-ball",
+      "spot": "Found on NE · Northeast island entrance; next to southern ladder"
+    },
+    {
+      "id": "item:EVENT_WHIRL_ISLAND_SW_GUARD_SPEC",
+      "title": "Guard Spec",
+      "category": "Items",
+      "location": "Whirl Islands SW",
+      "detail": "Item ball in the north-east part of Whirl Islands SW, tile 15,2. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/WhirlIslandSW.asm",
+      "flags": [
+        1680
+      ],
+      "region": "johto",
+      "area": "Whirl Islands SW",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/whirl-islands/#pokemon-location-items",
+      "sprite": "guard-spec",
+      "spot": "Found on SW · Southwestern island section"
+    },
+    {
+      "id": "item:EVENT_PICKED_UP_FOCUS_BAND",
+      "title": "Focus Band",
+      "category": "Items",
+      "location": "Fighting Dojo (Saffron)",
+      "detail": "Item ball in the north-west part of Fighting Dojo (Saffron), tile 3,1. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/FightingDojo.asm",
+      "flags": [
+        1917
+      ],
+      "region": "kanto",
+      "area": "Fighting Dojo (Saffron)",
+      "rankedboost": "",
+      "sprite": "focus-band",
+      "spot": ""
+    },
+    {
+      "id": "item:EVENT_ROCK_TUNNEL_1F_ELIXER",
+      "title": "Elixir",
+      "category": "Items",
+      "location": "Rock Tunnel 1F",
+      "detail": "Item ball in the west part of Rock Tunnel 1F, tile 4,18. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/RockTunnel1F.asm",
+      "flags": [
+        1918
+      ],
+      "region": "kanto",
+      "area": "Rock Tunnel 1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/rock-tunnel/#pokemon-location-items",
+      "sprite": "elixir",
+      "spot": "Found on 1F · southwest"
+    },
+    {
+      "id": "item:EVENT_ROCK_TUNNEL_B1F_REVIVE",
+      "title": "Revive",
+      "category": "Items",
+      "location": "Rock Tunnel B1F",
+      "detail": "Item ball in the north part of Rock Tunnel B1F, tile 15,2. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/RockTunnelB1F.asm",
+      "flags": [
+        1922
+      ],
+      "region": "kanto",
+      "area": "Rock Tunnel B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/rock-tunnel/#pokemon-location-items",
+      "sprite": "revive",
+      "spot": "Found on B1F · north"
+    },
+    {
+      "id": "item:EVENT_ROCK_TUNNEL_B1F_PP_UP",
+      "title": "PP Up",
+      "category": "Items",
+      "location": "Rock Tunnel B1F",
+      "detail": "Item ball in the west part of Rock Tunnel B1F, tile 6,17. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/RockTunnelB1F.asm",
+      "flags": [
+        1921
+      ],
+      "region": "kanto",
+      "area": "Rock Tunnel B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/rock-tunnel/#pokemon-location-items",
+      "sprite": "pp-up",
+      "spot": "Found on B1F · west"
+    },
+    {
+      "id": "item:EVENT_ROCK_TUNNEL_B1F_IRON",
+      "title": "Iron",
+      "category": "Items",
+      "location": "Rock Tunnel B1F",
+      "detail": "Item ball in the south-west part of Rock Tunnel B1F, tile 7,25. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/RockTunnelB1F.asm",
+      "flags": [
+        1920
+      ],
+      "region": "kanto",
+      "area": "Rock Tunnel B1F",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/rock-tunnel/#pokemon-location-items",
+      "sprite": "iron",
+      "spot": "Found on B1F · south"
+    },
+    {
+      "id": "item:EVENT_ROUTE_12_CALCIUM",
+      "title": "Calcium",
+      "category": "Items",
+      "location": "Route 12",
+      "detail": "Item ball in the south-west part of Route 12, tile 5,43. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route12.asm",
+      "flags": [
+        1928
+      ],
+      "region": "kanto",
+      "area": "Route 12",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-12/#pokemon-location-items",
+      "sprite": "calcium",
+      "spot": "Visible item ball along the route"
+    },
+    {
+      "id": "item:EVENT_ROUTE_12_NUGGET",
+      "title": "Nugget",
+      "category": "Items",
+      "location": "Route 12",
+      "detail": "Item ball in the south-west part of Route 12, tile 5,51. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route12.asm",
+      "flags": [
+        1929
+      ],
+      "region": "kanto",
+      "area": "Route 12",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-12/#pokemon-location-items",
+      "sprite": "nugget",
+      "spot": "Visible item ball along the route"
+    },
+    {
+      "id": "item:EVENT_ROUTE_15_PP_UP",
+      "title": "PP Up",
+      "category": "Items",
+      "location": "Route 15",
+      "detail": "Item ball in the north-west part of Route 15, tile 12,5. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route15.asm",
+      "flags": [
+        1930
+      ],
+      "region": "kanto",
+      "area": "Route 15",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-15/#pokemon-location-items",
+      "sprite": "pp-up",
+      "spot": "Visible item ball along the route"
+    },
+    {
+      "id": "item:EVENT_ROUTE_2_CARBOS",
+      "title": "Carbos",
+      "category": "Items",
+      "location": "Route 2",
+      "detail": "Item ball in the north-east part of Route 2, tile 19,2. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route2.asm",
+      "flags": [
+        1925
+      ],
+      "region": "kanto",
+      "area": "Route 2",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-2/#pokemon-location-items",
+      "sprite": "carbos",
+      "spot": "Visible item ball along the route"
+    },
+    {
+      "id": "item:EVENT_ROUTE_2_MAX_POTION",
+      "title": "Max Potion",
+      "category": "Items",
+      "location": "Route 2",
+      "detail": "Item ball in the west part of Route 2, tile 2,23. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route2.asm",
+      "flags": [
+        1924
+      ],
+      "region": "kanto",
+      "area": "Route 2",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-2/#pokemon-location-items",
+      "sprite": "max-potion",
+      "spot": "Visible item ball along the route"
+    },
+    {
+      "id": "item:EVENT_ROUTE_2_DIRE_HIT",
+      "title": "Dire Hit",
+      "category": "Items",
+      "location": "Route 2",
+      "detail": "Item ball in the west part of Route 2, tile 0,29. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route2.asm",
+      "flags": [
+        1923
+      ],
+      "region": "kanto",
+      "area": "Route 2",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-2/#pokemon-location-items",
+      "sprite": "dire-hit",
+      "spot": "Visible item ball along the route"
+    },
+    {
+      "id": "item:EVENT_ROUTE_2_ELIXER",
+      "title": "Elixir",
+      "category": "Items",
+      "location": "Route 2",
+      "detail": "Item ball in the south-east part of Route 2, tile 14,50. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route2.asm",
+      "flags": [
+        1926
+      ],
+      "region": "kanto",
+      "area": "Route 2",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-2/#pokemon-location-items",
+      "sprite": "elixir",
+      "spot": "Visible item ball along the route"
+    },
+    {
+      "id": "item:EVENT_ROUTE_25_PROTEIN",
+      "title": "Protein",
+      "category": "Items",
+      "location": "Route 25",
+      "detail": "Item ball in the north part of Route 25, tile 32,4. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route25.asm",
+      "flags": [
+        1931
+      ],
+      "region": "kanto",
+      "area": "Route 25",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-25/#pokemon-location-items",
+      "sprite": "protein",
+      "spot": "Northeast corner of the tree maze (requires Cut)"
+    },
+    {
+      "id": "item:EVENT_ROUTE_26_MAX_ELIXER",
+      "title": "Max Elixir",
+      "category": "Items",
+      "location": "Route 26",
+      "detail": "Item ball in the north part of Route 26, tile 9,15. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route26.asm",
+      "flags": [
+        1706
+      ],
+      "region": "kanto",
+      "area": "Route 26",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-26/#pokemon-location-items",
+      "sprite": "max-elixir",
+      "spot": "On the northern express path after the second ledge"
+    },
+    {
+      "id": "item:EVENT_ROUTE_27_RARE_CANDY",
+      "title": "Rare Candy",
+      "category": "Items",
+      "location": "Route 27",
+      "detail": "Item ball in the center part of Route 27, tile 53,12. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route27.asm",
+      "flags": [
+        1708
+      ],
+      "region": "kanto",
+      "area": "Route 27",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-27/#pokemon-location-items",
+      "sprite": "rare-candy",
+      "spot": "On a tiny area southeast of the Tohjo Falls (requires Surf)"
+    },
+    {
+      "id": "item:EVENT_ROUTE_4_HP_UP",
+      "title": "HP Up",
+      "category": "Items",
+      "location": "Route 4",
+      "detail": "Item ball in the north part of Route 4, tile 26,3. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/Route4.asm",
+      "flags": [
+        1927
+      ],
+      "region": "kanto",
+      "area": "Route 4",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-4/#pokemon-location-items",
+      "sprite": "hp-up",
+      "spot": "Visible item ball along the route"
+    },
+    {
+      "id": "item:EVENT_TOHJO_FALLS_MOON_STONE",
+      "title": "Moon Stone",
+      "category": "Items",
+      "location": "Tohjo Falls",
+      "detail": "Item ball in the west part of Tohjo Falls, tile 2,6. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/TohjoFalls.asm",
+      "flags": [
+        1705
+      ],
+      "region": "kanto",
+      "area": "Tohjo Falls",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/tohjo-falls/#pokemon-location-items",
+      "sprite": "moon-stone",
+      "spot": "On the small piece of land at the western end of the cave (requires Surf)"
+    },
+    {
+      "id": "item:EVENT_VICTORY_ROAD_FULL_RESTORE",
+      "title": "Full Restore",
+      "category": "Items",
+      "location": "Victory Road",
+      "detail": "Item ball in the east part of Victory Road, tile 18,29. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/VictoryRoad.asm",
+      "flags": [
+        1701
+      ],
+      "region": "kanto",
+      "area": "Victory Road",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/victory-road/#pokemon-location-items",
+      "sprite": "full-restore",
+      "spot": "Visible item ball in the central area"
+    },
+    {
+      "id": "item:EVENT_VICTORY_ROAD_X_SPECIAL",
+      "title": "X Sp Atk",
+      "category": "Items",
+      "location": "Victory Road",
+      "detail": "Item ball in the center part of Victory Road, tile 7,38. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/VictoryRoad.asm",
+      "flags": [
+        1703
+      ],
+      "region": "kanto",
+      "area": "Victory Road",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/victory-road/#pokemon-location-items",
+      "sprite": "x-sp-atk",
+      "spot": "Visible item ball along the western wall"
+    },
+    {
+      "id": "item:EVENT_VICTORY_ROAD_MAX_REVIVE",
+      "title": "Max Revive",
+      "category": "Items",
+      "location": "Victory Road",
+      "detail": "Item ball in the center part of Victory Road, tile 12,48. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/VictoryRoad.asm",
+      "flags": [
+        1700
+      ],
+      "region": "kanto",
+      "area": "Victory Road",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/victory-road/#pokemon-location-items",
+      "sprite": "max-revive",
+      "spot": "Visible item ball on the upper ledge"
+    },
+    {
+      "id": "item:EVENT_VICTORY_ROAD_FULL_HEAL",
+      "title": "Full Heal",
+      "category": "Items",
+      "location": "Victory Road",
+      "detail": "Item ball in the east part of Victory Road, tile 15,48. Completion uses its original event flag.",
+      "guide": "https://github.com/pret/pokegold/blob/ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8/maps/VictoryRoad.asm",
+      "flags": [
+        1702
+      ],
+      "region": "kanto",
+      "area": "Victory Road",
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/victory-road/#pokemon-location-items",
+      "sprite": "full-heal",
+      "spot": "Visible item ball on the upper level"
     }
   ],
   "maps": {

@@ -8,3 +8,7 @@ local.properties
 *.jks
 *.keystore
 .idea/
+
+# local-only publishing and optional art
+release/
+app/src/main/assets/sprites/
