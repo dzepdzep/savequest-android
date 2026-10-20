@@ -43,4 +43,26 @@ class CatalogTest(unittest.TestCase):
         self.assertTrue(all(t['wild'] and not t['flags'] for t in shops))
         self.assertEqual(TASKS['TM48']['kind'],'shop');self.assertEqual(TASKS['TM04']['kind'],'found')
         self.assertTrue(all(t.get('kind') in('shop','prize','found') for t in TASKS.values() if t['category']=='TM/HM'))
+    def test_every_item_has_how_to_get(self):
+        items=[t for t in TASKS.values() if t['category']=='Items']
+        self.assertTrue(all(t.get('howto','').count('\n')>=2 for t in items))
+        self.assertTrue(all(t['howto'].startswith('Where:') for t in items))
+    def test_weekday_gifts_name_their_day(self):
+        for ev,day in (('SHARP_BEAK_FROM_MONICA','MONDAY'),('PINK_BOW_FROM_TUSCANY','TUESDAY'),('BLACKBELT_FROM_WESLEY','WEDNESDAY'),('HARD_STONE_FROM_ARTHUR','THURSDAY'),('POISON_BARB_FROM_FRIEDA','FRIDAY'),('SPELL_TAG_FROM_SANTOS','SATURDAY'),('MAGNET_FROM_SUNNY','SUNDAY')):
+            self.assertIn(day,TASKS['npc:EVENT_GOT_'+ev]['howto'])
+    def test_story_gated_gifts(self):
+        self.assertIn('ALL 16 badges',TASKS['npc:EVENT_GOT_HP_UP_FROM_VERMILION_GUY']['howto'])
+        self.assertIn('Plain Badge',TASKS['npc:EVENT_GOT_SQUIRTBOTTLE']['howto'])
+        self.assertIn('Cut',TASKS['npc:EVENT_GOT_CHARCOAL_IN_CHARCOAL_KILN']['howto'])
+        self.assertIn('party',TASKS['npc:EVENT_GOT_EEVEE']['howto'])
+        self.assertEqual(TASKS['npc:EVENT_GOT_RAINBOW_WING']['flags'],[120]);self.assertEqual(TASKS['npc:EVENT_GOT_SILVER_WING']['flags'],[121])
+    def test_hidden_items_need_itemfinder_and_balls_do_not(self):
+        for t in TASKS.values():
+            if t['category']=='Items' and t['kind']=='hidden':self.assertIn('Itemfinder',t['howto'])
+            if t['category']=='Items' and t['kind']=='ball':self.assertNotIn('Itemfinder',t['howto'])
+    def test_hm_requirements_are_listed(self):
+        self.assertIn('Rock Smash',TASKS['item:EVENT_BURNED_TOWER_1F_X_SPEED']['howto'])
+    def test_gift_flags_are_unique(self):
+        flags=[t['flags'][0] for t in TASKS.values() if t['category']=='Items' and t['kind'] in('gift','ball','hidden')]
+        self.assertEqual(len(flags),len(set(flags)))
 if __name__=='__main__':unittest.main()

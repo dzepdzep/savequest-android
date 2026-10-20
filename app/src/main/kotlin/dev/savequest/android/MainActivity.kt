@@ -18,6 +18,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.lifecycleScope
 import dev.savequest.core.*
@@ -66,7 +67,7 @@ class MainActivity : ComponentActivity() {
     override fun onResume() { super.onResume(); launchAction { reload(); auto = repo.prefs.getBoolean("auto", false); if (auto) message = repo.refresh() } }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { MaterialTheme(colorScheme = darkColorScheme(primary = Color(0xFFA8DDB5), background = Color(0xFF101C20), surface = Color(0xFF19292D))) { Surface(Modifier.fillMaxSize()) { Screen() } } }
+        setContent { MaterialTheme(colorScheme = darkColorScheme(primary = Color(0xFF7FDCC4), onPrimary = Color(0xFF00382D), background = Color(0xFF0E1A1D), surface = Color(0xFF172629), surfaceVariant = Color(0xFF263A3E), onSurfaceVariant = Color(0xFFB4C6C9))) { Surface(Modifier.fillMaxSize()) { Screen() } } }
     }
     private fun openUrl(url: String) { try { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) } catch (_: Exception) { message = "No browser available" } }
     @Composable private fun Screen() {
@@ -85,24 +86,37 @@ class MainActivity : ComponentActivity() {
             val current = parsed?.evidence(task) ?: Evidence(EvidenceKind.UNKNOWN, "Import a save to detect progress")
             task.id to Progress.resolve(current, earlier.any { it.evidence(task).kind != EvidenceKind.UNKNOWN }, manual[task.id]?.checked == true)
         } }
-        val visible = repo.tasks.filter { it.category == category && (!incomplete || results[it.id]?.kind == EvidenceKind.UNKNOWN) && (kind == "All" || it.kind == kind || (category != "Items" && category != "TM/HM")) && (region == "All" || it.region.isEmpty() || it.region.split(",").any { r -> r.equals(region, true) }) && "${it.title} ${it.location} ${it.area} ${it.detail}".contains(query, true) }
+        val visible = repo.tasks.filter { it.category == category && (!incomplete || results[it.id]?.kind == EvidenceKind.UNKNOWN) && (kind == "All" || it.kind == kind || (category != "Items" && category != "TM/HM")) && (region == "All" || it.region.isEmpty() || it.region.split(",").any { r -> r.equals(region, true) }) && "${it.title} ${it.location} ${it.area} ${it.detail} ${it.howto}".contains(query, true) }
         LazyColumn(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding().testTag("catalog"), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
           item { Column {
-            Text("SaveQuest", style = MaterialTheme.typography.headlineLarge)
-            Text("Pokémon Silver · original English edition", style = MaterialTheme.typography.titleMedium)
-            Text("Early access · partial completion catalog", color = MaterialTheme.colorScheme.primary)
+            var menu by remember { mutableStateOf(false) }
+            Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                Column(Modifier.weight(1f)) {
+                    Text("SaveQuest", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+                    Text("Pokémon Silver · early access", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+                Box {
+                    TextButton(onClick = { menu = true }) { Text("More ▾") }
+                    DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                        DropdownMenuItem(text = { Text("Export backup") }, enabled = !busy, onClick = { menu = false; exportPicker.launch("savequest-backup.json") })
+                        DropdownMenuItem(text = { Text("Restore backup") }, enabled = !busy, onClick = { menu = false; restorePicker.launch(arrayOf("application/json", "text/plain", "application/octet-stream")) })
+                        DropdownMenuItem(text = { Text("Silver walkthrough") }, onClick = { menu = false; openUrl("https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Gold_and_Silver") })
+                    }
+                }
+            }
             Spacer(Modifier.height(8.dp))
-            Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(enabled = !busy, onClick = { savePicker.launch(arrayOf("*/*")) }) { Text("Import save") }
                 OutlinedButton(enabled = !busy && repo.prefs.contains("uri"), onClick = { launchAction { message = repo.refresh() } }) { Text("Refresh") }
-                OutlinedButton(enabled = !busy, onClick = { exportPicker.launch("savequest-backup.json") }) { Text("Export backup") }
-                OutlinedButton(enabled = !busy, onClick = { restorePicker.launch(arrayOf("application/json", "text/plain", "application/octet-stream")) }) { Text("Restore backup") }
-                OutlinedButton(onClick = { try { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Gold_and_Silver"))) } catch (_: Exception) { message = "No browser available" } }) { Text("Silver walkthrough") }
             }
-            Text(message, style = MaterialTheme.typography.bodySmall)
-            if (busy) LinearProgressIndicator(Modifier.fillMaxWidth())
-            Row { Checkbox(checked = auto, enabled = repo.prefs.getString("uri", null) != null, onCheckedChange = { auto = it; repo.autoRefresh(it) }); Text("Auto refresh linked file\nOn return + best effort every 15+ minutes", style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 8.dp)) }
-            if (parsed != null) Text("${parsed.trainer} · ${parsed.badges}/16 badges · ${parsed.caughtCount} caught · ${parsed.seenCount} seen · ${history.size} snapshots${if (parsed.usedBackup) " · backup recovered" else ""}")
+            if (message.isNotBlank()) Text(message, style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 6.dp))
+            if (busy) LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 6.dp))
+            if (parsed != null) Card(Modifier.fillMaxWidth().padding(top = 8.dp)) { Column(Modifier.padding(12.dp)) {
+                Text(parsed.trainer, style = MaterialTheme.typography.titleMedium)
+                Text("${parsed.badges}/16 badges · ${parsed.caughtCount} caught · ${parsed.seenCount} seen · ${history.size} snapshots${if (parsed.usedBackup) " · backup recovered" else ""}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                ProgressBar(parsed.caughtCount / 251f, Modifier.padding(top = 8.dp))
+            } }
+            Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) { Checkbox(checked = auto, enabled = repo.prefs.getString("uri", null) != null, onCheckedChange = { auto = it; repo.autoRefresh(it) }); Text("Auto refresh linked file (on return + about every 15 min)", style = MaterialTheme.typography.bodySmall) }
             Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 snapshots.distinctBy { it.profile }.forEach { s -> FilterChip(selected = active == s.profile, onClick = { active = s.profile; repo.prefs.edit().putString("active", active).apply() }, label = { Text(Silver.parse(s.raw).trainer + " · " + s.profile.takeLast(4)) }) }
             }
@@ -136,39 +150,11 @@ class MainActivity : ComponentActivity() {
               } }
                     val groups = if (category == "Items") visible.sortedWith(compareBy({ if (it.kind == "shop") 2 else if (it.region == "kanto") 1 else 0 }, { it.area }, { it.title })).groupBy { if (it.kind == "shop") "Shops (price lists)" else it.region.replaceFirstChar { c -> c.uppercase() } + " · " + it.area } else mapOf("" to visible)
                     groups.forEach { (header, list) ->
-                    if (header.isNotEmpty()) item(key = "h:$header") { Text("$header  (${list.count { results[it.id]?.kind != EvidenceKind.UNKNOWN }}/${list.size})", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 8.dp)) }
+                    if (header.isNotEmpty()) item(key = "h:$header") { SectionHeader(header, list.count { results[it.id]?.kind != EvidenceKind.UNKNOWN }, list.size) }
                     items(list, key = { it.id }) { task ->
-                        Card(Modifier.fillMaxWidth()) { Column(Modifier.padding(12.dp)) {
-                            Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                if (task.sprite.isNotEmpty()) Sprite("items/${task.sprite}", 32.dp)
-                                else if (task.dexNumber != null) Sprite("pokemon/%03d".format(task.dexNumber), 48.dp)
-                                Text(task.title, style = MaterialTheme.typography.titleMedium)
-                            }
-                            if (task.location.isNotBlank() && task.wild.isEmpty()) Text(task.location, style = MaterialTheme.typography.bodyMedium)
-                            val evidence = results.getValue(task.id)
-                            Text("${evidence.kind.name.lowercase().replaceFirstChar { it.uppercase() }} · ${evidence.detail}", color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.bodySmall)
-                            if (task.spot.isNotEmpty()) Text("RankedBoost: ${task.spot}", style = MaterialTheme.typography.bodySmall)
-                            if (task.category == "Trainers" && task.detail.contains(" / ")) {
-                                val team = task.detail.split(" / ")
-                                Text("Team of ${team.size}", style = MaterialTheme.typography.labelMedium)
-                                team.forEach { Text("• $it", style = MaterialTheme.typography.bodySmall) }
-                            } else Text(task.detail, style = MaterialTheme.typography.bodySmall)
-                            if (task.wild.isNotEmpty()) {
-                                var showAll by remember(task.id) { mutableStateOf(false) }
-                                val lines = task.wild.map { it.split("\t") }.filter { l -> region == "All" || l[1].isEmpty() || l[1].equals(region, true) }
-                                (if (showAll) lines else lines.take(4)).forEach { l -> Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-                                    Text("${l[0]} · ${l[2]}", style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
-                                    TextButton(onClick = { openUrl(l[3]) }) { Text("RankedBoost") }
-                                } }
-                                if (lines.size > 4) TextButton(onClick = { showAll = !showAll }) { Text(if (showAll) "Show fewer" else "Show all ${lines.size} places") }
-                            }
-                            Row {
-                                Checkbox(modifier = Modifier.testTag("manual:${task.id}"), checked = manual[task.id]?.checked == true, enabled = active.isNotEmpty() && !busy, onCheckedChange = { checked -> launchAction { repo.db.progress().set(Manual(active, task.id, checked, System.currentTimeMillis())); message = "Manual confirmation saved separately" } })
-                                Text("Manual confirmation", modifier = Modifier.padding(top = 12.dp))
-                                if (task.rankedboost.isNotEmpty()) TextButton(onClick = { openUrl(task.rankedboost) }) { Text("RankedBoost") }
-                                if (task.guide.isNotEmpty()) TextButton(onClick = { openUrl(task.guide) }) { Text("Source") }
-                            }
-                        } }
+                        TaskCard(task, results.getValue(task.id), manual[task.id]?.checked == true, active.isNotEmpty() && !busy, region,
+                            onManual = { checked -> launchAction { repo.db.progress().set(Manual(active, task.id, checked, System.currentTimeMillis())); message = "Manual confirmation saved separately" } },
+                            openUrl = { openUrl(it) })
                     }
                     }
             }

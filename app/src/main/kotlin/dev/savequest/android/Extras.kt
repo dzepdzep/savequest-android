@@ -38,8 +38,9 @@ object SaveFacts {
     }
 }
 
-private object SpriteCache {
+internal object SpriteCache {
     private val cache = HashMap<String, ImageBitmap?>()
+    @Composable fun has(name: String, folder: String): Boolean { val c = LocalContext.current; return remember(name, folder) { get(c, "sprites/$folder/$name.png") != null } }
     fun get(c: Context, path: String): ImageBitmap? = synchronized(cache) {
         cache.getOrPut(path) { try { c.assets.open(path).use { BitmapFactory.decodeStream(it)?.asImageBitmap() } } catch (_: Exception) { null } }
     }
