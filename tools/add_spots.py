@@ -22,7 +22,7 @@ def link(s):
     return base+':~:text='+quote(snippet,safe='').replace('-','%2D')
 added=0;enriched=0
 for s in spots:
-    extra={'region':s['region'],'area':s['area']+(' '+s['floor'] if s['floor'] else ''),'rankedboost':link(s),'sprite':s['sprite'],'spot':s['rbText'] or ''}
+    extra={'region':s['region'],'area':s['area']+(' '+s['floor'] if s['floor'] else ''),'rankedboost':link(s),'sprite':s['sprite'],'spot':s['rbText'] or '','kind':s['kind']}
     t=by_flag.get(s['flag'])
     place=f"{'Hidden item (needs Itemfinder)' if s['kind']=='hidden' else 'Item ball'} in the {s['where']} part of {extra['area']}, tile {s['x']},{s['y']}."
     if t:

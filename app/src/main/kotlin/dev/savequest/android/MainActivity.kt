@@ -74,6 +74,7 @@ class MainActivity : ComponentActivity() {
         var query by remember { mutableStateOf("") }
         var incomplete by remember { mutableStateOf(false) }
         var region by remember { mutableStateOf("All") }
+        var kind by remember { mutableStateOf("All") }
         var selectedSnapshot by remember(active) { mutableStateOf<String?>(null) }
         val history = remember(snapshots, active) { snapshots.filter { it.profile == active } }
         val selected = history.find { it.id == selectedSnapshot } ?: history.find { it.hash == repo.prefs.getString("currentHash:$active", null) } ?: history.firstOrNull()
@@ -84,7 +85,7 @@ class MainActivity : ComponentActivity() {
             val current = parsed?.evidence(task) ?: Evidence(EvidenceKind.UNKNOWN, "Import a save to detect progress")
             task.id to Progress.resolve(current, earlier.any { it.evidence(task).kind != EvidenceKind.UNKNOWN }, manual[task.id]?.checked == true)
         } }
-        val visible = repo.tasks.filter { it.category == category && (!incomplete || results[it.id]?.kind == EvidenceKind.UNKNOWN) && (region == "All" || it.region.isEmpty() || it.region.split(",").any { r -> r.equals(region, true) }) && "${it.title} ${it.location} ${it.area} ${it.detail}".contains(query, true) }
+        val visible = repo.tasks.filter { it.category == category && (!incomplete || results[it.id]?.kind == EvidenceKind.UNKNOWN) && (kind == "All" || it.kind == kind || (category != "Items" && category != "TM/HM")) && (region == "All" || it.region.isEmpty() || it.region.split(",").any { r -> r.equals(region, true) }) && "${it.title} ${it.location} ${it.area} ${it.detail}".contains(query, true) }
         LazyColumn(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding().testTag("catalog"), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
           item { Column {
             Text("SaveQuest", style = MaterialTheme.typography.headlineLarge)
@@ -106,7 +107,7 @@ class MainActivity : ComponentActivity() {
                 snapshots.distinctBy { it.profile }.forEach { s -> FilterChip(selected = active == s.profile, onClick = { active = s.profile; repo.prefs.edit().putString("active", active).apply() }, label = { Text(Silver.parse(s.raw).trainer + " · " + s.profile.takeLast(4)) }) }
             }
             Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                listOf("TM/HM", "Trainers", "Items", "Pokédex", "Pokémon", "Heracross", "Tips", "History").forEach { name -> val total = repo.tasks.count { it.category == name }; val done = if (total > 0) repo.tasks.count { it.category == name && results[it.id]?.kind != EvidenceKind.UNKNOWN } else 0; FilterChip(selected = category == name, onClick = { category = name }, label = { Text(if (total > 0 && parsed != null) "$name $done/$total" else name) }) }
+                listOf("TM/HM", "Trainers", "Items", "Pokédex", "Pokémon", "Heracross", "Tips", "History").forEach { name -> val total = repo.tasks.count { it.category == name }; val done = if (total > 0) repo.tasks.count { it.category == name && results[it.id]?.kind != EvidenceKind.UNKNOWN } else 0; FilterChip(selected = category == name, onClick = { category = name; kind = "All" }, label = { Text(if (total > 0 && parsed != null) "$name $done/$total" else name) }) }
             }
           } }
             if (category == "Pokémon") {
@@ -122,14 +123,18 @@ class MainActivity : ComponentActivity() {
               item { Column {
                 if (selectedSnapshot != null) TextButton(onClick = { selectedSnapshot = null }) { Text("Viewing history · return to current save") }
                 OutlinedTextField(value = query, onValueChange = { query = it }, label = { Text("Search name or location") }, singleLine = true, modifier = Modifier.fillMaxWidth())
-                if (category == "Items" || category == "Pokédex" || category == "Trainers") Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                if (category == "Items" || category == "TM/HM") Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    (if (category == "Items") listOf("All" to "All types", "gift" to "NPC gifts", "ball" to "Item balls (overworld)", "hidden" to "Hidden (Itemfinder)", "shop" to "Can be bought")
+                     else listOf("All" to "All", "shop" to "Can be bought", "prize" to "Game Corner prize", "found" to "Found / earned")).forEach { (k, label) -> FilterChip(selected = kind == k, onClick = { kind = k }, label = { Text(label) }) }
+                }
+                if (category in setOf("Items", "Pokédex", "Trainers", "TM/HM")) Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                     listOf("All", "Johto", "Kanto").forEach { r -> FilterChip(selected = region == r, onClick = { region = r }, label = { Text(r) }) }
                 }
                 Row { Checkbox(checked = incomplete, onCheckedChange = { incomplete = it }); Text("Show unconfirmed only", modifier = Modifier.padding(top = 12.dp)) }
                 val found = visible.count { results[it.id]?.kind != EvidenceKind.UNKNOWN }
                 Text("$found of ${visible.size} confirmed · evidence is shown separately from manual checks", style = MaterialTheme.typography.bodySmall)
               } }
-                    val groups = if (category == "Items") visible.sortedWith(compareBy({ if (it.region == "kanto") 1 else 0 }, { it.area }, { it.title })).groupBy { it.region.replaceFirstChar { c -> c.uppercase() } + " · " + it.area } else mapOf("" to visible)
+                    val groups = if (category == "Items") visible.sortedWith(compareBy({ if (it.kind == "shop") 2 else if (it.region == "kanto") 1 else 0 }, { it.area }, { it.title })).groupBy { if (it.kind == "shop") "Shops (price lists)" else it.region.replaceFirstChar { c -> c.uppercase() } + " · " + it.area } else mapOf("" to visible)
                     groups.forEach { (header, list) ->
                     if (header.isNotEmpty()) item(key = "h:$header") { Text("$header  (${list.count { results[it.id]?.kind != EvidenceKind.UNKNOWN }}/${list.size})", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 8.dp)) }
                     items(list, key = { it.id }) { task ->
@@ -139,11 +144,15 @@ class MainActivity : ComponentActivity() {
                                 else if (task.dexNumber != null) Sprite("pokemon/%03d".format(task.dexNumber), 48.dp)
                                 Text(task.title, style = MaterialTheme.typography.titleMedium)
                             }
-                            if (task.location.isNotBlank()) Text(task.location, style = MaterialTheme.typography.bodyMedium)
+                            if (task.location.isNotBlank() && task.wild.isEmpty()) Text(task.location, style = MaterialTheme.typography.bodyMedium)
                             val evidence = results.getValue(task.id)
                             Text("${evidence.kind.name.lowercase().replaceFirstChar { it.uppercase() }} · ${evidence.detail}", color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.bodySmall)
                             if (task.spot.isNotEmpty()) Text("RankedBoost: ${task.spot}", style = MaterialTheme.typography.bodySmall)
-                            Text(task.detail, style = MaterialTheme.typography.bodySmall)
+                            if (task.category == "Trainers" && task.detail.contains(" / ")) {
+                                val team = task.detail.split(" / ")
+                                Text("Team of ${team.size}", style = MaterialTheme.typography.labelMedium)
+                                team.forEach { Text("• $it", style = MaterialTheme.typography.bodySmall) }
+                            } else Text(task.detail, style = MaterialTheme.typography.bodySmall)
                             if (task.wild.isNotEmpty()) {
                                 var showAll by remember(task.id) { mutableStateOf(false) }
                                 val lines = task.wild.map { it.split("\t") }.filter { l -> region == "All" || l[1].isEmpty() || l[1].equals(region, true) }

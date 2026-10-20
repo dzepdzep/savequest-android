@@ -16,6 +16,10 @@ def guide(key):
     if m and 1<=int(m[1])<=46:return f'{IDX}route-{int(m[1])}/'
     for p,s in AREAS:
         if key==p or key.startswith(p+'_'):return f'{IDX}{s}/'
+    # shops, houses and gyms inside a town: link the town page (first word of the map key matches the town)
+    tok=key.split('_')[0]
+    for p,sl in AREAS:
+        if p.split('_')[0]==tok and p.endswith(('_CITY','_TOWN','_ISLAND')):return f'{IDX}{sl}/'
     return IDX
 stem_of={s.upper():s for s in cat['maps']}                # SPROUTTOWER2F -> SproutTower2F
 def stem(key):return stem_of.get(key.replace('_',''))
@@ -74,12 +78,66 @@ for t in tasks:
         s=t['guide'].rsplit('/',1)[-1].removesuffix('.asm')
         key=next((k for k in ref['regions'] if stem(k)==s),None)
         if key:t['region']=region(key);t['area']=where(key);t['rankedboost']=guide(key)
+
+# TMs/HMs: where to find each one, split by region, with a RankedBoost link per place
+tmhm=json.loads((ROOT/'tools/tmhm.json').read_text(encoding='utf8'))
+OVERRIDE={'SLOWPOKE_WELL':'johto','MT_MORTAR':'johto','TEAM_ROCKET_HQ':'johto','OTHER':''}
+KIND={'gym':'Gym leader','npc':'NPC','shop':'Shop','timed':'Timed event','field':'Pickup','story':'Story','trade':'Trade','contest':'Bug-Catching Contest','game_corner':'Game Corner'}
+def method_region(area,text):
+    if 'Moomoo Farm' in text:return 'johto','ROUTE_39'
+    if area in OVERRIDE:return OVERRIDE[area],area
+    if area in ref['regions']:return ref['regions'][area],area
+    c={v for k,v in ref['regions'].items() if k.startswith(area)};return (c.pop() if len(c)==1 else ''),area
+by_id={t['id']:t for t in tasks}
+for it in tmhm['items']:
+    t=by_id.get(it['id'])
+    if not t:continue
+    lines=[];regs=set()
+    for m in it['methods']:
+        r,key=method_region(m['area'],m['where']);regs.add(r)
+        url=guide(key) if m['area']!='OTHER' or 'Moomoo' in m['where'] else IDX
+        lines.append(f"{m['where'].split(' – ')[0].split('.')[0][:40] if m['kind']!='trade' else 'Trade from Gen I'}\t{r}\t{KIND.get(m['kind'],m['kind'].title())}: {m['where']}\t{url}")
+    regs.discard('')
+    t['wild']=lines;t['region']=','.join(sorted(regs));t['area']=''
+    t['rankedboost']=lines[0].split('\t')[3] if lines else ''
 # NPC gifts (TM/HM gifts already live in the TM/HM tab)
 have={t['id'] for t in tasks};added=0
 for n in ref['npcs']:
     if n['title'] in('Cyndaquil','Totodile','Chikorita'):continue   # only one starter is ever obtained
     tid='npc:'+n['event']
     if tid in have or not stem(n['area']):continue
-    tasks.append({'id':tid,'title':('Evolution stones' if n['title'].startswith('Everstone') else n['title'])+' (gift)','category':'Items','location':where(n['area']),'detail':f"Reward from {n['giver']}. Completion uses its original event flag; some gifts need a story condition first.",'guide':f"https://github.com/pret/pokegold/blob/{PIN}/maps/{stem(n['area'])}.asm",'flags':[n['flag']],'region':region(n['area']),'area':where(n['area']),'rankedboost':guide(n['area']),'sprite':'','spot':''});added+=1
+    tasks.append({'id':tid,'title':('Evolution stones' if n['title'].startswith('Everstone') else n['title'])+' (gift)','category':'Items','location':where(n['area']),'detail':f"Reward from {n['giver']}. Completion uses its original event flag; some gifts need a story condition first.",'guide':f"https://github.com/pret/pokegold/blob/{PIN}/maps/{stem(n['area'])}.asm",'flags':[n['flag']],'region':region(n['area']),'area':where(n['area']),'rankedboost':guide(n['area']),'sprite':'','spot':'','kind':'gift'});added+=1
+
+# Shops: every buyable item and TM with where it is sold and the price (data/items/marts.asm, bargain_shop.asm)
+shops=json.loads((ROOT/'tools/shops.json').read_text(encoding='utf8'))
+def nice(c):
+    w=[{'POKE':'Poké','PP':'PP','HP':'HP','TM':'TM','HM':'HM'}.get(x,x.title()) for x in c.split('_')];return ' '.join(w)
+NOTE={'MartCherrygroveDex':' (after getting the Pokédex)','MartGoldenrod5F2':' (stock grows with story)','MartGoldenrod5F3':' (stock grows with story)','MartGoldenrod5F4':' (stock grows with story)','MartMahogany2':' (after the Team Rocket story)','Bargain':' (rotating daily stock)'}
+def key_of_stem(st):return next((k for k in ref['regions'] if stem(k)==st),None)
+sold={}
+for m in shops['marts']:
+    k=key_of_stem(m['stem']);reg=ref['regions'].get(k,'') if k else ''
+    for it in m['items']:
+        price=m.get('prices',{}).get(it) or shops['price'].get(shops['tmid'].get(it,it),0)
+        sold.setdefault(it,[]).append({'area':cat['maps'][m['stem']]['location']+NOTE.get(m['mart'],''),'region':reg,'price':price,'url':guide(k) if k else IDX})
+by_id={t['id']:t for t in tasks}
+tm_shop=set()
+for it,places in sold.items():
+    if it in shops['tmid']:
+        t=by_id[shops['tmid'][it]];tm_shop.add(t['id'])
+        old=[l for l in t.get('wild',[]) if '\tShop: ' not in l]
+        new=[f"{p['area']}\t{p['region']}\tShop: ¥{p['price']:,}\t{p['url']}" for p in places]
+        t['wild']=new+old;t['region']=','.join(sorted({r for r in (l.split('\t')[1] for l in t['wild']) if r}))
+    else:
+        tid='shop:'+it;lines=[f"{p['area']}\t{p['region']}\t¥{p['price']:,}\t{p['url']}" for p in places]
+        regs=sorted({p['region'] for p in places if p['region']});low=min(p['price'] for p in places)
+        task={'id':tid,'title':nice(it)+' (buy)','category':'Items','location':'Sold in '+str(len(places))+' shop(s) from ¥'+f'{low:,}','detail':'Buying is not recorded in the save, so tick this manually.','guide':f"https://github.com/pret/pokegold/blob/{PIN}/data/items/marts.asm",'flags':[],'region':','.join(regs),'area':'Shops','rankedboost':places[0]['url'],'sprite':'','spot':'','kind':'shop','wild':lines}
+        if tid in by_id:by_id[tid].update(task)
+        else:tasks.append(task)
+for t in tasks:
+    if t['category']=='TM/HM':
+        t['kind']='shop' if t['id'] in tm_shop else ('prize' if any('Game Corner' in l or 'Prize' in l for l in t.get('wild',[])) else 'found')
+for t in tasks:
+    if t['id'].startswith('npc:'):t['kind']='gift'
 CAT.write_text(json.dumps(cat,ensure_ascii=False,indent=2),encoding='utf8')
 print(f'wild lines {sum(len(v) for v in wild.values())}, species with wild: {sum(1 for v in wild.values() if v)}/251, npc gifts added {added}, tasks {len(tasks)}')

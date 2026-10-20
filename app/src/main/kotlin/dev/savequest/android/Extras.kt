@@ -64,7 +64,7 @@ private object SpriteCache {
         } }
         Card(Modifier.fillMaxWidth()) { Column(Modifier.padding(12.dp)) {
             Text("Where Heracross hides", style = MaterialTheme.typography.titleMedium)
-            Text("Heracross is not a normal grass encounter. In Gold and Silver it only appears when you use Headbutt on a rare tree on Routes 29, 30, 31, 32, 33, 42, 43, 44, 45 or 46 (30% of rare-tree battles; the other results are Spearow and Aipom). Trees in Azalea Town and Ilex Forest give Pineco instead.", style = MaterialTheme.typography.bodySmall)
+            Text("Heracross is not a normal grass encounter. In Gold and Silver it only appears when you use Headbutt on a rare tree on Routes 29, 30, 31, 32, 42, 43 or 44 (30% of rare-tree battles; the other results are Spearow and Aipom). The game also lists Routes 33, 45 and 46, but no headbuttable trees were found on those maps. See the Heracross tab for a map of the trees. Trees in Azalea Town and Ilex Forest give Pineco instead.", style = MaterialTheme.typography.bodySmall)
             Text("Whether a tree is rare depends on your trainer ID and the tree's position, so it differs per save: roughly one tree in ten is rare. Headbutt each tree a few times; a rare tree gives a battle most of the time, an ordinary one far less.", style = MaterialTheme.typography.bodySmall)
             if (SaveFacts.usable(raw) && !usedBackup) Text("Your trainer ID ends in ${SaveFacts.trainerId(raw!!) % 10}.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary)
             TextButton(onClick = { open("https://rankedboost.com/pokemon/location/gold-silver/") }) { Text("RankedBoost locations") }

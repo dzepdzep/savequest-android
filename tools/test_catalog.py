@@ -29,4 +29,18 @@ class CatalogTest(unittest.TestCase):
     def test_wild_lines_are_well_formed(self):
         for t in TASKS.values():
             for line in t.get('wild',[]):self.assertEqual(len(line.split('\t')),4)
+    def test_items_are_split_by_kind_and_region(self):
+        items=[t for t in TASKS.values() if t['category']=='Items']
+        self.assertEqual({t['kind'] for t in items},{'gift','ball','hidden','shop'})
+        self.assertTrue(all(t['region'] in('johto','kanto') for t in items if t['kind']!='shop'))
+    def test_tm_hm_have_regions_and_places(self):
+        tms=[t for t in TASKS.values() if t['category']=='TM/HM']
+        self.assertEqual(len(tms),57);self.assertTrue(all(t['wild'] for t in tms))
+        self.assertIn('kanto',TASKS['TM03']['region']);self.assertIn('johto',TASKS['TM01']['region'])
+    def test_shops_and_buyable_tms(self):
+        shops=[t for t in TASKS.values() if t.get('kind')=='shop' and t['category']=='Items']
+        self.assertGreaterEqual(len(shops),40)
+        self.assertTrue(all(t['wild'] and not t['flags'] for t in shops))
+        self.assertEqual(TASKS['TM48']['kind'],'shop');self.assertEqual(TASKS['TM04']['kind'],'found')
+        self.assertTrue(all(t.get('kind') in('shop','prize','found') for t in TASKS.values() if t['category']=='TM/HM'))
 if __name__=='__main__':unittest.main()
