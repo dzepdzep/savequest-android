@@ -18,4 +18,15 @@ class CatalogTest(unittest.TestCase):
         self.assertTrue(TASKS['TM11']['guide'].endswith('/maps/RadioTower3F.asm'))
     def test_sandstorm_threshold_not_maximum(self):self.assertIn('at least 150',TASKS['TM37']['location'])
     def test_sleep_talk_warehouse(self):self.assertIn('Underground Warehouse',TASKS['TM35']['location'])
+    def test_item_spots_have_flags_regions_and_links(self):
+        spots=[t for t in TASKS.values() if t.get('region') and t['id'].startswith('item:')]
+        self.assertGreaterEqual(len(spots),200)
+        for t in spots:
+            self.assertTrue(t['flags']);self.assertIn(t['region'],('johto','kanto'))
+            if t.get('rankedboost'):self.assertTrue(t['rankedboost'].startswith('https://rankedboost.com/pokemon/location/gold-silver/'))
+    def test_heracross_only_from_rare_headbutt_trees(self):
+        w=TASKS['dex:214']['wild'];self.assertTrue(w);self.assertTrue(all('RARE trees only' in x for x in w))
+    def test_wild_lines_are_well_formed(self):
+        for t in TASKS.values():
+            for line in t.get('wild',[]):self.assertEqual(len(line.split('\t')),4)
 if __name__=='__main__':unittest.main()

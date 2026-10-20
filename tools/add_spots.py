@@ -12,9 +12,14 @@ PIN=cat['sourceCommit']
 RB='https://rankedboost.com/pokemon/location/gold-silver/'
 spots=json.loads((ROOT/'tools/spots.json').read_text(encoding='utf8'))
 tasks=cat['tasks'];by_flag={t['flags'][0]:t for t in tasks if t['id'].startswith('item:') and t.get('flags')}
+from urllib.parse import quote
 def link(s):
     if not s['rb']:return ''
-    return RB+s['rb']+'/#pokemon-location-items'
+    base=RB+s['rb']+'/#pokemon-location-items'
+    snippet=' '.join((s['rbText'] or '').split(' (')[0].split(' ')[:5])
+    if len(snippet)<8:snippet=s['item']
+    # Chrome highlights the matching text on the RankedBoost page; other browsers just scroll to the Items section.
+    return base+':~:text='+quote(snippet,safe='').replace('-','%2D')
 added=0;enriched=0
 for s in spots:
     extra={'region':s['region'],'area':s['area']+(' '+s['floor'] if s['floor'] else ''),'rankedboost':link(s),'sprite':s['sprite'],'spot':s['rbText'] or ''}
