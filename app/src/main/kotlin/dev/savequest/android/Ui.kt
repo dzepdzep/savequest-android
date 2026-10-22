@@ -107,9 +107,11 @@ private fun kindLabel(task: Task) = when (task.kind) {
     else -> ""
 }
 
-@Composable fun SectionHeader(text: String, done: Int, total: Int) {
-    Column(Modifier.fillMaxWidth().padding(top = 12.dp)) {
+@Composable fun SectionHeader(text: String, done: Int, total: Int, expanded: Boolean = true, onClick: (() -> Unit)? = null) {
+    Column(Modifier.fillMaxWidth().padding(top = 12.dp).testTag("section:$text")
+        .clickable(enabled = onClick != null, onClickLabel = if (expanded) "Collapse $text" else "Expand $text") { onClick?.invoke() }) {
         Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(if (expanded) "▾" else "▸", color = MaterialTheme.colorScheme.primary, modifier = Modifier.width(20.dp))
             Text(text, style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.weight(1f))
             Text("$done/$total", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }

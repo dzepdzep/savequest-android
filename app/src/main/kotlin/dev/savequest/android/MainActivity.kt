@@ -24,11 +24,14 @@ import androidx.lifecycle.lifecycleScope
 import dev.savequest.core.*
 import dev.savequest.silver.Silver
 import dev.savequest.storage.*
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.text.DateFormat
 import java.util.Date
+
+private const val COLLAPSED_KEY = "collapsed:Items"
 
 class MainActivity : ComponentActivity() {
     private val repo by lazy { Repository.get(this) }
@@ -69,6 +72,22 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent { MaterialTheme(colorScheme = darkColorScheme(primary = Color(0xFF7FDCC4), onPrimary = Color(0xFF00382D), background = Color(0xFF0E1A1D), surface = Color(0xFF172629), surfaceVariant = Color(0xFF263A3E), onSurfaceVariant = Color(0xFFB4C6C9))) { Surface(Modifier.fillMaxSize()) { Screen() } } }
     }
+    /** Saves one manual checkbox change, then offers Undo. The change object (not the row) is what Undo uses, so it still works when the row has left the list. */
+    private fun changeManual(change: ManualChange, title: String, host: SnackbarHostState, scope: CoroutineScope) {
+        if (busy || change.profile.isEmpty()) return
+        launchAction {
+            repo.db.progress().set(Manual(change.profile, change.taskId, change.after, System.currentTimeMillis()))
+            scope.launch {
+                host.currentSnackbarData?.dismiss()
+                val result = host.showSnackbar(message = if (change.after) "Marked \"$title\" as done manually" else "Unmarked \"$title\"", actionLabel = "Undo", withDismissAction = true, duration = SnackbarDuration.Long)
+                if (result == SnackbarResult.ActionPerformed) undoManual(change.undo())
+            }
+        }
+    }
+    private fun undoManual(change: ManualChange) { lifecycleScope.launch {
+        try { repo.db.progress().set(Manual(change.profile, change.taskId, change.after, System.currentTimeMillis())); reload() }
+        catch (e: Exception) { message = e.message ?: "Undo failed; the earlier state was kept" }
+    } }
     private fun openUrl(url: String) { try { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) } catch (_: Exception) { message = "No browser available" } }
     @Composable private fun Screen() {
         var category by rememberSaveable { mutableStateOf("TM/HM") }
@@ -86,7 +105,22 @@ class MainActivity : ComponentActivity() {
             val current = parsed?.evidence(task) ?: Evidence(EvidenceKind.UNKNOWN, "Import a save to detect progress")
             task.id to Progress.resolve(current, earlier.any { it.evidence(task).kind != EvidenceKind.UNKNOWN }, manual[task.id]?.checked == true)
         } }
-        val visible = repo.tasks.filter { it.category == category && (!incomplete || results[it.id]?.kind == EvidenceKind.UNKNOWN) && (kind == "All" || it.kind == kind || (category != "Items" && category != "TM/HM")) && (region == "All" || it.region.isEmpty() || it.region.split(",").any { r -> r.equals(region, true) }) && "${it.title} ${it.location} ${it.area} ${it.detail} ${it.howto}".contains(query, true) }
+        fun isDone(t: Task) = results[t.id]?.kind != EvidenceKind.UNKNOWN
+        // progress is counted on `base` (every filter except "Show unconfirmed only"); `visible` is what gets listed
+        val base = repo.tasks.filter { Checklist.matches(it, category, kind, region, query) }
+        val visible = Checklist.visibleRows(base, ::isDone, incomplete)
+        val sections = if (category == "Items") Checklist.sections(base, ::isDone, incomplete) else emptyList()
+        val searching = query.isNotBlank()
+        var collapsed by remember { mutableStateOf(repo.prefs.getStringSet(COLLAPSED_KEY, null)?.toSet() ?: emptySet()) }
+        fun setCollapsed(next: Set<String>) { collapsed = next; repo.prefs.edit().putStringSet(COLLAPSED_KEY, HashSet(next)).apply() }
+        val snack = remember { SnackbarHostState() }
+        val scope = rememberCoroutineScope()
+        val card: @Composable (Task) -> Unit = { task ->
+            TaskCard(task, results.getValue(task.id), manual[task.id]?.checked == true, active.isNotEmpty() && !busy, region,
+                onManual = { checked -> changeManual(ManualChange(active, task.id, manual[task.id]?.checked == true, checked), task.title, snack, scope) },
+                openUrl = { openUrl(it) })
+        }
+        Box(Modifier.fillMaxSize()) {
         LazyColumn(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding().testTag("catalog"), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
           item { Column {
             var menu by remember { mutableStateOf(false) }
@@ -145,19 +179,23 @@ class MainActivity : ComponentActivity() {
                     listOf("All", "Johto", "Kanto").forEach { r -> FilterChip(selected = region == r, onClick = { region = r }, label = { Text(r) }) }
                 }
                 Row { Checkbox(checked = incomplete, onCheckedChange = { incomplete = it }); Text("Show unconfirmed only", modifier = Modifier.padding(top = 12.dp)) }
-                val found = visible.count { results[it.id]?.kind != EvidenceKind.UNKNOWN }
-                Text("$found of ${visible.size} confirmed · evidence is shown separately from manual checks", style = MaterialTheme.typography.bodySmall)
+                if (category == "Items") Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                    val listed = sections.map { it.key }
+                    TextButton(enabled = !searching && listed.isNotEmpty(), modifier = Modifier.testTag("items:expandAll"), onClick = { setCollapsed(Checklist.expandAll(collapsed, listed)) }) { Text("Expand all") }
+                    TextButton(enabled = !searching && listed.isNotEmpty(), modifier = Modifier.testTag("items:collapseAll"), onClick = { setCollapsed(Checklist.collapseAll(collapsed, listed)) }) { Text("Collapse all") }
+                    if (searching) Text("Search is showing every match; folded locations come back when you clear it.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+                val found = base.count { isDone(it) }
+                Text("$found of ${base.size} confirmed" + (if (incomplete) " · listing ${visible.size} unconfirmed" else "") + " · evidence is shown separately from manual checks", style = MaterialTheme.typography.bodySmall)
               } }
-                    val groups = if (category == "Items") visible.sortedWith(compareBy({ if (it.kind == "shop") 2 else if (it.region == "kanto") 1 else 0 }, { it.area }, { it.title })).groupBy { if (it.kind == "shop") "Shops (price lists)" else it.region.replaceFirstChar { c -> c.uppercase() } + " · " + it.area } else mapOf("" to visible)
-                    groups.forEach { (header, list) ->
-                    if (header.isNotEmpty()) item(key = "h:$header") { SectionHeader(header, list.count { results[it.id]?.kind != EvidenceKind.UNKNOWN }, list.size) }
-                    items(list, key = { it.id }) { task ->
-                        TaskCard(task, results.getValue(task.id), manual[task.id]?.checked == true, active.isNotEmpty() && !busy, region,
-                            onManual = { checked -> launchAction { repo.db.progress().set(Manual(active, task.id, checked, System.currentTimeMillis())); message = "Manual confirmation saved separately" } },
-                            openUrl = { openUrl(it) })
-                    }
-                    }
+                    if (category == "Items") sections.forEach { sec ->
+                        val open = Checklist.isExpanded(sec.key, collapsed, searching)
+                        item(key = "h:${sec.key}") { SectionHeader(sec.key, sec.done, sec.total, open, if (searching) null else ({ setCollapsed(Checklist.toggled(collapsed, sec.key)) })) }
+                        if (open) items(sec.shown, key = { it.id }) { task -> card(task) }
+                    } else items(visible, key = { it.id }) { task -> card(task) }
             }
+        }
+        SnackbarHost(snack, Modifier.align(androidx.compose.ui.Alignment.BottomCenter).navigationBarsPadding().padding(8.dp))
         }
     }
 }
