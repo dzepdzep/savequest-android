@@ -65,4 +65,13 @@ class CatalogTest(unittest.TestCase):
     def test_gift_flags_are_unique(self):
         flags=[t['flags'][0] for t in TASKS.values() if t['category']=='Items' and t['kind'] in('gift','ball','hidden')]
         self.assertEqual(len(flags),len(set(flags)))
+    def test_rankedboost_userscript_is_current_and_passes_its_own_tests(self):
+        import importlib.util,shutil,subprocess
+        spec=importlib.util.spec_from_file_location('bru',Path(__file__).with_name('build_rankedboost_userscript.py'));m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+        text,flags,pages=m.build()
+        for f in (m.OUT,m.APP):self.assertEqual(f.read_text(encoding='utf8'),text,str(f)+' is stale: run python tools/build_rankedboost_userscript.py')
+        self.assertGreaterEqual(flags,190)
+        if shutil.which('node'):
+            r=subprocess.run(['node',str(Path(__file__).with_name('rankedboost')/'test_userscript.js')],capture_output=True,text=True)
+            self.assertEqual(r.returncode,0,r.stdout+r.stderr)
 if __name__=='__main__':unittest.main()

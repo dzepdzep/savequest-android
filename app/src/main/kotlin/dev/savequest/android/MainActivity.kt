@@ -95,6 +95,8 @@ class MainActivity : ComponentActivity() {
         var incomplete by remember { mutableStateOf(false) }
         var region by remember { mutableStateOf("All") }
         var kind by remember { mutableStateOf("All") }
+        var rbOpen by rememberSaveable { mutableStateOf(false) }
+        var rbUrl by rememberSaveable { mutableStateOf(RB_LOCATIONS) }
         var selectedSnapshot by remember(active) { mutableStateOf<String?>(null) }
         val history = remember(snapshots, active) { snapshots.filter { it.profile == active } }
         val selected = history.find { it.id == selectedSnapshot } ?: history.find { it.hash == repo.prefs.getString("currentHash:$active", null) } ?: history.firstOrNull()
@@ -155,7 +157,7 @@ class MainActivity : ComponentActivity() {
                 snapshots.distinctBy { it.profile }.forEach { s -> FilterChip(selected = active == s.profile, onClick = { active = s.profile; repo.prefs.edit().putString("active", active).apply() }, label = { Text(Silver.parse(s.raw).trainer + " · " + s.profile.takeLast(4)) }) }
             }
             Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                listOf("TM/HM", "Trainers", "Items", "Pokédex", "Pokémon", "Heracross", "Tips", "History").forEach { name -> val total = repo.tasks.count { it.category == name }; val done = if (total > 0) repo.tasks.count { it.category == name && results[it.id]?.kind != EvidenceKind.UNKNOWN } else 0; FilterChip(selected = category == name, onClick = { category = name; kind = "All" }, label = { Text(if (total > 0 && parsed != null) "$name $done/$total" else name) }) }
+                listOf("TM/HM", "Trainers", "Items", "Pokédex", "Pokémon", "Heracross", "Tips", "RankedBoost", "History").forEach { name -> val total = repo.tasks.count { it.category == name }; val done = if (total > 0) repo.tasks.count { it.category == name && results[it.id]?.kind != EvidenceKind.UNKNOWN } else 0; FilterChip(selected = category == name, onClick = { category = name; kind = "All" }, label = { Text(if (total > 0 && parsed != null) "$name $done/$total" else name) }) }
             }
           } }
             if (category == "Pokémon") {
@@ -164,6 +166,8 @@ class MainActivity : ComponentActivity() {
                 item { HeracrossTab(selected?.raw, parsed?.usedBackup == true) { openUrl(it) } }
             } else if (category == "Tips") {
                 item { TipsTab(selected?.raw, parsed?.usedBackup == true) { openUrl(it) } }
+            } else if (category == "RankedBoost") {
+                item { RankedBoostTab(selected != null) { rbUrl = it; rbOpen = true } }
             } else if (category == "History") {
                 item { Text("Viewing a snapshot keeps all imports. Manual confirmations apply to this profile today, not to the historical date. Historical save evidence uses only earlier imports. Import time is not in-game chronology.", style = MaterialTheme.typography.bodySmall) }
                 items(history, key = { it.id }) { s -> OutlinedButton(onClick = { selectedSnapshot = s.id; category = "TM/HM" }, modifier = Modifier.fillMaxWidth()) { Text(DateFormat.getDateTimeInstance().format(Date(s.importedAt)) + " · " + s.hash.take(8)) } }
@@ -195,6 +199,7 @@ class MainActivity : ComponentActivity() {
                     } else items(visible, key = { it.id }) { task -> card(task) }
             }
         }
+        if (rbOpen) Surface(Modifier.fillMaxSize()) { RankedBoostScreen(selected?.raw, rbUrl, { rbUrl = it }, { rbOpen = false }) }
         SnackbarHost(snack, Modifier.align(androidx.compose.ui.Alignment.BottomCenter).navigationBarsPadding().padding(8.dp))
         }
     }
