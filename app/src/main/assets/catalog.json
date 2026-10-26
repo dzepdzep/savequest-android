@@ -665,7 +665,12 @@
       "sprite": "full-heal",
       "spot": "Behind the fence, between the two flowers at the end of the path near the south gate (hidden)",
       "kind": "hidden",
-      "howto": "Where: National Park (Johto). South-west part of the map, tile 6,47 (column, row counted from the top-left corner).\nNeeds: Itemfinder (the Itemfinder is a gift from the man in Ecruteak City's Itemfinder House).\nDo: the item is invisible. Use the Itemfinder from your Bag when you are within a few tiles; when it reacts, stand next to the tile, face it and press A to pick the item up.\nNote: any day or time; one-time pickup. SaveQuest ticks it after you save in-game."
+      "howto": "Where: National Park (Johto). South-west part of the map, tile 6,47 (column, row counted from the top-left corner).\nNeeds: Itemfinder (the Itemfinder is a gift from the man in Ecruteak City's Itemfinder House).\nDo: the item is invisible. Use the Itemfinder from your Bag when you are within a few tiles; when it reacts, stand next to the tile, face it and press A to pick the item up.\nNote: any day or time; one-time pickup. SaveQuest ticks it after you save in-game.",
+      "days": [
+        "Tue",
+        "Thu",
+        "Sat"
+      ]
     },
     {
       "id": "item:EVENT_OLIVINE_LIGHTHOUSE_5F_HIDDEN_HYPER_POTION",
@@ -6443,7 +6448,10 @@
       "region": "kanto",
       "area": "",
       "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/celadon-city/",
-      "kind": "found"
+      "kind": "found",
+      "times": [
+        "night"
+      ]
     },
     {
       "id": "TM04",
@@ -6828,7 +6836,10 @@
       "region": "johto",
       "area": "",
       "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/",
-      "kind": "found"
+      "kind": "found",
+      "days": [
+        "Sun"
+      ]
     },
     {
       "id": "TM22",
@@ -6953,7 +6964,10 @@
       "region": "johto",
       "area": "",
       "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/goldenrod-city/",
-      "kind": "found"
+      "kind": "found",
+      "days": [
+        "Sun"
+      ]
     },
     {
       "id": "TM28",
@@ -7760,7 +7774,11 @@
         "Ilex Forest\tjohto\tHeadbutt · any tree (65%), rare trees (50%) · Lv 10\thttps://rankedboost.com/pokemon/location/gold-silver/ilex-forest/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/national-park/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/national-park/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:14",
@@ -7790,7 +7808,11 @@
         "Ilex Forest\tjohto\tHeadbutt · ordinary trees (15%) · Lv 10\thttps://rankedboost.com/pokemon/location/gold-silver/ilex-forest/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/national-park/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/national-park/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:15",
@@ -7813,7 +7835,10 @@
         "Ilex Forest\tjohto\tHeadbutt · any tree (5%), rare trees (5%) · Lv 10\thttps://rankedboost.com/pokemon/location/gold-silver/ilex-forest/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-2/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-2/",
+      "times": [
+        "morning"
+      ]
     },
     {
       "id": "dex:16",
@@ -7842,7 +7867,11 @@
         "Route 25\tkanto\tGrass · day · Lv 8-10\thttps://rankedboost.com/pokemon/location/gold-silver/route-25/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/national-park/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/national-park/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:17",
@@ -7862,7 +7891,11 @@
         "Route 25\tkanto\tGrass · day · Lv 12\thttps://rankedboost.com/pokemon/location/gold-silver/route-25/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-37/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-37/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:18",
@@ -7936,7 +7969,12 @@
         "Route 22\tkanto\tGrass · night · Lv 3-7\thttps://rankedboost.com/pokemon/location/gold-silver/route-22/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/sprout-tower/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/sprout-tower/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:20",
@@ -7961,7 +7999,12 @@
         "Route 27\tkanto\tGrass · day, night · Lv 30\thttps://rankedboost.com/pokemon/location/gold-silver/route-27/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:21",
@@ -7991,7 +8034,11 @@
         "Route 46\tjohto\tHeadbutt · any tree (80%), rare trees (50%) · Lv 10\thttps://rankedboost.com/pokemon/location/gold-silver/route-46/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-33/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-33/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:22",
@@ -8008,7 +8055,11 @@
         "Route 22\tkanto\tGrass · morning, day · Lv 7\thttps://rankedboost.com/pokemon/location/gold-silver/route-22/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-9/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-9/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:23",
@@ -8194,7 +8245,12 @@
         "Route 8\tkanto\tGrass · any time · Lv 18\thttps://rankedboost.com/pokemon/location/gold-silver/route-8/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-36/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-36/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:38",
@@ -8277,7 +8333,12 @@
         "Route 4\tkanto\tGrass · night · Lv 5\thttps://rankedboost.com/pokemon/location/gold-silver/route-4/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:42",
@@ -8327,7 +8388,10 @@
         "Route 25\tkanto\tGrass · night · Lv 10\thttps://rankedboost.com/pokemon/location/gold-silver/route-25/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ilex-forest/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ilex-forest/",
+      "times": [
+        "night"
+      ]
     },
     {
       "id": "dex:44",
@@ -8339,7 +8403,10 @@
         "Route 5\tkanto\tGrass · night · Lv 15\thttps://rankedboost.com/pokemon/location/gold-silver/route-5/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-5/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-5/",
+      "times": [
+        "night"
+      ]
     },
     {
       "id": "dex:45",
@@ -8363,7 +8430,12 @@
         "Mount Moon\tkanto\tGrass · any time · Lv 12\thttps://rankedboost.com/pokemon/location/gold-silver/mt-moon/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ilex-forest/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ilex-forest/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:47",
@@ -8387,7 +8459,11 @@
         "Route 25\tkanto\tGrass · morning, night · Lv 8\thttps://rankedboost.com/pokemon/location/gold-silver/route-25/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-43/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-43/",
+      "times": [
+        "morning",
+        "night"
+      ]
     },
     {
       "id": "dex:49",
@@ -8400,7 +8476,10 @@
         "Route 25\tkanto\tGrass · night · Lv 10\thttps://rankedboost.com/pokemon/location/gold-silver/route-25/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-24/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-24/",
+      "times": [
+        "night"
+      ]
     },
     {
       "id": "dex:50",
@@ -8672,7 +8751,12 @@
         "Route 25\tkanto\tGrass · any time · Lv 10\thttps://rankedboost.com/pokemon/location/gold-silver/route-25/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-31/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-31/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:70",
@@ -8687,7 +8771,12 @@
         "Route 25\tkanto\tGrass · any time · Lv 14\thttps://rankedboost.com/pokemon/location/gold-silver/route-25/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-44/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-44/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:71",
@@ -8791,7 +8880,12 @@
         "Rock Tunnel B1F\t\tGrass · any time · Lv 12\thttps://rankedboost.com/pokemon/location/gold-silver/rock-tunnel/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/union-cave/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/union-cave/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:75",
@@ -8913,7 +9007,11 @@
         "Route 39\tjohto\tGrass · morning, day · Lv 16\thttps://rankedboost.com/pokemon/location/gold-silver/route-39/"
       ],
       "region": "johto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-38/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-38/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:84",
@@ -8929,7 +9027,11 @@
         "Route 28\tkanto\tGrass · morning, day · Lv 41\thttps://rankedboost.com/pokemon/location/gold-silver/route-28/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:85",
@@ -8943,7 +9045,11 @@
         "Route 28\tkanto\tGrass · morning, day · Lv 43\thttps://rankedboost.com/pokemon/location/gold-silver/route-28/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:86",
@@ -8988,7 +9094,12 @@
         "Celadon City\tkanto\tSurf · Lv 15-20\thttps://rankedboost.com/pokemon/location/gold-silver/celadon-city/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-16/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-16/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:89",
@@ -9005,7 +9116,12 @@
         "Celadon City\tkanto\tSurf · Lv 15\thttps://rankedboost.com/pokemon/location/gold-silver/celadon-city/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-16/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-16/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:90",
@@ -9046,7 +9162,10 @@
         "Tin Tower 9F\tjohto\tGrass · night · Lv 20-22\thttps://rankedboost.com/pokemon/location/gold-silver/tin-tower/"
       ],
       "region": "johto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/sprout-tower/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/sprout-tower/",
+      "times": [
+        "night"
+      ]
     },
     {
       "id": "dex:93",
@@ -9058,7 +9177,10 @@
         "Route 8\tkanto\tGrass · night · Lv 20\thttps://rankedboost.com/pokemon/location/gold-silver/route-8/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-8/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-8/",
+      "times": [
+        "night"
+      ]
     },
     {
       "id": "dex:94",
@@ -9443,7 +9565,12 @@
         "Route 21\tkanto\tGrass · day · Lv 28-30\thttps://rankedboost.com/pokemon/location/gold-silver/route-21/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-21/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-21/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:123",
@@ -9474,7 +9601,12 @@
         "Ice Path B3F\t\tGrass · day · Lv 22-24\thttps://rankedboost.com/pokemon/location/gold-silver/ice-path/"
       ],
       "region": "johto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ice-path/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ice-path/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:125",
@@ -9487,7 +9619,12 @@
         "Route 10North\tkanto\tGrass · day · Lv 15-17\thttps://rankedboost.com/pokemon/location/gold-silver/route-10/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-10/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-10/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:126",
@@ -9500,7 +9637,12 @@
         "Burned Tower B1F\t\tGrass · day · Lv 16\thttps://rankedboost.com/pokemon/location/gold-silver/burned-tower/"
       ],
       "region": "",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/burned-tower/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:127",
@@ -9872,7 +10014,11 @@
         "Route 1\tkanto\tGrass · morning, day · Lv 3\thttps://rankedboost.com/pokemon/location/gold-silver/route-1/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-29/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-29/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:162",
@@ -9884,7 +10030,11 @@
         "Route 1\tkanto\tGrass · morning, day · Lv 6\thttps://rankedboost.com/pokemon/location/gold-silver/route-1/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-1/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-1/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:163",
@@ -9904,7 +10054,10 @@
         "Route 2\tkanto\tGrass · night · Lv 3-5\thttps://rankedboost.com/pokemon/location/gold-silver/route-2/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/national-park/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/national-park/",
+      "times": [
+        "night"
+      ]
     },
     {
       "id": "dex:164",
@@ -9921,7 +10074,10 @@
         "Route 15\tkanto\tGrass · night · Lv 25\thttps://rankedboost.com/pokemon/location/gold-silver/route-15/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-43/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-43/",
+      "times": [
+        "night"
+      ]
     },
     {
       "id": "dex:165",
@@ -9936,7 +10092,10 @@
         "Route 2\tkanto\tGrass · morning · Lv 3\thttps://rankedboost.com/pokemon/location/gold-silver/route-2/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-30/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-30/",
+      "times": [
+        "morning"
+      ]
     },
     {
       "id": "dex:166",
@@ -9948,7 +10107,10 @@
         "Route 2\tkanto\tGrass · morning · Lv 7\thttps://rankedboost.com/pokemon/location/gold-silver/route-2/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-2/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-2/",
+      "times": [
+        "morning"
+      ]
     },
     {
       "id": "dex:167",
@@ -10098,7 +10260,12 @@
         "Route 43\tjohto\tGrass · day · Lv 15-17\thttps://rankedboost.com/pokemon/location/gold-silver/route-43/"
       ],
       "region": "johto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-42/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-42/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:181",
@@ -10176,7 +10343,11 @@
         "Route 15\tkanto\tGrass · morning, day · Lv 22-24\thttps://rankedboost.com/pokemon/location/gold-silver/route-15/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-32/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-32/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:188",
@@ -10188,7 +10359,11 @@
         "Route 14\tkanto\tGrass · morning, day · Lv 26\thttps://rankedboost.com/pokemon/location/gold-silver/route-14/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-14/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-14/",
+      "times": [
+        "morning",
+        "day"
+      ]
     },
     {
       "id": "dex:189",
@@ -10232,7 +10407,10 @@
         "Route 24\tkanto\tGrass · day · Lv 10\thttps://rankedboost.com/pokemon/location/gold-silver/route-24/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/national-park/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/national-park/",
+      "times": [
+        "day"
+      ]
     },
     {
       "id": "dex:192",
@@ -10270,7 +10448,11 @@
         "Route 32\tjohto\tGrass · night · Lv 6-8\thttps://rankedboost.com/pokemon/location/gold-silver/route-32/"
       ],
       "region": "johto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ruins-of-alph/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ruins-of-alph/",
+      "times": [
+        "morning",
+        "night"
+      ]
     },
     {
       "id": "dex:195",
@@ -10301,7 +10483,11 @@
         "Route 12\tkanto\tSurf · Lv 25\thttps://rankedboost.com/pokemon/location/gold-silver/route-12/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ruins-of-alph/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/ruins-of-alph/",
+      "times": [
+        "morning",
+        "night"
+      ]
     },
     {
       "id": "dex:196",
@@ -10334,7 +10520,10 @@
         "Route 16\tkanto\tGrass · night · Lv 28\thttps://rankedboost.com/pokemon/location/gold-silver/route-16/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-7/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-7/",
+      "times": [
+        "night"
+      ]
     },
     {
       "id": "dex:199",
@@ -10357,7 +10546,10 @@
         "Silver Cave Item Rooms\tjohto\tGrass · night · Lv 45\thttps://rankedboost.com/pokemon/location/gold-silver/mt-silver/"
       ],
       "region": "johto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/",
+      "times": [
+        "night"
+      ]
     },
     {
       "id": "dex:201",
@@ -10543,7 +10735,10 @@
         "Route 28\tkanto\tGrass · night · Lv 40\thttps://rankedboost.com/pokemon/location/gold-silver/route-28/"
       ],
       "region": "johto,kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/mt-silver/",
+      "times": [
+        "night"
+      ]
     },
     {
       "id": "dex:216",
@@ -10578,7 +10773,12 @@
         "Route 18\tkanto\tGrass · any time · Lv 27\thttps://rankedboost.com/pokemon/location/gold-silver/route-18/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-16/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-16/",
+      "times": [
+        "morning",
+        "day",
+        "night"
+      ]
     },
     {
       "id": "dex:219",
@@ -10694,7 +10894,10 @@
         "Route 7\tkanto\tGrass · night · Lv 15\thttps://rankedboost.com/pokemon/location/gold-silver/route-7/"
       ],
       "region": "kanto",
-      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-7/"
+      "rankedboost": "https://rankedboost.com/pokemon/location/gold-silver/route-7/",
+      "times": [
+        "night"
+      ]
     },
     {
       "id": "dex:229",
@@ -13143,7 +13346,12 @@
       "sprite": "",
       "spot": "",
       "kind": "gift",
-      "howto": "Where: National Park (north of Goldenrod). Talk to the Teacher standing in the south part of the park (tile 27,40).\nWhen: any day. (On Tue/Thu/Sat the park runs the Bug-Catching Contest – if you cannot find her, come back on another day.)\nNeeds: a free Bag slot.\nDo: just talk to her."
+      "howto": "Where: National Park (north of Goldenrod). Talk to the Teacher standing in the south part of the park (tile 27,40).\nWhen: any day. (On Tue/Thu/Sat the park runs the Bug-Catching Contest – if you cannot find her, come back on another day.)\nNeeds: a free Bag slot.\nDo: just talk to her.",
+      "days": [
+        "Tue",
+        "Thu",
+        "Sat"
+      ]
     },
     {
       "id": "npc:EVENT_GOT_PINK_BOW_FROM_MARY",
@@ -13215,7 +13423,10 @@
       "sprite": "",
       "spot": "",
       "kind": "gift",
-      "howto": "Where: Blackthorn City, Santos stands at tile 22,20.\nWhen: SATURDAY only (game clock).\nNeeds: nothing.\nDo: talk to Santos on a Saturday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once."
+      "howto": "Where: Blackthorn City, Santos stands at tile 22,20.\nWhen: SATURDAY only (game clock).\nNeeds: nothing.\nDo: talk to Santos on a Saturday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once.",
+      "days": [
+        "Sat"
+      ]
     },
     {
       "id": "npc:EVENT_GOT_EVERSTONE_FROM_BILLS_GRANDPA",
@@ -13269,7 +13480,10 @@
       "sprite": "",
       "spot": "",
       "kind": "gift",
-      "howto": "Where: Lake of Rage, Wesley stands at tile 4,4 (north-west corner).\nWhen: WEDNESDAY only.\nNeeds: nothing.\nDo: talk to Wesley on a Wednesday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once."
+      "howto": "Where: Lake of Rage, Wesley stands at tile 4,4 (north-west corner).\nWhen: WEDNESDAY only.\nNeeds: nothing.\nDo: talk to Wesley on a Wednesday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once.",
+      "days": [
+        "Wed"
+      ]
     },
     {
       "id": "npc:EVENT_GOT_POISON_BARB_FROM_FRIEDA",
@@ -13287,7 +13501,10 @@
       "sprite": "",
       "spot": "",
       "kind": "gift",
-      "howto": "Where: Route 32 (south part, near the Union Cave end). Frieda stands at tile 12,67.\nWhen: FRIDAY only.\nNeeds: nothing.\nDo: talk to Frieda on a Friday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once."
+      "howto": "Where: Route 32 (south part, near the Union Cave end). Frieda stands at tile 12,67.\nWhen: FRIDAY only.\nNeeds: nothing.\nDo: talk to Frieda on a Friday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once.",
+      "days": [
+        "Fri"
+      ]
     },
     {
       "id": "npc:EVENT_GOT_HARD_STONE_FROM_ARTHUR",
@@ -13305,7 +13522,10 @@
       "sprite": "",
       "spot": "",
       "kind": "gift",
-      "howto": "Where: Route 36 (east of Violet City, towards Route 37). Arthur wanders around tile 46,6.\nWhen: THURSDAY only.\nNeeds: nothing.\nDo: talk to Arthur on a Thursday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once."
+      "howto": "Where: Route 36 (east of Violet City, towards Route 37). Arthur wanders around tile 46,6.\nWhen: THURSDAY only.\nNeeds: nothing.\nDo: talk to Arthur on a Thursday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once.",
+      "days": [
+        "Thu"
+      ]
     },
     {
       "id": "npc:EVENT_GOT_MAGNET_FROM_SUNNY",
@@ -13323,7 +13543,10 @@
       "sprite": "",
       "spot": "",
       "kind": "gift",
-      "howto": "Where: Route 37 (north of Ecruteak). Sunny wanders around tile 16,8.\nWhen: SUNDAY only.\nNeeds: nothing.\nDo: talk to Sunny on a Sunday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once."
+      "howto": "Where: Route 37 (north of Ecruteak). Sunny wanders around tile 16,8.\nWhen: SUNDAY only.\nNeeds: nothing.\nDo: talk to Sunny on a Sunday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once.",
+      "days": [
+        "Sun"
+      ]
     },
     {
       "id": "npc:EVENT_GOT_OLD_ROD",
@@ -13503,7 +13726,10 @@
       "sprite": "",
       "spot": "",
       "kind": "gift",
-      "howto": "Where: Route 40 (the sea route south of Olivine City). Monica walks left/right at about tile 10,6.\nWhen: MONDAY only.\nNeeds: nothing (you may need Surf to reach Route 40).\nDo: talk to Monica on a Monday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once."
+      "howto": "Where: Route 40 (the sea route south of Olivine City). Monica walks left/right at about tile 10,6.\nWhen: MONDAY only.\nNeeds: nothing (you may need Surf to reach Route 40).\nDo: talk to Monica on a Monday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once.",
+      "days": [
+        "Mon"
+      ]
     },
     {
       "id": "npc:EVENT_GOT_SECRETPOTION_FROM_PHARMACY",
@@ -13557,7 +13783,10 @@
       "sprite": "",
       "spot": "",
       "kind": "gift",
-      "howto": "Where: Route 29 (between New Bark Town and Cherrygrove), Tuscany stands near tile 29,12.\nWhen: TUESDAY only.\nNeeds: nothing.\nDo: talk to Tuscany on a Tuesday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once."
+      "howto": "Where: Route 29 (between New Bark Town and Cherrygrove), Tuscany stands near tile 29,12.\nWhen: TUESDAY only.\nNeeds: nothing.\nDo: talk to Tuscany on a Tuesday.\nNote: the weekday comes from the game clock (the real-time clock in the cartridge). The giver only stands there on that weekday; you can only get it once.",
+      "days": [
+        "Tue"
+      ]
     },
     {
       "id": "npc:EVENT_GOT_UP_GRADE",

@@ -74,14 +74,22 @@ private fun isRankedBoost(u: Uri?) = u != null && u.scheme == "https" && (u.host
                             try { c.startActivity(Intent(Intent.ACTION_VIEW, request.url)) } catch (_: Exception) {}
                             return true
                         }
-                        override fun onPageFinished(view: WebView, url: String?) {
+                        // the panel is only injected into the RankedBoost Gold/Silver pages it was written for
+                        private fun inject(view: WebView, url: String?) {
                             val u = url?.let { Uri.parse(it) }
-                            if (url != null) onUrlNow(url)
                             val save = b64
-                            // the panel is only injected into the RankedBoost Gold/Silver pages it was written for
                             val path = u?.path.orEmpty()
                             if (save != null && script.isNotEmpty() && isRankedBoost(u) && (path.startsWith("/pokemon/location/gold-silver/") || path.startsWith("/pokemon/pokedex/gold-silver/")))
-                                view.evaluateJavascript("window.__SQ_SAVE_B64='$save';\n$script", null)
+                                view.evaluateJavascript("window.__SQ_SAVE_B64='$save';\n$script", null)   // harmless if the panel is already there
+                        }
+                        override fun onPageFinished(view: WebView, url: String?) {
+                            if (url != null) onUrlNow(url)
+                            inject(view, url)
+                        }
+                        // RankedBoost can change pages without a full load (history API): inject there too
+                        override fun doUpdateVisitedHistory(view: WebView, url: String?, isReload: Boolean) {
+                            if (url != null) onUrlNow(url)
+                            inject(view, url)
                         }
                     }
                     webChromeClient = object : WebChromeClient() {

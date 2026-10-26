@@ -91,10 +91,13 @@ class MainActivity : ComponentActivity() {
     private fun openUrl(url: String) { try { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) } catch (_: Exception) { message = "No browser available" } }
     @Composable private fun Screen() {
         var category by rememberSaveable { mutableStateOf("TM/HM") }
-        var query by remember { mutableStateOf("") }
-        var incomplete by remember { mutableStateOf(false) }
-        var region by remember { mutableStateOf("All") }
-        var kind by remember { mutableStateOf("All") }
+        // saved with the screen state so rotating the phone keeps the search and every filter
+        var query by rememberSaveable { mutableStateOf("") }
+        var incomplete by rememberSaveable { mutableStateOf(false) }
+        var region by rememberSaveable { mutableStateOf("All") }
+        var kind by rememberSaveable { mutableStateOf("All") }
+        var whenDay by rememberSaveable { mutableStateOf("") }
+        var whenTime by rememberSaveable { mutableStateOf("") }
         var rbOpen by rememberSaveable { mutableStateOf(false) }
         var rbUrl by rememberSaveable { mutableStateOf(RB_LOCATIONS) }
         var selectedSnapshot by remember(active) { mutableStateOf<String?>(null) }
@@ -108,8 +111,10 @@ class MainActivity : ComponentActivity() {
             task.id to Progress.resolve(current, earlier.any { it.evidence(task).kind != EvidenceKind.UNKNOWN }, manual[task.id]?.checked == true)
         } }
         fun isDone(t: Task) = results[t.id]?.kind != EvidenceKind.UNKNOWN
+        // HMs the save shows you own (bag or receipt evidence); the advisor only nags about HMs you can actually use
+        val ownedHms = listOf("Cut", "Fly", "Surf", "Strength", "Flash", "Whirlpool", "Waterfall").filterIndexed { i, _ -> results["HM0${i + 1}"]?.kind.let { it != null && it != EvidenceKind.UNKNOWN } }.toSet()
         // progress is counted on `base` (every filter except "Show unconfirmed only"); `visible` is what gets listed
-        val base = repo.tasks.filter { Checklist.matches(it, category, kind, region, query) }
+        val base = repo.tasks.filter { Checklist.matches(it, category, kind, region, query, WhenFilter(whenDay, whenTime)) }
         val visible = Checklist.visibleRows(base, ::isDone, incomplete)
         val sections = if (category == "Items") Checklist.sections(base, ::isDone, incomplete) else emptyList()
         val searching = query.isNotBlank()
@@ -157,10 +162,12 @@ class MainActivity : ComponentActivity() {
                 snapshots.distinctBy { it.profile }.forEach { s -> FilterChip(selected = active == s.profile, onClick = { active = s.profile; repo.prefs.edit().putString("active", active).apply() }, label = { Text(Silver.parse(s.raw).trainer + " · " + s.profile.takeLast(4)) }) }
             }
             Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                listOf("TM/HM", "Trainers", "Items", "Pokédex", "Pokémon", "Heracross", "Tips", "RankedBoost", "History").forEach { name -> val total = repo.tasks.count { it.category == name }; val done = if (total > 0) repo.tasks.count { it.category == name && results[it.id]?.kind != EvidenceKind.UNKNOWN } else 0; FilterChip(selected = category == name, onClick = { category = name; kind = "All" }, label = { Text(if (total > 0 && parsed != null) "$name $done/$total" else name) }) }
+                listOf("TM/HM", "Trainers", "Items", "Pokédex", "Team", "Pokémon", "Heracross", "Tips", "RankedBoost", "History").forEach { name -> val total = repo.tasks.count { it.category == name }; val done = if (total > 0) repo.tasks.count { it.category == name && results[it.id]?.kind != EvidenceKind.UNKNOWN } else 0; FilterChip(selected = category == name, onClick = { category = name; kind = "All" }, label = { Text(if (total > 0 && parsed != null) "$name $done/$total" else name) }) }
             }
           } }
-            if (category == "Pokémon") {
+            if (category == "Team") {
+                item { TeamTab(selected?.raw, parsed?.usedBackup == true, repo.tasks.filter { it.dexNumber != null }.sortedBy { it.dexNumber }.map { it.title.substringAfter(" · ") }, ownedHms) { openUrl(it) } }
+            } else if (category == "Pokémon") {
                 item { PokemonTab(selected?.raw, parsed?.usedBackup == true, repo.tasks.filter { it.dexNumber != null }.sortedBy { it.dexNumber }.map { it.title.substringAfter(" · ") }) }
             } else if (category == "Heracross") {
                 item { HeracrossTab(selected?.raw, parsed?.usedBackup == true) { openUrl(it) } }
@@ -181,6 +188,24 @@ class MainActivity : ComponentActivity() {
                 }
                 if (category in setOf("Items", "Pokédex", "Trainers", "TM/HM")) Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                     listOf("All", "Johto", "Kanto").forEach { r -> FilterChip(selected = region == r, onClick = { region = r }, label = { Text(r) }) }
+                }
+                if (category in setOf("Items", "Pokédex", "TM/HM")) {
+                    // weekday / time-of-day limits come from the game data; "today" and "now" use the phone clock (the game uses the cartridge clock)
+                    val nowCal = java.util.Calendar.getInstance()
+                    val today = GameClock.dayName(nowCal.get(java.util.Calendar.DAY_OF_WEEK)); val nowWindow = GameClock.windowOf(nowCal.get(java.util.Calendar.HOUR_OF_DAY))
+                    Row(Modifier.horizontalScroll(rememberScrollState()), verticalAlignment = androidx.compose.ui.Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                        Text("Day", style = MaterialTheme.typography.labelMedium)
+                        FilterChip(selected = whenDay.isEmpty(), onClick = { whenDay = "" }, label = { Text("Any") })
+                        FilterChip(selected = whenDay == today, onClick = { whenDay = if (whenDay == today) "" else today }, label = { Text("Today · $today") })
+                        GameClock.DAYS.filter { it != today }.forEach { d -> FilterChip(selected = whenDay == d, onClick = { whenDay = if (whenDay == d) "" else d }, label = { Text(d) }) }
+                    }
+                    Row(Modifier.horizontalScroll(rememberScrollState()), verticalAlignment = androidx.compose.ui.Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                        Text("Time", style = MaterialTheme.typography.labelMedium)
+                        FilterChip(selected = whenTime.isEmpty(), onClick = { whenTime = "" }, label = { Text("Any") })
+                        FilterChip(selected = whenTime == nowWindow, onClick = { whenTime = if (whenTime == nowWindow) "" else nowWindow }, label = { Text("Now · $nowWindow") })
+                        GameClock.TIMES.filter { it != nowWindow }.forEach { t -> FilterChip(selected = whenTime == t, onClick = { whenTime = if (whenTime == t) "" else t }, label = { Text(t.replaceFirstChar { c -> c.uppercase() }) }) }
+                    }
+                    if (whenDay.isNotEmpty() || whenTime.isNotEmpty()) Text("Showing only entries limited to " + listOf(whenDay.takeIf { it.isNotEmpty() }, whenTime.takeIf { it.isNotEmpty() }).filterNotNull().joinToString(" · ") + ". Pokémon appear under a time if they have a spawn that only exists then.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 Row { Checkbox(checked = incomplete, onCheckedChange = { incomplete = it }); Text("Show unconfirmed only", modifier = Modifier.padding(top = 12.dp)) }
                 if (category == "Items") Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {

@@ -57,4 +57,24 @@ class ChecklistTest {
         if (!change.undo().after) doneNow -= change.undo().taskId                        // Undo works from the stored change, not from the row
         assertEquals(listOf("a1", "a2"), listed())
     }
+    @Test fun gameClockWindowsAndWeekdays() {
+        assertEquals("night", GameClock.windowOf(3)); assertEquals("morning", GameClock.windowOf(4)); assertEquals("morning", GameClock.windowOf(9))
+        assertEquals("day", GameClock.windowOf(10)); assertEquals("day", GameClock.windowOf(17)); assertEquals("night", GameClock.windowOf(18)); assertEquals("night", GameClock.windowOf(0))
+        // java.util.Calendar: 1 = Sunday ... 7 = Saturday
+        assertEquals(listOf("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"), (1..7).map { GameClock.dayName(it) })
+    }
+    @Test fun weekdayAndTimeFiltersOnlyKeepLimitedMatches() {
+        val tue = Task("tue", "Pink Bow", "Items", kind = "gift", days = listOf("Tue"))
+        val bugContest = Task("bc", "Quick Claw", "Items", kind = "gift", days = listOf("Tue", "Thu", "Sat"))
+        val night = Task("n", "Gastly", "Pokédex", times = listOf("night"))
+        val plain = Task("p", "Rattata", "Pokédex")
+        assertTrue(Checklist.matches(tue, "Items", "All", "All", "", WhenFilter(day = "Tue")))
+        assertFalse(Checklist.matches(tue, "Items", "All", "All", "", WhenFilter(day = "Wed")))
+        assertTrue(Checklist.matches(bugContest, "Items", "All", "All", "", WhenFilter(day = "Sat")))
+        assertTrue(Checklist.matches(night, "Pokédex", "All", "All", "", WhenFilter(time = "night")))
+        assertFalse(Checklist.matches(night, "Pokédex", "All", "All", "", WhenFilter(time = "morning")))
+        assertFalse(Checklist.matches(plain, "Pokédex", "All", "All", "", WhenFilter(time = "night")))   // unlimited rows are hidden while a time is chosen
+        assertTrue(Checklist.matches(plain, "Pokédex", "All", "All", "", WhenFilter()))                    // no filter: everything
+        assertFalse(WhenFilter().active); assertTrue(WhenFilter(time = "day").active)
+    }
 }

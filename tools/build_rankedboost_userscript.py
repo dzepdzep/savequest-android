@@ -12,7 +12,7 @@ TPL=ROOT/'tools/rankedboost/savequest-rankedboost.template.js'
 OUT=ROOT/'tools/rankedboost/savequest-rankedboost.user.js'
 APP=ROOT/'app/src/main/assets/rankedboost/savequest-rankedboost.js'   # the same script, injected by the app's RankedBoost screen
 def slug(s):
-    s=s.lower().replace('♀','-f').replace('♂','-m').replace('elixer','elixir').replace('poké','poke').replace('é','e')
+    s=s.lower().replace("'",'').replace('\u2019','').replace('♀','-f').replace('♂','-m').replace('elixer','elixir').replace('poké','poke').replace('é','e')
     return re.sub(r'[^a-z0-9]+','-',s).strip('-')
 def build():
     cat=json.loads((ROOT/'app/src/main/assets/catalog.json').read_text(encoding='utf8'))

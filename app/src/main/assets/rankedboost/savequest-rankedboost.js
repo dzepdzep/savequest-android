@@ -19,7 +19,7 @@
   // immediately, so page scripts cannot read it. Without it the panel asks for a file (browser userscript mode).
   const PRE=typeof window!=='undefined'&&typeof window.__SQ_SAVE_B64==='string'?window.__SQ_SAVE_B64:null;
   if(PRE)try{delete window.__SQ_SAVE_B64}catch{window.__SQ_SAVE_B64=undefined}
-  const GAME={"species":["bulbasaur","ivysaur","venusaur","charmander","charmeleon","charizard","squirtle","wartortle","blastoise","caterpie","metapod","butterfree","weedle","kakuna","beedrill","pidgey","pidgeotto","pidgeot","rattata","raticate","spearow","fearow","ekans","arbok","pikachu","raichu","sandshrew","sandslash","nidoran-f","nidorina","nidoqueen","nidoran-m","nidorino","nidoking","clefairy","clefable","vulpix","ninetales","jigglypuff","wigglytuff","zubat","golbat","oddish","gloom","vileplume","paras","parasect","venonat","venomoth","diglett","dugtrio","meowth","persian","psyduck","golduck","mankey","primeape","growlithe","arcanine","poliwag","poliwhirl","poliwrath","abra","kadabra","alakazam","machop","machoke","machamp","bellsprout","weepinbell","victreebel","tentacool","tentacruel","geodude","graveler","golem","ponyta","rapidash","slowpoke","slowbro","magnemite","magneton","farfetch-d","doduo","dodrio","seel","dewgong","grimer","muk","shellder","cloyster","gastly","haunter","gengar","onix","drowzee","hypno","krabby","kingler","voltorb","electrode","exeggcute","exeggutor","cubone","marowak","hitmonlee","hitmonchan","lickitung","koffing","weezing","rhyhorn","rhydon","chansey","tangela","kangaskhan","horsea","seadra","goldeen","seaking","staryu","starmie","mr-mime","scyther","jynx","electabuzz","magmar","pinsir","tauros","magikarp","gyarados","lapras","ditto","eevee","vaporeon","jolteon","flareon","porygon","omanyte","omastar","kabuto","kabutops","aerodactyl","snorlax","articuno","zapdos","moltres","dratini","dragonair","dragonite","mewtwo","mew","chikorita","bayleef","meganium","cyndaquil","quilava","typhlosion","totodile","croconaw","feraligatr","sentret","furret","hoothoot","noctowl","ledyba","ledian","spinarak","ariados","crobat","chinchou","lanturn","pichu","cleffa","igglybuff","togepi","togetic","natu","xatu","mareep","flaaffy","ampharos","bellossom","marill","azumarill","sudowoodo","politoed","hoppip","skiploom","jumpluff","aipom","sunkern","sunflora","yanma","wooper","quagsire","espeon","umbreon","murkrow","slowking","misdreavus","unown","wobbuffet","girafarig","pineco","forretress","dunsparce","gligar","steelix","snubbull","granbull","qwilfish","scizor","shuckle","heracross","sneasel","teddiursa","ursaring","slugma","magcargo","swinub","piloswine","corsola","remoraid","octillery","delibird","mantine","skarmory","houndour","houndoom","kingdra","phanpy","donphan","porygon2","stantler","smeargle","tyrogue","hitmontop","smoochum","elekid","magby","miltank","blissey","raikou","entei","suicune","larvitar","pupitar","tyranitar","lugia","ho-oh","celebi"],"maps":{"azalea-town":[{"s":"full-heal","f":177,"k":"hidden"}],"burned-tower":[{"s":"ether","f":128,"k":"hidden"},{"s":"ultra-ball","f":129,"k":"hidden"},{"s":"burn-heal","f":130,"k":"hidden"},{"s":"nugget","f":131,"k":"hidden"},{"s":"burn-heal","f":1620,"k":"visible"},{"s":"x-speed","f":1621,"k":"visible"},{"s":"hp-up","f":1622,"k":"visible"}],"celadon-city":[{"s":"pp-up","f":253,"k":"hidden"}],"cerulean-city":[{"s":"berserk-gene","f":250,"k":"hidden"},{"s":"machine-part","f":251,"k":"hidden"}],"cianwood-city":[{"s":"revive","f":178,"k":"hidden"},{"s":"max-ether","f":179,"k":"hidden"}],"cinnabar-island":[{"s":"rare-candy","f":254,"k":"hidden"}],"dark-cave":[{"s":"elixir","f":157,"k":"hidden"},{"s":"revive","f":1697,"k":"visible"},{"s":"potion","f":1694,"k":"visible"},{"s":"hyper-potion","f":1696,"k":"visible"},{"s":"full-heal","f":1695,"k":"visible"}],"digletts-cave":[{"s":"max-revive","f":228,"k":"hidden"}],"dragons-den":[{"s":"revive","f":160,"k":"hidden"},{"s":"max-potion","f":161,"k":"hidden"},{"s":"max-elixir","f":162,"k":"hidden"}],"ecruteak-city":[{"s":"hyper-potion","f":180,"k":"hidden"}],"goldenrod-city":[{"s":"paralyze-heal","f":139,"k":"hidden"},{"s":"super-potion","f":140,"k":"hidden"},{"s":"antidote","f":141,"k":"hidden"},{"s":"max-potion","f":142,"k":"hidden"},{"s":"revive","f":143,"k":"hidden"},{"s":"amulet-coin","f":1654,"k":"visible"},{"s":"burn-heal","f":1655,"k":"visible"},{"s":"ether","f":1653,"k":"visible"},{"s":"ultra-ball","f":1656,"k":"visible"},{"s":"coin-case","f":1650,"k":"visible"},{"s":"full-heal","f":1652,"k":"visible"},{"s":"smoke-ball","f":1651,"k":"visible"},{"s":"max-ether","f":1657,"k":"visible"}],"ice-path":[{"s":"max-potion","f":148,"k":"hidden"},{"s":"ice-heal","f":150,"k":"hidden"},{"s":"carbos","f":149,"k":"hidden"},{"s":"pp-up","f":1673,"k":"visible"},{"s":"iron","f":1674,"k":"visible"},{"s":"max-potion","f":1676,"k":"visible"},{"s":"full-heal","f":1675,"k":"visible"},{"s":"never-melt-ice","f":1678,"k":"visible"}],"ilex-forest":[{"s":"ether","f":136,"k":"hidden"},{"s":"super-potion","f":137,"k":"hidden"},{"s":"full-heal","f":138,"k":"hidden"},{"s":"revive","f":1649,"k":"visible"}],"lake-of-rage":[{"s":"full-restore","f":181,"k":"hidden"},{"s":"rare-candy","f":182,"k":"hidden"},{"s":"max-potion","f":183,"k":"hidden"},{"s":"max-ether","f":1605,"k":"visible"}],"mt-moon":[{"s":"moon-stone","f":236,"k":"hidden"}],"mt-mortar":[{"s":"max-repel","f":145,"k":"hidden"},{"s":"hyper-potion","f":144,"k":"hidden"},{"s":"full-restore","f":146,"k":"hidden"},{"s":"max-revive","f":147,"k":"hidden"},{"s":"max-revive","f":1662,"k":"visible"},{"s":"hyper-potion","f":1663,"k":"visible"},{"s":"escape-rope","f":1661,"k":"visible"},{"s":"ether","f":1659,"k":"visible"},{"s":"guard-spec","f":1660,"k":"visible"},{"s":"dragon-scale","f":1667,"k":"visible"},{"s":"escape-rope","f":1669,"k":"visible"},{"s":"elixir","f":1668,"k":"visible"},{"s":"max-potion","f":1664,"k":"visible"},{"s":"rare-candy","f":1665,"k":"visible"},{"s":"full-heal","f":1671,"k":"visible"},{"s":"hyper-potion","f":1670,"k":"visible"}],"national-park":[{"s":"full-heal","f":132,"k":"hidden"},{"s":"paralyze-heal","f":1624,"k":"visible"}],"olivine-city":[{"s":"hyper-potion","f":133,"k":"hidden"},{"s":"protein","f":234,"k":"hidden"},{"s":"ether","f":1636,"k":"visible"},{"s":"rare-candy","f":1637,"k":"visible"},{"s":"great-ball","f":1638,"k":"visible"},{"s":"super-potion","f":1640,"k":"visible"}],"rock-tunnel":[{"s":"x-accuracy","f":231,"k":"hidden"},{"s":"x-defense","f":232,"k":"hidden"},{"s":"max-potion","f":233,"k":"hidden"},{"s":"elixir","f":1918,"k":"visible"},{"s":"revive","f":1922,"k":"visible"},{"s":"pp-up","f":1921,"k":"visible"},{"s":"iron","f":1920,"k":"visible"}],"route-11":[{"s":"revive","f":245,"k":"hidden"}],"route-12":[{"s":"elixir","f":243,"k":"hidden"},{"s":"calcium","f":1928,"k":"visible"},{"s":"nugget","f":1929,"k":"visible"}],"route-13":[{"s":"calcium","f":244,"k":"hidden"}],"route-17":[{"s":"max-ether","f":246,"k":"hidden"},{"s":"max-elixir","f":247,"k":"hidden"}],"route-2":[{"s":"max-ether","f":237,"k":"hidden"},{"s":"full-heal","f":238,"k":"hidden"},{"s":"full-restore","f":239,"k":"hidden"},{"s":"revive","f":240,"k":"hidden"},{"s":"carbos","f":1925,"k":"visible"},{"s":"max-potion","f":1924,"k":"visible"},{"s":"dire-hit","f":1923,"k":"visible"},{"s":"elixir","f":1926,"k":"visible"}],"route-25":[{"s":"potion","f":248,"k":"hidden"},{"s":"protein","f":1931,"k":"visible"}],"route-28":[{"s":"rare-candy","f":163,"k":"hidden"}],"route-30":[{"s":"potion","f":164,"k":"hidden"}],"route-32":[{"s":"great-ball","f":165,"k":"hidden"},{"s":"super-potion","f":166,"k":"hidden"},{"s":"potion","f":1713,"k":"visible"},{"s":"great-ball","f":1712,"k":"visible"}],"route-34":[{"s":"rare-candy","f":167,"k":"hidden"},{"s":"super-potion","f":168,"k":"hidden"}],"route-37":[{"s":"ether","f":169,"k":"hidden"}],"route-39":[{"s":"nugget","f":170,"k":"hidden"}],"route-4":[{"s":"ultra-ball","f":241,"k":"hidden"},{"s":"hp-up","f":1927,"k":"visible"}],"route-40":[{"s":"hyper-potion","f":171,"k":"hidden"}],"route-41":[{"s":"max-ether","f":172,"k":"hidden"}],"route-42":[{"s":"max-potion","f":173,"k":"hidden"},{"s":"ultra-ball","f":1715,"k":"visible"},{"s":"super-potion","f":1716,"k":"visible"}],"route-44":[{"s":"elixir","f":174,"k":"hidden"},{"s":"ultra-ball","f":1719,"k":"visible"},{"s":"max-revive","f":1718,"k":"visible"}],"route-45":[{"s":"pp-up","f":175,"k":"hidden"},{"s":"elixir","f":1722,"k":"visible"},{"s":"max-potion","f":1723,"k":"visible"},{"s":"x-special","f":1720,"k":"visible"},{"s":"revive","f":1721,"k":"visible"}],"route-9":[{"s":"ether","f":242,"k":"hidden"}],"mt-silver":[{"s":"full-restore","f":184,"k":"hidden"},{"s":"dire-hit","f":154,"k":"hidden"},{"s":"ultra-ball","f":155,"k":"hidden"},{"s":"max-potion","f":156,"k":"hidden"},{"s":"max-revive","f":1692,"k":"visible"},{"s":"full-restore","f":1693,"k":"visible"},{"s":"max-elixir","f":1689,"k":"visible"},{"s":"x-accuracy","f":1690,"k":"visible"},{"s":"escape-rope","f":1691,"k":"visible"}],"team-rocket-hq":[{"s":"revive","f":134,"k":"hidden"},{"s":"full-heal","f":135,"k":"hidden"},{"s":"hyper-potion","f":1641,"k":"visible"},{"s":"x-accuracy","f":1643,"k":"visible"},{"s":"nugget","f":1642,"k":"visible"},{"s":"ice-heal","f":1648,"k":"visible"},{"s":"protein","f":1647,"k":"visible"},{"s":"full-heal","f":1645,"k":"visible"},{"s":"dire-hit","f":1646,"k":"visible"}],"tin-tower":[{"s":"max-potion","f":125,"k":"hidden"},{"s":"full-restore","f":126,"k":"hidden"},{"s":"carbos","f":127,"k":"hidden"},{"s":"full-heal","f":1611,"k":"visible"},{"s":"ultra-ball","f":1612,"k":"visible"},{"s":"escape-rope","f":1614,"k":"visible"},{"s":"super-potion","f":1613,"k":"visible"},{"s":"rare-candy","f":1615,"k":"visible"},{"s":"max-revive","f":1616,"k":"visible"},{"s":"full-restore","f":1619,"k":"visible"},{"s":"max-elixir","f":1618,"k":"visible"},{"s":"nugget","f":1617,"k":"visible"}],"vermilion-city":[{"s":"full-heal","f":252,"k":"hidden"},{"s":"iron","f":235,"k":"hidden"}],"victory-road":[{"s":"max-potion","f":158,"k":"hidden"},{"s":"full-heal","f":159,"k":"hidden"},{"s":"full-restore","f":1701,"k":"visible"},{"s":"x-special","f":1703,"k":"visible"},{"s":"max-revive","f":1700,"k":"visible"},{"s":"full-heal","f":1702,"k":"visible"}],"violet-city":[{"s":"hyper-potion","f":176,"k":"hidden"},{"s":"pp-up","f":1603,"k":"visible"},{"s":"rare-candy","f":1604,"k":"visible"}],"whirl-islands":[{"s":"rare-candy","f":151,"k":"hidden"},{"s":"ultra-ball","f":152,"k":"hidden"},{"s":"full-restore","f":153,"k":"hidden"},{"s":"nugget","f":1684,"k":"visible"},{"s":"full-restore","f":1681,"k":"visible"},{"s":"carbos","f":1682,"k":"visible"},{"s":"calcium","f":1683,"k":"visible"},{"s":"escape-rope","f":1685,"k":"visible"},{"s":"max-revive","f":1687,"k":"visible"},{"s":"full-restore","f":1686,"k":"visible"},{"s":"max-elixir","f":1688,"k":"visible"},{"s":"ultra-ball","f":1679,"k":"visible"},{"s":"guard-spec","f":1680,"k":"visible"}],"route-29":[{"s":"potion","f":1709,"k":"visible"}],"route-31":[{"s":"antidote","f":1710,"k":"visible"},{"s":"poke-ball","f":1711,"k":"visible"}],"route-43":[{"s":"max-ether","f":1717,"k":"visible"}],"route-46":[{"s":"dire-hit","f":1724,"k":"visible"}],"slowpoke-well":[{"s":"super-potion","f":1634,"k":"visible"}],"sprout-tower":[{"s":"paralyze-heal","f":1607,"k":"visible"},{"s":"x-defense","f":1608,"k":"visible"},{"s":"escape-rope","f":1610,"k":"visible"},{"s":"potion","f":1609,"k":"visible"}],"union-cave":[{"s":"potion","f":1627,"k":"visible"},{"s":"x-attack","f":1628,"k":"visible"},{"s":"great-ball","f":1626,"k":"visible"},{"s":"awakening","f":1629,"k":"visible"},{"s":"x-defense","f":1631,"k":"visible"},{"s":"elixir","f":1632,"k":"visible"},{"s":"hyper-potion","f":1633,"k":"visible"}],"route-15":[{"s":"pp-up","f":1930,"k":"visible"}],"route-26":[{"s":"max-elixir","f":1706,"k":"visible"}],"route-27":[{"s":"rare-candy","f":1708,"k":"visible"}],"tohjo-falls":[{"s":"moon-stone","f":1705,"k":"visible"}]}};
+  const GAME={"species":["bulbasaur","ivysaur","venusaur","charmander","charmeleon","charizard","squirtle","wartortle","blastoise","caterpie","metapod","butterfree","weedle","kakuna","beedrill","pidgey","pidgeotto","pidgeot","rattata","raticate","spearow","fearow","ekans","arbok","pikachu","raichu","sandshrew","sandslash","nidoran-f","nidorina","nidoqueen","nidoran-m","nidorino","nidoking","clefairy","clefable","vulpix","ninetales","jigglypuff","wigglytuff","zubat","golbat","oddish","gloom","vileplume","paras","parasect","venonat","venomoth","diglett","dugtrio","meowth","persian","psyduck","golduck","mankey","primeape","growlithe","arcanine","poliwag","poliwhirl","poliwrath","abra","kadabra","alakazam","machop","machoke","machamp","bellsprout","weepinbell","victreebel","tentacool","tentacruel","geodude","graveler","golem","ponyta","rapidash","slowpoke","slowbro","magnemite","magneton","farfetchd","doduo","dodrio","seel","dewgong","grimer","muk","shellder","cloyster","gastly","haunter","gengar","onix","drowzee","hypno","krabby","kingler","voltorb","electrode","exeggcute","exeggutor","cubone","marowak","hitmonlee","hitmonchan","lickitung","koffing","weezing","rhyhorn","rhydon","chansey","tangela","kangaskhan","horsea","seadra","goldeen","seaking","staryu","starmie","mr-mime","scyther","jynx","electabuzz","magmar","pinsir","tauros","magikarp","gyarados","lapras","ditto","eevee","vaporeon","jolteon","flareon","porygon","omanyte","omastar","kabuto","kabutops","aerodactyl","snorlax","articuno","zapdos","moltres","dratini","dragonair","dragonite","mewtwo","mew","chikorita","bayleef","meganium","cyndaquil","quilava","typhlosion","totodile","croconaw","feraligatr","sentret","furret","hoothoot","noctowl","ledyba","ledian","spinarak","ariados","crobat","chinchou","lanturn","pichu","cleffa","igglybuff","togepi","togetic","natu","xatu","mareep","flaaffy","ampharos","bellossom","marill","azumarill","sudowoodo","politoed","hoppip","skiploom","jumpluff","aipom","sunkern","sunflora","yanma","wooper","quagsire","espeon","umbreon","murkrow","slowking","misdreavus","unown","wobbuffet","girafarig","pineco","forretress","dunsparce","gligar","steelix","snubbull","granbull","qwilfish","scizor","shuckle","heracross","sneasel","teddiursa","ursaring","slugma","magcargo","swinub","piloswine","corsola","remoraid","octillery","delibird","mantine","skarmory","houndour","houndoom","kingdra","phanpy","donphan","porygon2","stantler","smeargle","tyrogue","hitmontop","smoochum","elekid","magby","miltank","blissey","raikou","entei","suicune","larvitar","pupitar","tyranitar","lugia","ho-oh","celebi"],"maps":{"azalea-town":[{"s":"full-heal","f":177,"k":"hidden"}],"burned-tower":[{"s":"ether","f":128,"k":"hidden"},{"s":"ultra-ball","f":129,"k":"hidden"},{"s":"burn-heal","f":130,"k":"hidden"},{"s":"nugget","f":131,"k":"hidden"},{"s":"burn-heal","f":1620,"k":"visible"},{"s":"x-speed","f":1621,"k":"visible"},{"s":"hp-up","f":1622,"k":"visible"}],"celadon-city":[{"s":"pp-up","f":253,"k":"hidden"}],"cerulean-city":[{"s":"berserk-gene","f":250,"k":"hidden"},{"s":"machine-part","f":251,"k":"hidden"}],"cianwood-city":[{"s":"revive","f":178,"k":"hidden"},{"s":"max-ether","f":179,"k":"hidden"}],"cinnabar-island":[{"s":"rare-candy","f":254,"k":"hidden"}],"dark-cave":[{"s":"elixir","f":157,"k":"hidden"},{"s":"revive","f":1697,"k":"visible"},{"s":"potion","f":1694,"k":"visible"},{"s":"hyper-potion","f":1696,"k":"visible"},{"s":"full-heal","f":1695,"k":"visible"}],"digletts-cave":[{"s":"max-revive","f":228,"k":"hidden"}],"dragons-den":[{"s":"revive","f":160,"k":"hidden"},{"s":"max-potion","f":161,"k":"hidden"},{"s":"max-elixir","f":162,"k":"hidden"}],"ecruteak-city":[{"s":"hyper-potion","f":180,"k":"hidden"}],"goldenrod-city":[{"s":"paralyze-heal","f":139,"k":"hidden"},{"s":"super-potion","f":140,"k":"hidden"},{"s":"antidote","f":141,"k":"hidden"},{"s":"max-potion","f":142,"k":"hidden"},{"s":"revive","f":143,"k":"hidden"},{"s":"amulet-coin","f":1654,"k":"visible"},{"s":"burn-heal","f":1655,"k":"visible"},{"s":"ether","f":1653,"k":"visible"},{"s":"ultra-ball","f":1656,"k":"visible"},{"s":"coin-case","f":1650,"k":"visible"},{"s":"full-heal","f":1652,"k":"visible"},{"s":"smoke-ball","f":1651,"k":"visible"},{"s":"max-ether","f":1657,"k":"visible"}],"ice-path":[{"s":"max-potion","f":148,"k":"hidden"},{"s":"ice-heal","f":150,"k":"hidden"},{"s":"carbos","f":149,"k":"hidden"},{"s":"pp-up","f":1673,"k":"visible"},{"s":"iron","f":1674,"k":"visible"},{"s":"max-potion","f":1676,"k":"visible"},{"s":"full-heal","f":1675,"k":"visible"},{"s":"never-melt-ice","f":1678,"k":"visible"}],"ilex-forest":[{"s":"ether","f":136,"k":"hidden"},{"s":"super-potion","f":137,"k":"hidden"},{"s":"full-heal","f":138,"k":"hidden"},{"s":"revive","f":1649,"k":"visible"}],"lake-of-rage":[{"s":"full-restore","f":181,"k":"hidden"},{"s":"rare-candy","f":182,"k":"hidden"},{"s":"max-potion","f":183,"k":"hidden"},{"s":"max-ether","f":1605,"k":"visible"}],"mt-moon":[{"s":"moon-stone","f":236,"k":"hidden"}],"mt-mortar":[{"s":"max-repel","f":145,"k":"hidden"},{"s":"hyper-potion","f":144,"k":"hidden"},{"s":"full-restore","f":146,"k":"hidden"},{"s":"max-revive","f":147,"k":"hidden"},{"s":"max-revive","f":1662,"k":"visible"},{"s":"hyper-potion","f":1663,"k":"visible"},{"s":"escape-rope","f":1661,"k":"visible"},{"s":"ether","f":1659,"k":"visible"},{"s":"guard-spec","f":1660,"k":"visible"},{"s":"dragon-scale","f":1667,"k":"visible"},{"s":"escape-rope","f":1669,"k":"visible"},{"s":"elixir","f":1668,"k":"visible"},{"s":"max-potion","f":1664,"k":"visible"},{"s":"rare-candy","f":1665,"k":"visible"},{"s":"full-heal","f":1671,"k":"visible"},{"s":"hyper-potion","f":1670,"k":"visible"}],"national-park":[{"s":"full-heal","f":132,"k":"hidden"},{"s":"paralyze-heal","f":1624,"k":"visible"}],"olivine-city":[{"s":"hyper-potion","f":133,"k":"hidden"},{"s":"protein","f":234,"k":"hidden"},{"s":"ether","f":1636,"k":"visible"},{"s":"rare-candy","f":1637,"k":"visible"},{"s":"great-ball","f":1638,"k":"visible"},{"s":"super-potion","f":1640,"k":"visible"}],"rock-tunnel":[{"s":"x-accuracy","f":231,"k":"hidden"},{"s":"x-defense","f":232,"k":"hidden"},{"s":"max-potion","f":233,"k":"hidden"},{"s":"elixir","f":1918,"k":"visible"},{"s":"revive","f":1922,"k":"visible"},{"s":"pp-up","f":1921,"k":"visible"},{"s":"iron","f":1920,"k":"visible"}],"route-11":[{"s":"revive","f":245,"k":"hidden"}],"route-12":[{"s":"elixir","f":243,"k":"hidden"},{"s":"calcium","f":1928,"k":"visible"},{"s":"nugget","f":1929,"k":"visible"}],"route-13":[{"s":"calcium","f":244,"k":"hidden"}],"route-17":[{"s":"max-ether","f":246,"k":"hidden"},{"s":"max-elixir","f":247,"k":"hidden"}],"route-2":[{"s":"max-ether","f":237,"k":"hidden"},{"s":"full-heal","f":238,"k":"hidden"},{"s":"full-restore","f":239,"k":"hidden"},{"s":"revive","f":240,"k":"hidden"},{"s":"carbos","f":1925,"k":"visible"},{"s":"max-potion","f":1924,"k":"visible"},{"s":"dire-hit","f":1923,"k":"visible"},{"s":"elixir","f":1926,"k":"visible"}],"route-25":[{"s":"potion","f":248,"k":"hidden"},{"s":"protein","f":1931,"k":"visible"}],"route-28":[{"s":"rare-candy","f":163,"k":"hidden"}],"route-30":[{"s":"potion","f":164,"k":"hidden"}],"route-32":[{"s":"great-ball","f":165,"k":"hidden"},{"s":"super-potion","f":166,"k":"hidden"},{"s":"potion","f":1713,"k":"visible"},{"s":"great-ball","f":1712,"k":"visible"}],"route-34":[{"s":"rare-candy","f":167,"k":"hidden"},{"s":"super-potion","f":168,"k":"hidden"}],"route-37":[{"s":"ether","f":169,"k":"hidden"}],"route-39":[{"s":"nugget","f":170,"k":"hidden"}],"route-4":[{"s":"ultra-ball","f":241,"k":"hidden"},{"s":"hp-up","f":1927,"k":"visible"}],"route-40":[{"s":"hyper-potion","f":171,"k":"hidden"}],"route-41":[{"s":"max-ether","f":172,"k":"hidden"}],"route-42":[{"s":"max-potion","f":173,"k":"hidden"},{"s":"ultra-ball","f":1715,"k":"visible"},{"s":"super-potion","f":1716,"k":"visible"}],"route-44":[{"s":"elixir","f":174,"k":"hidden"},{"s":"ultra-ball","f":1719,"k":"visible"},{"s":"max-revive","f":1718,"k":"visible"}],"route-45":[{"s":"pp-up","f":175,"k":"hidden"},{"s":"elixir","f":1722,"k":"visible"},{"s":"max-potion","f":1723,"k":"visible"},{"s":"x-special","f":1720,"k":"visible"},{"s":"revive","f":1721,"k":"visible"}],"route-9":[{"s":"ether","f":242,"k":"hidden"}],"mt-silver":[{"s":"full-restore","f":184,"k":"hidden"},{"s":"dire-hit","f":154,"k":"hidden"},{"s":"ultra-ball","f":155,"k":"hidden"},{"s":"max-potion","f":156,"k":"hidden"},{"s":"max-revive","f":1692,"k":"visible"},{"s":"full-restore","f":1693,"k":"visible"},{"s":"max-elixir","f":1689,"k":"visible"},{"s":"x-accuracy","f":1690,"k":"visible"},{"s":"escape-rope","f":1691,"k":"visible"}],"team-rocket-hq":[{"s":"revive","f":134,"k":"hidden"},{"s":"full-heal","f":135,"k":"hidden"},{"s":"hyper-potion","f":1641,"k":"visible"},{"s":"x-accuracy","f":1643,"k":"visible"},{"s":"nugget","f":1642,"k":"visible"},{"s":"ice-heal","f":1648,"k":"visible"},{"s":"protein","f":1647,"k":"visible"},{"s":"full-heal","f":1645,"k":"visible"},{"s":"dire-hit","f":1646,"k":"visible"}],"tin-tower":[{"s":"max-potion","f":125,"k":"hidden"},{"s":"full-restore","f":126,"k":"hidden"},{"s":"carbos","f":127,"k":"hidden"},{"s":"full-heal","f":1611,"k":"visible"},{"s":"ultra-ball","f":1612,"k":"visible"},{"s":"escape-rope","f":1614,"k":"visible"},{"s":"super-potion","f":1613,"k":"visible"},{"s":"rare-candy","f":1615,"k":"visible"},{"s":"max-revive","f":1616,"k":"visible"},{"s":"full-restore","f":1619,"k":"visible"},{"s":"max-elixir","f":1618,"k":"visible"},{"s":"nugget","f":1617,"k":"visible"}],"vermilion-city":[{"s":"full-heal","f":252,"k":"hidden"},{"s":"iron","f":235,"k":"hidden"}],"victory-road":[{"s":"max-potion","f":158,"k":"hidden"},{"s":"full-heal","f":159,"k":"hidden"},{"s":"full-restore","f":1701,"k":"visible"},{"s":"x-special","f":1703,"k":"visible"},{"s":"max-revive","f":1700,"k":"visible"},{"s":"full-heal","f":1702,"k":"visible"}],"violet-city":[{"s":"hyper-potion","f":176,"k":"hidden"},{"s":"pp-up","f":1603,"k":"visible"},{"s":"rare-candy","f":1604,"k":"visible"}],"whirl-islands":[{"s":"rare-candy","f":151,"k":"hidden"},{"s":"ultra-ball","f":152,"k":"hidden"},{"s":"full-restore","f":153,"k":"hidden"},{"s":"nugget","f":1684,"k":"visible"},{"s":"full-restore","f":1681,"k":"visible"},{"s":"carbos","f":1682,"k":"visible"},{"s":"calcium","f":1683,"k":"visible"},{"s":"escape-rope","f":1685,"k":"visible"},{"s":"max-revive","f":1687,"k":"visible"},{"s":"full-restore","f":1686,"k":"visible"},{"s":"max-elixir","f":1688,"k":"visible"},{"s":"ultra-ball","f":1679,"k":"visible"},{"s":"guard-spec","f":1680,"k":"visible"}],"route-29":[{"s":"potion","f":1709,"k":"visible"}],"route-31":[{"s":"antidote","f":1710,"k":"visible"},{"s":"poke-ball","f":1711,"k":"visible"}],"route-43":[{"s":"max-ether","f":1717,"k":"visible"}],"route-46":[{"s":"dire-hit","f":1724,"k":"visible"}],"slowpoke-well":[{"s":"super-potion","f":1634,"k":"visible"}],"sprout-tower":[{"s":"paralyze-heal","f":1607,"k":"visible"},{"s":"x-defense","f":1608,"k":"visible"},{"s":"escape-rope","f":1610,"k":"visible"},{"s":"potion","f":1609,"k":"visible"}],"union-cave":[{"s":"potion","f":1627,"k":"visible"},{"s":"x-attack","f":1628,"k":"visible"},{"s":"great-ball","f":1626,"k":"visible"},{"s":"awakening","f":1629,"k":"visible"},{"s":"x-defense","f":1631,"k":"visible"},{"s":"elixir","f":1632,"k":"visible"},{"s":"hyper-potion","f":1633,"k":"visible"}],"route-15":[{"s":"pp-up","f":1930,"k":"visible"}],"route-26":[{"s":"max-elixir","f":1706,"k":"visible"}],"route-27":[{"s":"rare-candy","f":1708,"k":"visible"}],"tohjo-falls":[{"s":"moon-stone","f":1705,"k":"visible"}]}};
   // Layout facts (pret/pokegold): battery SRAM 32 KiB, primary block 0x2009-0x2D68 with a 16-bit checksum at 0x2D69,
   // event flags start at 0x261F (bit n = byte n>>3, bit n&7), Pokédex "caught" bitmap at 0x2A4C.
   function makeSnapshot(bytes){
@@ -45,7 +45,7 @@
     return {format:'savequest-rb-v1',caught,doneFlags};
   }
   // Which RankedBoost items may be ticked: every game pickup behind one site marker must be finished,
-  // and the marker's kind (hidden / visible) must agree. Anything unclear is skipped, never guessed.
+  // and the marker's kind (hidden / visible) must be known and agree. Anything unclear is skipped, never guessed.
   function plan(pageTasks,doneFlags,site){
     const grouped=new Map();
     for(const it of pageTasks){if(!grouped.has(it.s))grouped.set(it.s,[]);grouped.get(it.s).push(it);}
@@ -53,7 +53,7 @@
     for(const [slug,flags] of grouped){
       const s=site.get(slug);
       if(!s){skipped++;continue;}
-      if(s.kind&&flags.some(f=>f.k!==s.kind)){skipped++;continue;}
+      if(!s.kind||flags.some(f=>f.k!==s.kind)){skipped++;continue;}
       if(!flags.every(f=>doneFlags.has(f.f)))continue;
       if(s.checked){already++;continue;}
       matches.push(slug);
@@ -66,8 +66,10 @@
   const SAVE_KEY='savequest_rb_progress_v1';
   const AUTO_KEY='savequest_rb_auto_map_v1';
   const CAUGHT_KEY='rb_pokemon_caught_gold-silver';
-  const mapPage=(location.pathname.match(/^\/pokemon\/location\/gold-silver\/([^/]+)\//)||[])[1]||'';
-  const pageTasks=GAME.maps[mapPage]||[];
+  const pageOf=()=>(location.pathname.match(/^\/pokemon\/location\/gold-silver\/([^/]+)\//)||[])[1]||'';
+  let mapPage=pageOf();
+  let pageTasks=GAME.maps[mapPage]||[];
+  const sleep=ms=>new Promise(r=>setTimeout(r,ms));
   const $=(tag,txt,parent)=>{const el=document.createElement(tag);if(txt!==undefined)el.textContent=txt;(parent||document.body).appendChild(el);return el;};
   function status(btn){return btn.getAttribute('aria-pressed')==='true'||/^(collected|caught ✓)/i.test((btn.textContent||'').trim());}
   function readJSON(key,otherwise){try{const v=localStorage.getItem(key);return v===null?otherwise:JSON.parse(v);}catch{return otherwise}}
@@ -89,15 +91,34 @@
     }
     return bySlug;
   }
+  // RankedBoost labels each detail panel "<slug>|<kind>|<subkind>|": hidden|hidden, visible|field, gift|gift, shop|buy.
+  function kindOf(detail){
+    const parts=(detail||'').toLowerCase().split('|').slice(1);
+    return parts.includes('hidden')?'hidden':(parts.includes('visible')||parts.includes('field'))?'visible':'other';
+  }
   function mapCandidates(sv){
     if(!mapPage)return {matches:[],already:0,skipped:0,total:0};
     const buttons=siteButtons(),site=new Map();
     for(const [slug,list] of buttons){
-      // an item can appear in two responsive panels that share one storage key
-      const desc=(list[0].closest('[data-v3d-detail]')?.dataset.v3dDetail||'').toLowerCase();
-      site.set(slug,{kind:desc.includes('|hidden|')?'hidden':desc.includes('|field|')?'visible':null,checked:list.some(status)});
+      // an item can appear in several responsive panels that share one storage key; a slug that is both hidden and visible is ambiguous
+      // the phone layout repeats every item inside an accordion that carries no label; only labelled panels say what the item is
+      const kinds=new Set(list.map(b=>b.closest('[data-v3d-detail]')).filter(Boolean).map(d=>kindOf(d.dataset.v3dDetail)));
+      const kind=kinds.size===1&&(kinds.has('hidden')||kinds.has('visible'))?[...kinds][0]:null;
+      site.set(slug,{kind,checked:list.some(status)});
     }
     return plan(pageTasks,sv.doneFlags,site);
+  }
+  // RankedBoost builds its item panels after the page loads (the attribute saying hidden/visible arrives last), so wait until every
+  // item has a labelled panel, or give up after a few seconds and skip whatever is still unlabelled.
+  async function siteReady(maxMs){
+    const t0=Date.now();
+    while(Date.now()-t0<maxMs){
+      const bs=[...document.querySelectorAll('button.v3d-it-detail__got-btn[data-v3d-toggle]')];
+      const slugs=new Set(bs.map(b=>b.dataset.v3dToggle)),labelled=new Set(bs.filter(b=>b.closest('[data-v3d-detail]')).map(b=>b.dataset.v3dToggle));
+      if(slugs.size&&labelled.size===slugs.size)return true;
+      await sleep(250);
+    }
+    return false;
   }
   let current=saved();
   const panel=$('section');
@@ -111,11 +132,12 @@
   const makeButton=t=>{const b=$('button',t,btnRow);b.type='button';b.style.cssText='border:1px solid #b7e2cb;background:#ccecd8;color:#132d22;font:700 12px system-ui;border-radius:7px;padding:9px;cursor:pointer';return b};
   const preview=makeButton('Preview'),apply=makeButton('Apply to RankedBoost'),clear=makeButton('Forget imported save'),close=makeButton('Hide');
   const autoLabel=$('label',undefined,panel);autoLabel.style.cssText='display:flex;align-items:center;gap:9px;margin-top:12px;color:#d4e8dd';
-  const auto=$('input',undefined,autoLabel);auto.type='checkbox';auto.checked=readJSON(AUTO_KEY,false)===true;
-  $('span','Auto-apply verified item pickups as I visit each map',autoLabel);
-  $('p','Supported: caught Pokémon and source-confirmed item balls / hidden items. Trainers, NPC gifts and shop purchases are not synced. Unmatched markers are skipped.',panel).style.cssText='color:#aec6c1;margin:11px 0 0;font-size:11px';
-  function show(){
+  const auto=$('input',undefined,autoLabel);auto.type='checkbox';auto.checked=readJSON(AUTO_KEY,PRE?true:false)===true;
+  $('span','Auto-apply my save when I open a map or the Pokédex',autoLabel);
+  $('p','Supported: caught Pokémon and source-confirmed item balls / hidden items. Trainers, NPC gifts and shop purchases are not synced. Items RankedBoost has labelled differently are skipped, never guessed.',panel).style.cssText='color:#aec6c1;margin:11px 0 0;font-size:11px';
+  async function show(){
     current=saved();
+    if(current&&mapPage){out.textContent='Waiting for RankedBoost to finish loading…';await siteReady(9000);}
     if(!current){out.textContent='Choose your Gold/Silver .srm to start. No save bytes are uploaded.';apply.disabled=true;return;}
     let remaining=0;
     try{const old=existingCaught();remaining=[...current.caught].filter(s=>!old[s]).length;}
@@ -129,29 +151,45 @@
     ].join('\n');
     apply.disabled=remaining===0&&m.matches.length===0;
   }
+  let busy=false;
   async function importProgress(ask=true){
-    const sv=saved();if(!sv)return;
-    const old=existingCaught();
-    const catchAdd=[...sv.caught].filter(s=>!old[s]);
-    const m=mapCandidates(sv);
-    if(!catchAdd.length&&!m.matches.length){show();return}
-    if(ask&&!confirm('Update RankedBoost with '+catchAdd.length+' caught Pokémon and '+m.matches.length+' verified item pickups on this map? Existing progress is preserved.'))return;
-    if(catchAdd.length){
-      for(const s of catchAdd)old[s]=true;
-      try{localStorage.setItem(CAUGHT_KEY,JSON.stringify(old))}
-      catch(e){out.textContent='Could not save caught Pokémon: '+e.message;return}
-    }
-    let applied=0;
-    for(const slug of m.matches){
-      const btn=[...document.querySelectorAll('button.v3d-it-detail__got-btn[data-v3d-toggle]')].find(b=>b.dataset.v3dToggle===slug&&!status(b));
-      if(!btn)continue;
-      btn.click();
-      await new Promise(resolve=>setTimeout(resolve,55));
-      if(status(btn))applied++;
-    }
-    out.textContent='Saved '+catchAdd.length+' caught Pokémon in RankedBoost and '+applied+' item pickups on this map. Reload the page to verify they stay checked.'+
-      (m.matches.length>applied?'\nSome map buttons did not confirm their new state; these may need inspection.':'');
-    apply.disabled=true;
+    if(busy)return;busy=true;
+    try{
+      const sv=saved();if(!sv)return;
+      if(mapPage)await siteReady(9000);
+      const old=existingCaught();
+      const catchAdd=[...sv.caught].filter(s=>!old[s]);
+      const m=mapCandidates(sv);
+      if(!catchAdd.length&&!m.matches.length){show();return}
+      if(ask&&!confirm('Update RankedBoost with '+catchAdd.length+' caught Pokémon and '+m.matches.length+' verified item pickups on this map? Existing progress is preserved.'))return;
+      // 1. caught Pokémon visible on this map: press RankedBoost's own button so its page, counters and history all update
+      let clicked=0;
+      for(const slug of catchAdd){
+        const cb=[...document.querySelectorAll('button[data-v3d-noun="caught"][data-v3d-toggle]')].find(b=>b.dataset.v3dToggle===slug&&b.getAttribute('aria-pressed')!=='true');
+        if(cb){cb.click();clicked++;await sleep(40);}
+      }
+      // 2. every other caught Pokémon: write RankedBoost's own storage key (value 1 = the same value its button stores)
+      let written=0;
+      try{
+        const now=existingCaught();
+        for(const s of catchAdd)if(!now[s]){now[s]=1;written++;}
+        if(written)localStorage.setItem(CAUGHT_KEY,JSON.stringify(now));
+      }catch(e){out.textContent='Could not save caught Pokémon: '+e.message;return}
+      // 3. verified item pickups on this map: press the item button, then check that it really switched
+      let applied=0;
+      for(const slug of m.matches){
+        const btn=[...document.querySelectorAll('button.v3d-it-detail__got-btn[data-v3d-toggle]')].find(b=>b.dataset.v3dToggle===slug&&!status(b));
+        if(!btn)continue;
+        btn.click();
+        for(let i=0;i<8&&!status(btn);i++)await sleep(50);
+        if(status(btn))applied++;
+      }
+      out.textContent='Done: '+(clicked+written)+' caught Pokémon and '+applied+' item pickups ticked on RankedBoost'+(mapPage?' (this map)':'')+'.'+
+        (m.matches.length>applied?'\n'+(m.matches.length-applied)+' item buttons did not switch; reload and try again.':'')+
+        (written&&!mapPage?'\nReloading so the Pokédex shows them…':'');
+      apply.disabled=true;
+      if(written&&!mapPage)setTimeout(()=>location.reload(),1200);   // pages that never had a button for them only read the key on load
+    }finally{busy=false}
   }
   file.onchange=async()=>{
     const selected=file.files?.[0];if(!selected)return;
@@ -170,7 +208,7 @@
   };
   close.onclick=()=>panel.remove();
   auto.onchange=()=>{
-    if(auto.checked&&!confirm('Automatically apply ONLY confidently matched finished item pickups when you open each RankedBoost Gold/Silver map? Existing checkmarks stay checked.')){auto.checked=false;return;}
+    if(auto.checked&&!PRE&&!confirm('Automatically apply caught Pokémon and ONLY confidently matched finished item pickups when you open a RankedBoost Gold/Silver map or the Pokédex? Existing checkmarks stay checked.')){auto.checked=false;return;}
     localStorage.setItem(AUTO_KEY,JSON.stringify(auto.checked));
   };
   let preError='';
@@ -180,5 +218,13 @@
   }
   show();
   if(preError){out.textContent=preError;apply.disabled=true;}
-  if(current&&auto.checked&&mapPage)setTimeout(()=>importProgress(false).catch(e=>{out.textContent='Auto-import error: '+e.message}),1600);
+  const autoRun=()=>{if(current&&auto.checked)importProgress(false).catch(e=>{out.textContent='Auto-import error: '+e.message});};
+  setTimeout(autoRun,1200);
+  // RankedBoost can switch maps without reloading: follow the address and run again for the new map
+  let lastPath=location.pathname;
+  setInterval(()=>{
+    if(location.pathname===lastPath)return;
+    lastPath=location.pathname;mapPage=pageOf();pageTasks=GAME.maps[mapPage]||[];apply.disabled=false;
+    show();setTimeout(autoRun,1200);
+  },700);
 })();

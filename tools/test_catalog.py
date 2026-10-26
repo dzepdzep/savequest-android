@@ -65,6 +65,34 @@ class CatalogTest(unittest.TestCase):
     def test_gift_flags_are_unique(self):
         flags=[t['flags'][0] for t in TASKS.values() if t['category']=='Items' and t['kind'] in('gift','ball','hidden')]
         self.assertEqual(len(flags),len(set(flags)))
+    def test_weekday_and_time_limits(self):
+        gifts={'npc:EVENT_GOT_SHARP_BEAK_FROM_MONICA':'Mon','npc:EVENT_GOT_PINK_BOW_FROM_TUSCANY':'Tue','npc:EVENT_GOT_BLACKBELT_FROM_WESLEY':'Wed','npc:EVENT_GOT_HARD_STONE_FROM_ARTHUR':'Thu','npc:EVENT_GOT_POISON_BARB_FROM_FRIEDA':'Fri','npc:EVENT_GOT_SPELL_TAG_FROM_SANTOS':'Sat','npc:EVENT_GOT_MAGNET_FROM_SUNNY':'Sun'}
+        for i,d in gifts.items():self.assertEqual(TASKS[i]['days'],[d],i)
+        self.assertEqual(TASKS['npc:EVENT_GOT_QUICK_CLAW']['days'],['Tue','Thu','Sat'])   # Bug-Catching Contest days
+        self.assertEqual(TASKS['TM21']['days'],['Sun']);self.assertEqual(TASKS['TM27']['days'],['Sun'])
+        self.assertEqual(TASKS['TM03']['times'],['night'])
+        night=[t for t in TASKS.values() if 'night' in t.get('times',[])]
+        self.assertGreaterEqual(len(night),20)
+        for t in TASKS.values():
+            self.assertTrue(set(t.get('days',[]))<={'Mon','Tue','Wed','Thu','Fri','Sat','Sun'},t['id'])
+            self.assertTrue(set(t.get('times',[]))<={'morning','day','night'},t['id'])
+    def test_advisor_data(self):
+        adv=json.loads((Path(__file__).resolve().parents[1]/'app/src/main/assets/advisor.json').read_text(encoding='utf8'))
+        self.assertEqual(adv['sourceCommit'],CATALOG['sourceCommit'])
+        self.assertEqual(len(adv['species']),251);self.assertEqual(len(adv['speciesNames']),251)
+        ids=[s['id'] for s in adv['stages']];self.assertEqual(len(ids),22);self.assertEqual(len(set(ids)),22)
+        for s in adv['stages']:
+            self.assertTrue(2<=len(s['mons'])<=6,s['id']);self.assertTrue(s['tips'] and s['source'].startswith('https://'),s['id'])
+            self.assertTrue(s['badge']>=0 or s.get('flag') is not None,s['id']+' needs a badge or an event flag to be marked done')
+            for m in s['mons']:
+                self.assertTrue(1<=m['species']<=251 and 1<=m['level']<=100);self.assertTrue(all(str(x) in adv['moves'] for x in m['moves']))
+        # the boss teams agree with the Trainers tab, which comes from the same pret parties
+        for sid,tid in(('falkner','EVENT_BEAT_FALKNER'),('clair','EVENT_BEAT_CLAIR'),('blue','EVENT_BEAT_BLUE'),('janine','EVENT_BEAT_JANINE')):
+            st=next(s for s in adv['stages'] if s['id']==sid)
+            lv=' / '.join(f"Lv {m['level']} {adv['speciesNames'][m['species']-1]}" for m in st['mons'])
+            self.assertEqual(lv.replace('Mr. Mime','Mr  Mime'),TASKS['trainer:'+tid]['detail'].replace('Mr. Mime','Mr  Mime'),sid)
+        self.assertEqual(sorted(h['name'] for h in adv['hms']),['Cut','Flash','Fly','Strength','Surf','Waterfall','Whirlpool'])
+        self.assertEqual(adv['johtoBadges'][3],'Fog');self.assertEqual(adv['kantoBadges'][0],'Boulder')
     def test_rankedboost_userscript_is_current_and_passes_its_own_tests(self):
         import importlib.util,shutil,subprocess
         spec=importlib.util.spec_from_file_location('bru',Path(__file__).with_name('build_rankedboost_userscript.py'));m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)

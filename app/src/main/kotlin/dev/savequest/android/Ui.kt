@@ -33,6 +33,7 @@ import dev.savequest.core.*
 private val Johto = Color(0xFF5CC8B5)
 private val Kanto = Color(0xFFF0A35E)
 private val Neutral = Color(0xFF8FA6AB)
+private val WhenColor = Color(0xFFC9B6F2)   // weekday / time-of-day limits
 
 private fun regionColor(region: String) = when {
     region == "johto" -> Johto
@@ -155,6 +156,8 @@ private fun kindLabel(task: Task) = when (task.kind) {
                 Pill(if (done) "✔ " + evidence.kind.name.lowercase().replace('_', ' ') else "not confirmed", if (done) scheme.primary else scheme.onSurfaceVariant)
                 kindLabel(task).takeIf { it.isNotEmpty() }?.let { Pill(it, Neutral) }
                 task.region.split(",").filter { it.isNotEmpty() }.forEach { Pill(it.replaceFirstChar { c -> c.uppercase() }, regionColor(it)) }
+                if (task.days.isNotEmpty()) Pill(task.days.joinToString("/"), WhenColor)
+                if (task.times.isNotEmpty()) Pill(task.times.joinToString("/") { it.replaceFirstChar { c -> c.uppercase() } }, WhenColor)
             }
             if (!open && preview.isNotBlank()) Text(preview, style = MaterialTheme.typography.bodySmall, color = scheme.onSurfaceVariant, maxLines = 2, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 6.dp))
             if (open) {

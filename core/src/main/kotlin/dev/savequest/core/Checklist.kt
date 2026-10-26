@@ -13,6 +13,20 @@ data class ManualChange(val profile: String, val taskId: String, val before: Boo
     fun undo() = ManualChange(profile, taskId, after, before)
 }
 
+/** Weekday / time-of-day filter. Empty strings mean "no limit". [day] is Mon..Sun, [time] is morning, day or night. */
+data class WhenFilter(val day: String = "", val time: String = "") {
+    val active get() = day.isNotEmpty() || time.isNotEmpty()
+}
+
+/** The game clock's weekdays and time-of-day windows (pret/pokegold): morning 04:00-09:59, day 10:00-17:59, night 18:00-03:59. */
+object GameClock {
+    val DAYS = listOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+    val TIMES = listOf("morning", "day", "night")
+    /** [javaDayOfWeek] is java.util.Calendar.DAY_OF_WEEK (1 = Sunday ... 7 = Saturday). */
+    fun dayName(javaDayOfWeek: Int): String = DAYS[(javaDayOfWeek + 5) % 7]
+    fun windowOf(hour: Int): String = when (hour) { in 4..9 -> "morning"; in 10..17 -> "day"; else -> "night" }
+}
+
 object Checklist {
     const val SHOPS = "Shops (price lists)"
 
@@ -20,8 +34,10 @@ object Checklist {
     fun sectionKey(t: Task): String = if (t.kind == "shop") SHOPS else t.region.replaceFirstChar { it.uppercase() } + " · " + t.area
 
     /** Every filter except "Show unconfirmed only" (that one is applied later, after progress is counted). */
-    fun matches(t: Task, category: String, kind: String, region: String, query: String): Boolean =
+    fun matches(t: Task, category: String, kind: String, region: String, query: String, whenFilter: WhenFilter = WhenFilter()): Boolean =
         t.category == category &&
+            (whenFilter.day.isEmpty() || whenFilter.day in t.days) &&
+            (whenFilter.time.isEmpty() || whenFilter.time in t.times) &&
             (kind == "All" || t.kind == kind || (category != "Items" && category != "TM/HM")) &&
             (region == "All" || t.region.isEmpty() || t.region.split(",").any { it.equals(region, true) }) &&
             "${t.title} ${t.location} ${t.area} ${t.detail} ${t.howto}".contains(query, true)

@@ -12,6 +12,7 @@ function sram({caught=[],flags=[],corrupt=false}={}){
   b[0x2d69]=s&255;b[0x2d6a]=s>>8;if(corrupt)b[0x2d69]^=1;return b;
 }
 const tests={
+  'species slugs match RankedBoost (apostrophes dropped)'(){assert.ok(GAME.species.includes('farfetchd')&&!GAME.species.includes('farfetch-d'));assert.ok(GAME.species.includes('nidoran-f')&&GAME.species.includes('nidoran-m')&&GAME.species.includes('mr-mime')&&GAME.species.includes('ho-oh'))},
   'species table has 251 distinct slugs'(){assert.strictEqual(GAME.species.length,251);assert.strictEqual(new Set(GAME.species).size,251);assert.strictEqual(GAME.species[151],'chikorita')},
   'caught bits and event flags are read at the documented offsets'(){
     const s=makeSnapshot(sram({caught:[1,152],flags:[177,1620]}));
@@ -30,9 +31,10 @@ const tests={
   'plan ticks only finished, unchecked, kind-matching markers'(){
     const tasks=[{s:'full-heal',f:177,k:'hidden'},{s:'ether',f:5,k:'visible'},{s:'nugget',f:6,k:'visible'},{s:'twin',f:7,k:'visible'},{s:'twin',f:8,k:'visible'},{s:'missing',f:9,k:'visible'}];
     const site=new Map([['full-heal',{kind:'hidden',checked:false}],['ether',{kind:'hidden',checked:false}],['nugget',{kind:'visible',checked:true}],['twin',{kind:'visible',checked:false}]]);
-    const r=plan(tasks,new Set([177,5,6,7]),site);
+    site.set('ghost',{kind:null,checked:false});tasks.push({s:'ghost',f:9,k:'hidden'});   // unlabelled marker: never guessed
+    const r=plan(tasks,new Set([177,5,6,7,9]),site);
     assert.deepStrictEqual(r.matches,['full-heal']);   // ether: kind mismatch (skipped); nugget: already; twin: only 1 of 2 pickups done; missing: no site marker
-    assert.strictEqual(r.already,1);assert.strictEqual(r.skipped,2);
+    assert.strictEqual(r.already,1);assert.strictEqual(r.skipped,3);
   },
 };
 let bad=0;for(const [name,fn] of Object.entries(tests)){try{fn();console.log('PASS',name)}catch(e){bad++;console.log('FAIL',name,'-',e.message)}}

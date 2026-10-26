@@ -10,9 +10,16 @@ def sram(caught=(),flags=()):
     for n in caught:b[0x2a4c+((n-1)>>3)]|=1<<((n-1)&7)
     for f in flags:b[0x261f+(f>>3)]|=1<<(f&7)
     s=sum(b[0x2009:0x2d69])&0xffff;b[0x2d69]=s&255;b[0x2d6a]=s>>8;return bytes(b)
-def item(slug,label,kind,pressed='false'):
-    return f'<div data-v3d-detail="{label}|{kind}|x"><button class="v3d-it-detail__got-btn" data-v3d-toggle="{slug}" aria-pressed="{pressed}" onclick="this.setAttribute(\'aria-pressed\',this.getAttribute(\'aria-pressed\')===\'true\'?\'false\':\'true\');this.textContent=this.getAttribute(\'aria-pressed\')===\'true\'?\'Collected\':\'Mark as collected\'">Mark as collected</button></div>'
-PAGE='<!doctype html><title>t</title>'+item('full-heal','Full Heal','hidden')+item('ether','Ether','field')+item('nugget','Nugget','field','true')
+TOG="const on=this.getAttribute('aria-pressed')!=='true';document.querySelectorAll('[data-v3d-toggle='+this.dataset.v3dToggle+']').forEach(b=>{b.setAttribute('aria-pressed',on);b.textContent=on?'Collected':'Mark as collected'})"   # the real site keeps every copy of an item in step
+def btn(slug,pressed='false'):
+    return f'<button class="v3d-it-detail__got-btn" data-v3d-toggle="{slug}" aria-pressed="{pressed}" onclick="{TOG}">Mark as collected</button>'
+def item(slug,sub,pressed='false',late=False):
+    """Live RankedBoost markup (Oct 2026): a labelled desktop panel 'slug|kind|subkind|' plus an UNLABELLED phone accordion copy of the same item."""
+    lab='data-late-detail' if late else 'data-v3d-detail'
+    return f'<div class="v3d-it-detail v3d-detail-panel" {lab}="{slug}|{sub}|">{btn(slug,pressed)}</div><div class="v3d-accordion__pane-inner"><div class="v3d-it-detail v3d-it-detail--inline">{btn(slug,pressed)}</div></div>'
+def build_page(late=False):
+    return '<!doctype html><title>t</title>'+item('full-heal','hidden|hidden',late=late)+item('ether','visible|field',late=late)+item('nugget','visible|field','true',late=late)+item('pink-bow','gift|gift',late=late)+('<script>setTimeout(()=>document.querySelectorAll("[data-late-detail]").forEach(e=>{e.setAttribute("data-v3d-detail",e.getAttribute("data-late-detail"))}),1800)</script>' if late else '')
+PAGE=build_page()
 def run():
     fails=[]
     with sync_playwright() as p:
@@ -35,7 +42,8 @@ def run():
         check(page.get_attribute('[data-v3d-toggle=ether]','aria-pressed')=='false','unfinished item is left alone')
         check(page.get_attribute('[data-v3d-toggle=nugget]','aria-pressed')=='true','existing tick is never removed')
         caught=json.loads(page.evaluate("localStorage.getItem('rb_pokemon_caught_gold-silver')"))
-        check(caught=={'chikorita':True},'caught Pokémon merged into the native key')
+        check(caught=={'chikorita':1},'caught Pokémon merged into the native key (value 1, as RankedBoost writes it)')
+        check(page.eval_on_selector_all('[data-v3d-toggle=full-heal]','bs=>bs.every(b=>b.getAttribute("aria-pressed")==="true")'),'phone-layout copy of the item switches too')
         stored=page.evaluate("localStorage.getItem('savequest_rb_progress_v1')")
         check('Trainer' not in stored and len(stored)<5000,'only derived flags are stored (no name / bytes)')
         page.evaluate("localStorage.setItem('rb_pokemon_caught_gold-silver','[1,2]')")
@@ -52,6 +60,19 @@ def run():
         check('1 eligible unchecked' in page2.inner_text('#savequest-rankedboost-import [role=status]'),'embedded: preview works straight away')
         page2.click('text=Apply to RankedBoost');page2.wait_for_timeout(600)
         check(page2.get_attribute('[data-v3d-toggle=full-heal]','aria-pressed')=='true','embedded: Apply ticks the item')
+        # embedded + auto-apply while RankedBoost is still building its panels (labels arrive 1.8 s after load): waits, then ticks once
+        ctx4=br.new_context();page4=ctx4.new_page();page4.on('dialog',lambda d:d.accept())
+        LATE=build_page(late=True)
+        page4.route('https://rankedboost.com/**',lambda r:r.fulfill(status=200,content_type='text/html',body=LATE))
+        page4.goto('https://rankedboost.com/pokemon/location/gold-silver/azalea-town/')
+        page4.evaluate("window.__SQ_SAVE_B64='"+base64.b64encode(sram(caught=[152,83],flags=[177])).decode()+"';\n"+SCRIPT)
+        page4.wait_for_timeout(500)
+        check(page4.get_attribute('[data-v3d-toggle=full-heal]','aria-pressed')=='false','embedded: does nothing before the page labels its items')
+        page4.wait_for_timeout(4500)
+        check(page4.get_attribute('[data-v3d-toggle=full-heal]','aria-pressed')=='true','embedded: auto-applies once the items are labelled')
+        check(page4.get_attribute('[data-v3d-toggle=ether]','aria-pressed')=='false' and page4.get_attribute('[data-v3d-toggle=pink-bow]','aria-pressed')=='false','embedded: unfinished items and NPC gifts are left alone')
+        c4=json.loads(page4.evaluate("localStorage.getItem('rb_pokemon_caught_gold-silver')"))
+        check(c4=={'chikorita':1,'farfetchd':1},'embedded: Farfetch\'d uses RankedBoost\'s slug')
         page3=br.new_context().new_page();page3.route('https://rankedboost.com/**',lambda r:r.fulfill(status=200,content_type='text/html',body=PAGE))
         page3.goto('https://rankedboost.com/pokemon/location/gold-silver/azalea-town/')
         page3.evaluate("window.__SQ_SAVE_B64='AAAA';\n"+SCRIPT)

@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 /** One Pokemon read from a Gold/Silver save (read only). */
-data class Mon(val species: Int, val egg: Boolean, val nickname: String, val level: Int, val shiny: Boolean, val hp: Int?, val maxHp: Int?)
+data class Mon(val species: Int, val egg: Boolean, val nickname: String, val level: Int, val shiny: Boolean, val hp: Int?, val maxHp: Int?, val moves: List<Int> = emptyList())
 data class PcBox(val number: Int, val mons: List<Mon>, val valid: Boolean)
 data class MonData(val party: List<Mon>, val boxes: List<PcBox>)
 
@@ -44,7 +44,8 @@ object SaveMons {
         if (!egg && lv !in 1..100) return null
         val name = text(r, nameAt)
         return Mon(sp, egg, name.ifEmpty { if (egg) "EGG" else names.getOrElse(sp - 1) { "?" } }, lv, !egg && shiny(r, o),
-            if (party) b(r, o + 34) * 256 + b(r, o + 35) else null, if (party) b(r, o + 36) * 256 + b(r, o + 37) else null)
+            if (party) b(r, o + 34) * 256 + b(r, o + 35) else null, if (party) b(r, o + 36) * 256 + b(r, o + 37) else null,
+            if (egg) emptyList() else (2..5).map { b(r, o + it) }.filter { it != 0 })   // move ids sit right after species + held item
     }
     fun read(r: ByteArray, names: List<String>): MonData? {
         if (r.size < 0x8000) return null

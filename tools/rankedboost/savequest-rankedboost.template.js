@@ -45,7 +45,7 @@
     return {format:'savequest-rb-v1',caught,doneFlags};
   }
   // Which RankedBoost items may be ticked: every game pickup behind one site marker must be finished,
-  // and the marker's kind (hidden / visible) must agree. Anything unclear is skipped, never guessed.
+  // and the marker's kind (hidden / visible) must be known and agree. Anything unclear is skipped, never guessed.
   function plan(pageTasks,doneFlags,site){
     const grouped=new Map();
     for(const it of pageTasks){if(!grouped.has(it.s))grouped.set(it.s,[]);grouped.get(it.s).push(it);}
@@ -53,7 +53,7 @@
     for(const [slug,flags] of grouped){
       const s=site.get(slug);
       if(!s){skipped++;continue;}
-      if(s.kind&&flags.some(f=>f.k!==s.kind)){skipped++;continue;}
+      if(!s.kind||flags.some(f=>f.k!==s.kind)){skipped++;continue;}
       if(!flags.every(f=>doneFlags.has(f.f)))continue;
       if(s.checked){already++;continue;}
       matches.push(slug);
@@ -66,8 +66,10 @@
   const SAVE_KEY='savequest_rb_progress_v1';
   const AUTO_KEY='savequest_rb_auto_map_v1';
   const CAUGHT_KEY='rb_pokemon_caught_gold-silver';
-  const mapPage=(location.pathname.match(/^\/pokemon\/location\/gold-silver\/([^/]+)\//)||[])[1]||'';
-  const pageTasks=GAME.maps[mapPage]||[];
+  const pageOf=()=>(location.pathname.match(/^\/pokemon\/location\/gold-silver\/([^/]+)\//)||[])[1]||'';
+  let mapPage=pageOf();
+  let pageTasks=GAME.maps[mapPage]||[];
+  const sleep=ms=>new Promise(r=>setTimeout(r,ms));
   const $=(tag,txt,parent)=>{const el=document.createElement(tag);if(txt!==undefined)el.textContent=txt;(parent||document.body).appendChild(el);return el;};
   function status(btn){return btn.getAttribute('aria-pressed')==='true'||/^(collected|caught ✓)/i.test((btn.textContent||'').trim());}
   function readJSON(key,otherwise){try{const v=localStorage.getItem(key);return v===null?otherwise:JSON.parse(v);}catch{return otherwise}}
@@ -89,15 +91,34 @@
     }
     return bySlug;
   }
+  // RankedBoost labels each detail panel "<slug>|<kind>|<subkind>|": hidden|hidden, visible|field, gift|gift, shop|buy.
+  function kindOf(detail){
+    const parts=(detail||'').toLowerCase().split('|').slice(1);
+    return parts.includes('hidden')?'hidden':(parts.includes('visible')||parts.includes('field'))?'visible':'other';
+  }
   function mapCandidates(sv){
     if(!mapPage)return {matches:[],already:0,skipped:0,total:0};
     const buttons=siteButtons(),site=new Map();
     for(const [slug,list] of buttons){
-      // an item can appear in two responsive panels that share one storage key
-      const desc=(list[0].closest('[data-v3d-detail]')?.dataset.v3dDetail||'').toLowerCase();
-      site.set(slug,{kind:desc.includes('|hidden|')?'hidden':desc.includes('|field|')?'visible':null,checked:list.some(status)});
+      // an item can appear in several responsive panels that share one storage key; a slug that is both hidden and visible is ambiguous
+      // the phone layout repeats every item inside an accordion that carries no label; only labelled panels say what the item is
+      const kinds=new Set(list.map(b=>b.closest('[data-v3d-detail]')).filter(Boolean).map(d=>kindOf(d.dataset.v3dDetail)));
+      const kind=kinds.size===1&&(kinds.has('hidden')||kinds.has('visible'))?[...kinds][0]:null;
+      site.set(slug,{kind,checked:list.some(status)});
     }
     return plan(pageTasks,sv.doneFlags,site);
+  }
+  // RankedBoost builds its item panels after the page loads (the attribute saying hidden/visible arrives last), so wait until every
+  // item has a labelled panel, or give up after a few seconds and skip whatever is still unlabelled.
+  async function siteReady(maxMs){
+    const t0=Date.now();
+    while(Date.now()-t0<maxMs){
+      const bs=[...document.querySelectorAll('button.v3d-it-detail__got-btn[data-v3d-toggle]')];
+      const slugs=new Set(bs.map(b=>b.dataset.v3dToggle)),labelled=new Set(bs.filter(b=>b.closest('[data-v3d-detail]')).map(b=>b.dataset.v3dToggle));
+      if(slugs.size&&labelled.size===slugs.size)return true;
+      await sleep(250);
+    }
+    return false;
   }
   let current=saved();
   const panel=$('section');
@@ -111,11 +132,12 @@
   const makeButton=t=>{const b=$('button',t,btnRow);b.type='button';b.style.cssText='border:1px solid #b7e2cb;background:#ccecd8;color:#132d22;font:700 12px system-ui;border-radius:7px;padding:9px;cursor:pointer';return b};
   const preview=makeButton('Preview'),apply=makeButton('Apply to RankedBoost'),clear=makeButton('Forget imported save'),close=makeButton('Hide');
   const autoLabel=$('label',undefined,panel);autoLabel.style.cssText='display:flex;align-items:center;gap:9px;margin-top:12px;color:#d4e8dd';
-  const auto=$('input',undefined,autoLabel);auto.type='checkbox';auto.checked=readJSON(AUTO_KEY,false)===true;
-  $('span','Auto-apply verified item pickups as I visit each map',autoLabel);
-  $('p','Supported: caught Pokémon and source-confirmed item balls / hidden items. Trainers, NPC gifts and shop purchases are not synced. Unmatched markers are skipped.',panel).style.cssText='color:#aec6c1;margin:11px 0 0;font-size:11px';
-  function show(){
+  const auto=$('input',undefined,autoLabel);auto.type='checkbox';auto.checked=readJSON(AUTO_KEY,PRE?true:false)===true;
+  $('span','Auto-apply my save when I open a map or the Pokédex',autoLabel);
+  $('p','Supported: caught Pokémon and source-confirmed item balls / hidden items. Trainers, NPC gifts and shop purchases are not synced. Items RankedBoost has labelled differently are skipped, never guessed.',panel).style.cssText='color:#aec6c1;margin:11px 0 0;font-size:11px';
+  async function show(){
     current=saved();
+    if(current&&mapPage){out.textContent='Waiting for RankedBoost to finish loading…';await siteReady(9000);}
     if(!current){out.textContent='Choose your Gold/Silver .srm to start. No save bytes are uploaded.';apply.disabled=true;return;}
     let remaining=0;
     try{const old=existingCaught();remaining=[...current.caught].filter(s=>!old[s]).length;}
@@ -129,29 +151,45 @@
     ].join('\n');
     apply.disabled=remaining===0&&m.matches.length===0;
   }
+  let busy=false;
   async function importProgress(ask=true){
-    const sv=saved();if(!sv)return;
-    const old=existingCaught();
-    const catchAdd=[...sv.caught].filter(s=>!old[s]);
-    const m=mapCandidates(sv);
-    if(!catchAdd.length&&!m.matches.length){show();return}
-    if(ask&&!confirm('Update RankedBoost with '+catchAdd.length+' caught Pokémon and '+m.matches.length+' verified item pickups on this map? Existing progress is preserved.'))return;
-    if(catchAdd.length){
-      for(const s of catchAdd)old[s]=true;
-      try{localStorage.setItem(CAUGHT_KEY,JSON.stringify(old))}
-      catch(e){out.textContent='Could not save caught Pokémon: '+e.message;return}
-    }
-    let applied=0;
-    for(const slug of m.matches){
-      const btn=[...document.querySelectorAll('button.v3d-it-detail__got-btn[data-v3d-toggle]')].find(b=>b.dataset.v3dToggle===slug&&!status(b));
-      if(!btn)continue;
-      btn.click();
-      await new Promise(resolve=>setTimeout(resolve,55));
-      if(status(btn))applied++;
-    }
-    out.textContent='Saved '+catchAdd.length+' caught Pokémon in RankedBoost and '+applied+' item pickups on this map. Reload the page to verify they stay checked.'+
-      (m.matches.length>applied?'\nSome map buttons did not confirm their new state; these may need inspection.':'');
-    apply.disabled=true;
+    if(busy)return;busy=true;
+    try{
+      const sv=saved();if(!sv)return;
+      if(mapPage)await siteReady(9000);
+      const old=existingCaught();
+      const catchAdd=[...sv.caught].filter(s=>!old[s]);
+      const m=mapCandidates(sv);
+      if(!catchAdd.length&&!m.matches.length){show();return}
+      if(ask&&!confirm('Update RankedBoost with '+catchAdd.length+' caught Pokémon and '+m.matches.length+' verified item pickups on this map? Existing progress is preserved.'))return;
+      // 1. caught Pokémon visible on this map: press RankedBoost's own button so its page, counters and history all update
+      let clicked=0;
+      for(const slug of catchAdd){
+        const cb=[...document.querySelectorAll('button[data-v3d-noun="caught"][data-v3d-toggle]')].find(b=>b.dataset.v3dToggle===slug&&b.getAttribute('aria-pressed')!=='true');
+        if(cb){cb.click();clicked++;await sleep(40);}
+      }
+      // 2. every other caught Pokémon: write RankedBoost's own storage key (value 1 = the same value its button stores)
+      let written=0;
+      try{
+        const now=existingCaught();
+        for(const s of catchAdd)if(!now[s]){now[s]=1;written++;}
+        if(written)localStorage.setItem(CAUGHT_KEY,JSON.stringify(now));
+      }catch(e){out.textContent='Could not save caught Pokémon: '+e.message;return}
+      // 3. verified item pickups on this map: press the item button, then check that it really switched
+      let applied=0;
+      for(const slug of m.matches){
+        const btn=[...document.querySelectorAll('button.v3d-it-detail__got-btn[data-v3d-toggle]')].find(b=>b.dataset.v3dToggle===slug&&!status(b));
+        if(!btn)continue;
+        btn.click();
+        for(let i=0;i<8&&!status(btn);i++)await sleep(50);
+        if(status(btn))applied++;
+      }
+      out.textContent='Done: '+(clicked+written)+' caught Pokémon and '+applied+' item pickups ticked on RankedBoost'+(mapPage?' (this map)':'')+'.'+
+        (m.matches.length>applied?'\n'+(m.matches.length-applied)+' item buttons did not switch; reload and try again.':'')+
+        (written&&!mapPage?'\nReloading so the Pokédex shows them…':'');
+      apply.disabled=true;
+      if(written&&!mapPage)setTimeout(()=>location.reload(),1200);   // pages that never had a button for them only read the key on load
+    }finally{busy=false}
   }
   file.onchange=async()=>{
     const selected=file.files?.[0];if(!selected)return;
@@ -170,7 +208,7 @@
   };
   close.onclick=()=>panel.remove();
   auto.onchange=()=>{
-    if(auto.checked&&!confirm('Automatically apply ONLY confidently matched finished item pickups when you open each RankedBoost Gold/Silver map? Existing checkmarks stay checked.')){auto.checked=false;return;}
+    if(auto.checked&&!PRE&&!confirm('Automatically apply caught Pokémon and ONLY confidently matched finished item pickups when you open a RankedBoost Gold/Silver map or the Pokédex? Existing checkmarks stay checked.')){auto.checked=false;return;}
     localStorage.setItem(AUTO_KEY,JSON.stringify(auto.checked));
   };
   let preError='';
@@ -180,5 +218,13 @@
   }
   show();
   if(preError){out.textContent=preError;apply.disabled=true;}
-  if(current&&auto.checked&&mapPage)setTimeout(()=>importProgress(false).catch(e=>{out.textContent='Auto-import error: '+e.message}),1600);
+  const autoRun=()=>{if(current&&auto.checked)importProgress(false).catch(e=>{out.textContent='Auto-import error: '+e.message});};
+  setTimeout(autoRun,1200);
+  // RankedBoost can switch maps without reloading: follow the address and run again for the new map
+  let lastPath=location.pathname;
+  setInterval(()=>{
+    if(location.pathname===lastPath)return;
+    lastPath=location.pathname;mapPage=pageOf();pageTasks=GAME.maps[mapPage]||[];apply.disabled=false;
+    show();setTimeout(autoRun,1200);
+  },700);
 })();
