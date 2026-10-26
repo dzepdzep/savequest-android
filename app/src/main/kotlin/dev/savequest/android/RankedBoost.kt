@@ -49,7 +49,7 @@ private fun isRankedBoost(u: Uri?) = u != null && u.scheme == "https" && (u.host
     val onUrlNow by rememberUpdatedState(onUrl)
     var web by remember { mutableStateOf<WebView?>(null) }
     BackHandler { val w = web; if (w != null && w.canGoBack()) w.goBack() else onClose() }
-    Column(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding()) {
+    Column(Modifier.fillMaxSize().statusBarsPadding()) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             TextButton(onClick = onClose) { Text("◂ Close") }
             TextButton(onClick = { web?.loadUrl(RB_LOCATIONS) }) { Text("Locations") }

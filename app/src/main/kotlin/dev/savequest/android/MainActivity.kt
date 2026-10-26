@@ -91,6 +91,8 @@ class MainActivity : ComponentActivity() {
     private fun openUrl(url: String) { try { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) } catch (_: Exception) { message = "No browser available" } }
     @Composable private fun Screen() {
         var category by rememberSaveable { mutableStateOf("TM/HM") }
+        // four bottom tabs; `category` stays the detailed page, the tab is derived from it
+        val tab = when (category) { in CHECKLIST_PAGES -> "Checklist"; "Team" -> "Team"; "Pokémon" -> "Pokémon"; else -> "More" }
         // saved with the screen state so rotating the phone keeps the search and every filter
         var query by rememberSaveable { mutableStateOf("") }
         var incomplete by rememberSaveable { mutableStateOf(false) }
@@ -127,8 +129,9 @@ class MainActivity : ComponentActivity() {
                 onManual = { checked -> changeManual(ManualChange(active, task.id, manual[task.id]?.checked == true, checked), task.title, snack, scope) },
                 openUrl = { openUrl(it) })
         }
-        Box(Modifier.fillMaxSize()) {
-        LazyColumn(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding().testTag("catalog"), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Column(Modifier.fillMaxSize()) {
+        Box(Modifier.weight(1f).fillMaxWidth()) {
+        LazyColumn(Modifier.fillMaxSize().statusBarsPadding().testTag("catalog"), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
           item { Column {
             var menu by remember { mutableStateOf(false) }
             Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
@@ -161,8 +164,9 @@ class MainActivity : ComponentActivity() {
             Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 snapshots.distinctBy { it.profile }.forEach { s -> FilterChip(selected = active == s.profile, onClick = { active = s.profile; repo.prefs.edit().putString("active", active).apply() }, label = { Text(Silver.parse(s.raw).trainer + " · " + s.profile.takeLast(4)) }) }
             }
-            Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                listOf("TM/HM", "Trainers", "Items", "Pokédex", "Team", "Pokémon", "Heracross", "Tips", "RankedBoost", "History").forEach { name -> val total = repo.tasks.count { it.category == name }; val done = if (total > 0) repo.tasks.count { it.category == name && results[it.id]?.kind != EvidenceKind.UNKNOWN } else 0; FilterChip(selected = category == name, onClick = { category = name; kind = "All" }, label = { Text(if (total > 0 && parsed != null) "$name $done/$total" else name) }) }
+            val pages = when (tab) { "Checklist" -> CHECKLIST_PAGES; "More" -> MORE_PAGES; else -> emptyList() }
+            if (pages.isNotEmpty()) Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                pages.forEach { name -> val total = repo.tasks.count { it.category == name }; val done = if (total > 0) repo.tasks.count { it.category == name && results[it.id]?.kind != EvidenceKind.UNKNOWN } else 0; FilterChip(selected = category == name, onClick = { category = name; kind = "All" }, label = { Text(if (total > 0 && parsed != null) "$name $done/$total" else name) }) }
             }
           } }
             if (category == "Team") {
@@ -225,8 +229,23 @@ class MainActivity : ComponentActivity() {
             }
         }
         if (rbOpen) Surface(Modifier.fillMaxSize()) { RankedBoostScreen(selected?.raw, rbUrl, { rbUrl = it }, { rbOpen = false }) }
-        SnackbarHost(snack, Modifier.align(androidx.compose.ui.Alignment.BottomCenter).navigationBarsPadding().padding(8.dp))
+        SnackbarHost(snack, Modifier.align(androidx.compose.ui.Alignment.BottomCenter).padding(8.dp))
+        }
+        NavigationBar(Modifier.testTag("tabs")) {
+            listOf("Checklist" to "TM/HM", "Team" to "Team", "Pokémon" to "Pokémon", "More" to "Heracross").forEach { (name, first) ->
+                NavigationBarItem(
+                    selected = tab == name,
+                    onClick = { rbOpen = false; if (tab != name) { category = first; kind = "All" } },
+                    icon = { Text(TAB_MARK.getValue(name), style = MaterialTheme.typography.titleMedium) },
+                    label = { Text(name) },
+                )
+            }
+        }
         }
     }
 }
+
+private val CHECKLIST_PAGES = listOf("TM/HM", "Trainers", "Items", "Pokédex")
+private val MORE_PAGES = listOf("Heracross", "Tips", "RankedBoost", "History")
+private val TAB_MARK = mapOf("Checklist" to "✔", "Team" to "★", "Pokémon" to "●", "More" to "≡")
 
